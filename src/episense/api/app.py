@@ -127,25 +127,22 @@ def create_app(
     app.add_middleware(RequestCorrelationMiddleware)
     app.add_middleware(PayloadSizeLimitMiddleware, max_bytes=cfg.max_payload_bytes)
 
-    # Production CORS configuration: allow Vercel domains and local dev without open wildcard
+    # Production CORS configuration: supports env overrides, Vercel deployments, and test origins
     env_cors = os.environ.get("CORS_ORIGINS")
     if env_cors:
         cors_origins = [o.strip() for o in env_cors.split(",") if o.strip()]
-    elif cfg.cors_origins and cfg.cors_origins != ["*"]:
+        allow_origin_regex = r"https://.*\.vercel\.app"
+    elif cfg.cors_origins:
         cors_origins = cfg.cors_origins
+        allow_origin_regex = None if "*" in cors_origins else r"https://.*\.vercel\.app"
     else:
-        cors_origins = [
-            "http://localhost:5173",
-            "http://127.0.0.1:5173",
-            "http://localhost:3000",
-            "http://127.0.0.1:8008",
-            "http://localhost:8008",
-        ]
+        cors_origins = ["*"]
+        allow_origin_regex = None
 
     app.add_middleware(
         CORSMiddleware,
         allow_origins=cors_origins,
-        allow_origin_regex=r"https://.*\.vercel\.app",
+        allow_origin_regex=allow_origin_regex,
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
