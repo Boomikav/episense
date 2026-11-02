@@ -1,0 +1,31 @@
+{
+  "total_signals_consumed": 169,
+  "total_alerts_generated": 169,
+  "alerts_by_tier": {
+    "medium": 2,
+    "low": 95,
+    "informational": 72
+  },
+  "alerts_by_threat_tier": {
+    "tier_4_high_consequence": 30,
+    "tier_3_severe": 19,
+    "tier_2_moderate": 45,
+    "tier_1_mild": 75
+  },
+  "gated_alerts_count": 156,
+  "alerts_by_disease": {
+    "nipah virus disease": 1,
+    "chandipura virus": 1
+  },
+  "alerts_by_geo": {
+    "kozhikode": 1,
+    "gujarat": 1
+  },
+  "high_alerts_count": 0,
+  "medium_alerts_count": 2,
+  "low_alerts_count": 95,
+  "informational_alerts_count": 72,
+  "elapsed_seconds": 0.019,
+  "pipeline_version": "1.0.0",
+  "generated_at": "2026-09-06T14:50:33.848014+00:00"
+}

@@ -1,0 +1,201 @@
+{
+  "stage_1_fetch": {
+    "source_id": "who_don_feed",
+    "http_status": 200,
+    "items_discovered": 0,
+    "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
+    "url": "https://www.who.int/2026-DON622",
+    "publication_date": "2026-10-23 15:48:48+00:00",
+    "raw_text_length": 14640
+  },
+  "stage_2_deduplication": {
+    "content_hash_sha256": "fa32a507739061c5664c8cacfd0dce923633ceee5e0744e8d6abd2c02041081f",
+    "is_novel": true,
+    "prior_records_found": 0
+  },
+  "stage_3_parsing": {
+    "document_id": "358112eb-722b-4d31-b0e2-4f1be1e03d2f",
+    "origin": "LIVE_EXTERNAL",
+    "source_type": "official_bulletin",
+    "publication_timestamp": "2026-10-23T15:48:48+00:00"
+  },
+  "stage_4_nlp": {
+    "sentence_count": 94,
+    "total_entities": 33,
+    "temporal_count": 42,
+    "location_count": 72,
+    "quantity_count": 42
+  },
+  "stage_5_disease_extraction": {
+    "diseases_detected_count": 22,
+    "primary_disease": "Ebola disease",
+    "samples": [
+      {
+        "text": "Ebola disease",
+        "canonical": "Ebola disease"
+      },
+      {
+        "text": "Bundibugyo virus",
+        "canonical": "Bundibugyo virus"
+      },
+      {
+        "text": "Bundibugyo virus disease",
+        "canonical": "Bundibugyo virus disease"
+      },
+      {
+        "text": "Bundibugyo virus disease",
+        "canonical": "Bundibugyo virus disease"
+      },
+      {
+        "text": "Bundibugyo virus",
+        "canonical": "Bundibugyo virus"
+      }
+    ]
+  },
+  "stage_6_location_resolution": {
+    "locations_detected": 72,
+    "samples": [
+      {
+        "raw_text": "Democratic Republic of",
+        "resolution_state": "unresolved",
+        "resolved_name": null
+      },
+      {
+        "raw_text": "Congo",
+        "resolution_state": "unresolved",
+        "resolved_name": null
+      },
+      {
+        "raw_text": "Kenya",
+        "resolution_state": "unresolved",
+        "resolved_name": null
+      },
+      {
+        "raw_text": "Nigeria",
+        "resolution_state": "unresolved",
+        "resolved_name": null
+      },
+      {
+        "raw_text": "Democratic Republic of the Congo",
+        "resolution_state": "unresolved",
+        "resolved_name": null
+      },
+      {
+        "raw_text": "African Region",
+        "resolution_state": "unresolved",
+        "resolved_name": null
+      }
+    ]
+  },
+  "stage_7_temporal_extraction": {
+    "temporal_count": 42,
+    "samples": [
+      {
+        "original_expression": "8 October 2026",
+        "temporal_type": "point",
+        "normalized_start": "2026-10-08T00:00:00+00:00",
+        "normalized_end": "2026-10-08T23:59:59+00:00"
+      },
+      {
+        "original_expression": "20 October 2026",
+        "temporal_type": "point",
+        "normalized_start": "2026-10-20T00:00:00+00:00",
+        "normalized_end": "2026-10-20T23:59:59+00:00"
+      },
+      {
+        "original_expression": "6 October 2026",
+        "temporal_type": "point",
+        "normalized_start": "2026-10-06T00:00:00+00:00",
+        "normalized_end": "2026-10-06T23:59:59+00:00"
+      },
+      {
+        "original_expression": "20 October 2026",
+        "temporal_type": "point",
+        "normalized_start": "2026-10-20T00:00:00+00:00",
+        "normalized_end": "2026-10-20T23:59:59+00:00"
+      },
+      {
+        "original_expression": "20 October 2026",
+        "temporal_type": "point",
+        "normalized_start": "2026-10-20T00:00:00+00:00",
+        "normalized_end": "2026-10-20T23:59:59+00:00"
+      }
+    ]
+  },
+  "stage_8_quantity_extraction": {
+    "quantity_count": 42,
+    "samples": [
+      {
+        "raw_text": "9704",
+        "numeric_value": 9704.0,
+        "unit": "confirmed cases",
+        "type": "case_count"
+      },
+      {
+        "raw_text": "4687",
+        "numeric_value": 4687.0,
+        "unit": "deaths",
+        "type": "death_count"
+      },
+      {
+        "raw_text": "482",
+        "numeric_value": 482.0,
+        "unit": "deaths",
+        "type": "death_count"
+      },
+      {
+        "raw_text": "nine",
+        "numeric_value": 9.0,
+        "unit": "cases",
+        "type": "case_count"
+      },
+      {
+        "raw_text": "one",
+        "numeric_value": 1.0,
+        "unit": "death",
+        "type": "death_count"
+      }
+    ]
+  },
+  "stage_9_event_fusion": {
+    "status": "accepted",
+    "message": "Document ingested successfully; 18 event(s) affected",
+    "fused_events_affected": 18,
+    "signals_generated": 13,
+    "alerts_evaluated": 13
+  },
+  "stage_10_persistence": {
+    "persisted_document_id": "358112eb-722b-4d31-b0e2-4f1be1e03d2f",
+    "trace_id": "d3a88766-9384-4d72-b0bf-195a07ff656c",
+    "trace_overall_status": "completed",
+    "stages_recorded": [
+      "Ingestion & Schema Validation",
+      "Deduplication & Idempotency Gate",
+      "Language Identification & Document Preprocessing",
+      "Sentence Segmentation & Tokenization",
+      "Biomedical Named Entity Recognition",
+      "Assertion & Negation Analysis",
+      "Quantity & Case Count Extraction",
+      "Temporal Resolution & Date Normalization",
+      "Geographic Resolution & Disambiguation",
+      "Event Relevance & Candidate Validation",
+      "Cross-Document Event Fusion",
+      "Anti-Inflation & Duplicate Protection",
+      "Epidemiological Time-Series Binning",
+      "Historical Baseline Computation",
+      "Statistical Anomaly Detection",
+      "Risk Scoring & Tier Assignment",
+      "Explainability Dossier & Audit Generation"
+    ]
+  },
+  "stage_11_rest_api": {
+    "workbench_docs_status": 200,
+    "workbench_trace_status": 200,
+    "trace_id_queried": "d3a88766-9384-4d72-b0bf-195a07ff656c"
+  },
+  "stage_12_idempotency": {
+    "status": "duplicate_skipped",
+    "message": "Duplicate document detected (SHA-256: fa32a507739061c5...); skipped",
+    "duplicate_prevented": true
+  }
+}

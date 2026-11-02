@@ -1,0 +1,171 @@
+{
+  "total_dossiers": 169,
+  "complete_dossiers": 169,
+  "top_actionable_dossiers": [
+    {
+      "alert_id": "76f8fdcb-537a-518d-96c9-eb3d04db939f",
+      "disease": "nipah virus disease",
+      "geo": "kozhikode",
+      "tier": "MEDIUM",
+      "score": 0.75,
+      "summary": "[MEDIUM] Nipah Virus Disease in kozhikode (Score: 0.75, MEDIUM) - Observed: 2023.0 vs Expected: 1.00.",
+      "checksum": "cf6ce2e846ee48a0",
+      "provenance_complete": true,
+      "spans_reconstructed": 7
+    },
+    {
+      "alert_id": "96479edc-7f1d-52ed-8c1f-f4b99f05c623",
+      "disease": "chandipura virus",
+      "geo": "gujarat",
+      "tier": "MEDIUM",
+      "score": 0.655,
+      "summary": "[MEDIUM] Chandipura Virus in gujarat (Score: 0.66, MEDIUM) - Observed: 64.0 vs Expected: 1.00.",
+      "checksum": "096c9785bf818be4",
+      "provenance_complete": true,
+      "spans_reconstructed": 6
+    },
+    {
+      "alert_id": "3efe37ba-f703-5417-8802-8aae97de2bf0",
+      "disease": "leptospirosis",
+      "geo": "kerala",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Leptospirosis in kerala (Score: 0.64, LOW) - Observed: 240.0 vs Expected: 1.00.",
+      "checksum": "b9fc85a65213f457",
+      "provenance_complete": true,
+      "spans_reconstructed": 4
+    },
+    {
+      "alert_id": "8d68d00a-9b16-5803-a403-692222c4b890",
+      "disease": "nipah virus disease",
+      "geo": "unspecified_or_global",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Nipah Virus Disease in unspecified_or_global (Score: 0.64, LOW) - Observed: 2026.0 vs Expected: 1.00.",
+      "checksum": "bd74298fda5067ac",
+      "provenance_complete": true,
+      "spans_reconstructed": 4
+    },
+    {
+      "alert_id": "ac92ecb0-1848-5f66-bf50-1c97e69df008",
+      "disease": "kyasanur forest disease",
+      "geo": "kerala",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Kyasanur Forest Disease in kerala (Score: 0.64, LOW) - Observed: 1.0 vs Expected: 0.00.",
+      "checksum": "5154fa176ed365a9",
+      "provenance_complete": true,
+      "spans_reconstructed": 2
+    },
+    {
+      "alert_id": "3188b57b-941f-52cd-83bf-d4d60e7eefc8",
+      "disease": "nipah virus disease",
+      "geo": "unspecified_or_global",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Nipah Virus Disease in unspecified_or_global (Score: 0.64, LOW) - Observed: 1.0 vs Expected: 0.00.",
+      "checksum": "e8eb6cc145fed35b",
+      "provenance_complete": true,
+      "spans_reconstructed": 1
+    },
+    {
+      "alert_id": "117ea328-36e5-5e09-ac3e-eb86f81a2885",
+      "disease": "marburg virus disease",
+      "geo": "unspecified_or_global",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Marburg Virus Disease in unspecified_or_global (Score: 0.64, LOW) - Observed: 1.0 vs Expected: 0.00.",
+      "checksum": "906e5b3a65f95655",
+      "provenance_complete": true,
+      "spans_reconstructed": 3
+    },
+    {
+      "alert_id": "f26267ce-8e74-5e8d-a3f7-f2067eaeea92",
+      "disease": "chandipura virus",
+      "geo": "unspecified_or_global",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Chandipura Virus in unspecified_or_global (Score: 0.64, LOW) - Observed: 1.0 vs Expected: 0.00.",
+      "checksum": "5d5dec8ea782a556",
+      "provenance_complete": true,
+      "spans_reconstructed": 1
+    },
+    {
+      "alert_id": "6df01efc-17f5-5129-afa6-69e961e83759",
+      "disease": "cholera",
+      "geo": "rayagada",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Cholera in rayagada (Score: 0.64, LOW) - Observed: 1.0 vs Expected: 0.00.",
+      "checksum": "3529f57b1efe5a7d",
+      "provenance_complete": true,
+      "spans_reconstructed": 2
+    },
+    {
+      "alert_id": "95ff5ab0-754b-5cf6-a8d8-a3579da13611",
+      "disease": "chandipura virus",
+      "geo": "gujarat",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Chandipura Virus in gujarat (Score: 0.64, LOW) - Observed: 1.0 vs Expected: 0.00.",
+      "checksum": "9c0c45ec5b971585",
+      "provenance_complete": true,
+      "spans_reconstructed": 2
+    },
+    {
+      "alert_id": "f08f33fe-850c-5d60-a50f-697be58a38a0",
+      "disease": "cholera",
+      "geo": "gujarat",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Cholera in gujarat (Score: 0.64, LOW) - Observed: 1.0 vs Expected: 0.00.",
+      "checksum": "c9dca731f44472b0",
+      "provenance_complete": true,
+      "spans_reconstructed": 3
+    },
+    {
+      "alert_id": "ba4cc73b-72ae-5e20-b136-b34379893394",
+      "disease": "avian influenza a(h9n2)",
+      "geo": "unspecified_or_global",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Avian Influenza A(H9N2) in unspecified_or_global (Score: 0.64, LOW) - Observed: 1.0 vs Expected: 0.00.",
+      "checksum": "176a485486571cea",
+      "provenance_complete": true,
+      "spans_reconstructed": 1
+    },
+    {
+      "alert_id": "9fc2185e-4d72-50c4-9129-dd1dde6c29c7",
+      "disease": "avian influenza",
+      "geo": "malda",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Avian Influenza in malda (Score: 0.64, LOW) - Observed: 1.0 vs Expected: 0.00.",
+      "checksum": "b91bc8c94a05f4bb",
+      "provenance_complete": true,
+      "spans_reconstructed": 3
+    },
+    {
+      "alert_id": "2841f529-a792-535e-840e-3c2fee641647",
+      "disease": "mers-cov infection",
+      "geo": "unspecified_or_global",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Mers-Cov Infection in unspecified_or_global (Score: 0.64, LOW) - Observed: 1.0 vs Expected: 0.00.",
+      "checksum": "15156ad7fdaab5da",
+      "provenance_complete": true,
+      "spans_reconstructed": 2
+    },
+    {
+      "alert_id": "7ca0acbb-3b32-5dd3-a47f-4c2465a8a8a3",
+      "disease": "cholera",
+      "geo": "unspecified_or_global",
+      "tier": "LOW",
+      "score": 0.64,
+      "summary": "[LOW] Cholera in unspecified_or_global (Score: 0.64, LOW) - Observed: 900.0 vs Expected: 1.00.",
+      "checksum": "1a65d0e62543108d",
+      "provenance_complete": true,
+      "spans_reconstructed": 4
+    }
+  ]
+}

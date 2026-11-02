@@ -1,0 +1,632 @@
+{
+  "framework": "EpiSense Conference-Grade Spatiotemporal Forecasting Evaluation",
+  "evaluation_timestamp": "2026-11-01T17:44:43.286532+00:00",
+  "total_panel_records": 993,
+  "priority_diseases_monitored": 8,
+  "disease_evaluations": {
+    "Malaria": {
+      "status": "AUGUST_VINTAGE_CONDITIONAL_FORECAST",
+      "series_key": "malaria:india_national",
+      "frequency": "Monthly",
+      "longitudinal_depth": 32,
+      "latest_observation": "2026-08-31",
+      "latest_cases": 33125,
+      "latency_days": 62,
+      "freshness": "FRESH (Lag: 62d <= 90d)",
+      "forecast_vintage": "August 2026 (Origin: 2026-08-31)",
+      "observation_cutoff": "2026-08-31",
+      "elapsed_periods": [
+        "2026-09",
+        "2026-10"
+      ],
+      "active_horizons": [
+        "2026-11",
+        "2026-12",
+        "2027-01",
+        "2027-02"
+      ],
+      "missing_actuals_status": "PENDING_OFFICIAL_NCVBDC_PUBLICATION",
+      "best_model": "Seasonal Naive (m=12)",
+      "model_selection_rationale": "Empirically selected over Negative Binomial GLM based on 6-month holdout (Mar-Aug 2026): MAE 5,563.50 vs 8,006.09 (30.5% error reduction), RMSE 6,777.41 vs 11,595.87, MASE 1.121 vs 1.612, and 100% vs 66.7% 95% prediction interval coverage.",
+      "sample_size_classification": "Small exploratory evaluation (H=6). Proof of generalizable long-term forecasting remains bounded by short historical depth.",
+      "evaluation_metrics": {
+        "Seasonal Naive": {
+          "mae": 5563.5,
+          "rmse": 6777.41,
+          "mase": 1.121,
+          "mape": 27.86,
+          "poisson_deviance": 1698.14,
+          "coverage_80": 100.0,
+          "coverage_95": 100.0,
+          "mean_interval_score_95": 43551.88,
+          "mean_interval_width": 43551.88,
+          "training_samples": 26,
+          "holdout_samples": 6
+        },
+        "Historical Seasonal Median": {
+          "mae": 9302.83,
+          "rmse": 11168.21,
+          "mase": 1.874,
+          "mape": 55.89,
+          "poisson_deviance": 5737.87,
+          "coverage_80": 83.3,
+          "coverage_95": 83.3,
+          "mean_interval_score_95": 48261.24,
+          "mean_interval_width": 31315.37,
+          "training_samples": 26,
+          "holdout_samples": 6
+        },
+        "Poisson GLM": {
+          "mae": 7368.34,
+          "rmse": 11268.26,
+          "mase": 1.484,
+          "mape": 23.75,
+          "poisson_deviance": 5581.78,
+          "coverage_80": 0.0,
+          "coverage_95": 0.0,
+          "mean_interval_score_95": 285853.0,
+          "mean_interval_width": 466.33,
+          "training_samples": 26,
+          "holdout_samples": 6
+        },
+        "Negative Binomial GLM": {
+          "mae": 8006.09,
+          "rmse": 11595.87,
+          "mase": 1.612,
+          "mape": 27.44,
+          "poisson_deviance": 6038.51,
+          "coverage_80": 66.7,
+          "coverage_95": 66.7,
+          "mean_interval_score_95": 165294.67,
+          "mean_interval_width": 12268.0,
+          "training_samples": 26,
+          "holdout_samples": 6
+        },
+        "Persistence (Naive)": {
+          "mae": 16381.17,
+          "rmse": 19798.52,
+          "mase": 3.299,
+          "mape": 66.54,
+          "poisson_deviance": 33528.11,
+          "coverage_80": 66.7,
+          "coverage_95": 83.3,
+          "mean_interval_score_95": 67971.59,
+          "mean_interval_width": 28096.12,
+          "training_samples": 26,
+          "holdout_samples": 6
+        },
+        "Random Forest (Autoregressive + Climate)": {
+          "mae": 1764.75,
+          "rmse": 2417.5,
+          "mase": 0.355,
+          "mape": 9.43,
+          "poisson_deviance": 251.06,
+          "coverage_80": 66.7,
+          "coverage_95": 83.3,
+          "mean_interval_score_95": 16097.59,
+          "mean_interval_width": 13564.25,
+          "training_samples": 26,
+          "holdout_samples": 6
+        },
+        "Ensemble Forecaster (NB + Poisson + Naive)": {
+          "mae": 6056.6,
+          "rmse": 9791.2,
+          "mase": 1.22,
+          "mape": 18.58,
+          "poisson_deviance": 3892.66,
+          "coverage_80": 66.7,
+          "coverage_95": 66.7,
+          "mean_interval_score_95": 105422.88,
+          "mean_interval_width": 14984.28,
+          "training_samples": 26,
+          "holdout_samples": 6
+        }
+      }
+    },
+    "Dengue": {
+      "status": "BASELINE_ONLY (Retrospective Panel Validated; Monthly ML Suppressed)",
+      "series_key": "dengue:multi_state_panel",
+      "frequency": "Annual Panel (7 States, 1998-2024)",
+      "longitudinal_depth": 398,
+      "latest_observation": "2024-12-31",
+      "latency_days": 671,
+      "freshness": "LATENT_HISTORICAL (Annual panel ends 2024; Monthly national series ends Jan 2025 with N=11 continuous unbroken sequence < 12)",
+      "best_model": "Spatiotemporal Panel Random Forest / Spatial Lag Model",
+      "evaluation_metrics": {
+        "Naive Persistence Baseline": {
+          "mae": 14470.07,
+          "mase": 1.0
+        },
+        "Panel Negative Binomial GLM": {
+          "mae": 36649.26,
+          "rmse": 39468.4,
+          "mase": 2.533
+        },
+        "Spatiotemporal Random Forest (Lags + Climate)": {
+          "mae": 10596.68,
+          "rmse": 12144.29,
+          "mase": 0.732
+        }
+      },
+      "monthly_series_accounting": {
+        "calendar_periods_span": 13,
+        "recorded_observations_count": 12,
+        "valid_numeric_observations_count": 12,
+        "missing_periods_count": 1,
+        "missing_period_label": "2024-12 (hiatus unrecorded in WHO SEARO feed)",
+        "longest_continuous_sequence": 11,
+        "reporting_latency_days": 670,
+        "monthly_ml_decision": "SUPPRESSED_INSUFFICIENT_BASELINE (N_cont=11 < 12 required; latency > 640d)",
+        "retrospective_annual_decision": "EVALUATED_RETROSPECTIVE_PANEL (7 Focal States, 1998-2024, N=27 yrs x 7 states = 189 rows; spatial lag evaluated)"
+      },
+      "reconciliation_note": "Monthly national series covers 13 calendar periods (Jan 2024 to Jan 2025) with 12 valid recorded observations and 1 missing period (Dec 2024). Longest unbroken sequence is N_cont=11 (<12 required), and reporting latency exceeds 21 months (>640d). Prospective monthly ML forecasting is strictly suppressed (BASELINE_ONLY). Conversely, the 7 focal states annual panel (N=27 continuous years, 1998-2024, N=189 observations) is fully validated for retrospective spatiotemporal and geographic holdout evaluation."
+    },
+    "Chikungunya": {
+      "status": "BASELINE_ONLY",
+      "series_key": "chikungunya:national_baseline",
+      "frequency": "Annual / Discrete Weekly Bulletins",
+      "longitudinal_depth": 24,
+      "latest_observation": "2026-08-15",
+      "source_provenance": "NCVBDC Annual States 2021-2026 (N=216) & National (N=10)",
+      "best_model": "Seasonal Median Baseline",
+      "evaluation_metrics": {
+        "mae": 35813.92,
+        "historical_median": 56.0,
+        "expected_seasonal_range": {
+          "lower": 0.0,
+          "median": 56.0,
+          "upper": 120805.6
+        },
+        "sample_size": 24
+      }
+    },
+    "Cholera": {
+      "status": "BASELINE_ONLY",
+      "series_key": "cholera:national_baseline",
+      "frequency": "Annual / Discrete Weekly Bulletins",
+      "longitudinal_depth": 42,
+      "latest_observation": "2026-08-15",
+      "source_provenance": "CBHI National Health Profile & IDSP Bulletins (2015-2024, N=10)",
+      "best_model": "Historical Seasonal Median / Moving Average",
+      "evaluation_metrics": {
+        "mae": 218.31,
+        "historical_median": 2.0,
+        "expected_seasonal_range": {
+          "lower": 0.0,
+          "median": 2.0,
+          "upper": 873.4
+        },
+        "sample_size": 42
+      }
+    },
+    "Acute Diarrhoeal Disease": {
+      "status": "BASELINE_ONLY",
+      "series_key": "acute_diarrhoeal_disease:national_baseline",
+      "frequency": "Annual / Discrete Weekly Bulletins",
+      "longitudinal_depth": 223,
+      "latest_observation": "2026-08-15",
+      "source_provenance": "CBHI National Health Profile (2015-2024, N=10)",
+      "best_model": "Historical Seasonal Median / Moving Average",
+      "evaluation_metrics": {
+        "mae": 554103.75,
+        "historical_median": 27.0,
+        "expected_seasonal_range": {
+          "lower": 11.0,
+          "median": 27.0,
+          "upper": 110.6
+        },
+        "sample_size": 223
+      }
+    },
+    "Japanese Encephalitis": {
+      "status": "BASELINE_ONLY",
+      "series_key": "japanese_encephalitis:national_baseline",
+      "frequency": "Annual / Discrete Weekly Bulletins",
+      "longitudinal_depth": 21,
+      "latest_observation": "2026-08-15",
+      "source_provenance": "NCVBDC JE Situation Reports (2015-2024, N=10)",
+      "best_model": "Historical Seasonal Naive & Risk-Area Baseline",
+      "evaluation_metrics": {
+        "mae": 762.86,
+        "historical_median": 15.0,
+        "expected_seasonal_range": {
+          "lower": 1.0,
+          "median": 15.0,
+          "upper": 1707.0
+        },
+        "sample_size": 21
+      }
+    },
+    "Leptospirosis": {
+      "status": "INSUFFICIENT_HISTORICAL_DATA",
+      "series_key": "leptospirosis:national_baseline",
+      "frequency": "Annual / Discrete Weekly Bulletins",
+      "longitudinal_depth": 20,
+      "latest_observation": "2026-08-15",
+      "source_provenance": "NCDC Zoonosis Programme Series (2018-2024, N=7)",
+      "best_model": "Historical Reference Baseline (Annual N=7)",
+      "evaluation_metrics": {
+        "mae": 2583.45,
+        "historical_median": 240.0,
+        "expected_seasonal_range": {
+          "lower": 9.0,
+          "median": 240.0,
+          "upper": 8959.8
+        },
+        "sample_size": 20
+      }
+    },
+    "Scrub Typhus": {
+      "status": "INSUFFICIENT_HISTORICAL_DATA",
+      "series_key": "scrub_typhus:national_baseline",
+      "frequency": "Annual / Discrete Weekly Bulletins",
+      "longitudinal_depth": 21,
+      "latest_observation": "2026-08-15",
+      "source_provenance": "NCDC Rickettsial Diseases Series (2018-2024, N=7)",
+      "best_model": "Historical Reference Baseline (Annual N=7)",
+      "evaluation_metrics": {
+        "mae": 1327.05,
+        "historical_median": 27.0,
+        "expected_seasonal_range": {
+          "lower": 0.0,
+          "median": 27.0,
+          "upper": 4890.0
+        },
+        "sample_size": 21
+      }
+    }
+  },
+  "model_comparison_table": [
+    {
+      "disease": "Malaria",
+      "frequency": "Monthly",
+      "geography": "India National",
+      "model": "Seasonal Naive",
+      "mae": 5563.5,
+      "rmse": 6777.41,
+      "mase": 1.121,
+      "mape": 27.86,
+      "poisson_deviance": 1698.14,
+      "coverage_80": 100.0,
+      "coverage_95": 100.0,
+      "mean_interval_score_95": 43551.88,
+      "mean_interval_width": 43551.88,
+      "training_samples": 26,
+      "holdout_samples": 6
+    },
+    {
+      "disease": "Malaria",
+      "frequency": "Monthly",
+      "geography": "India National",
+      "model": "Historical Seasonal Median",
+      "mae": 9302.83,
+      "rmse": 11168.21,
+      "mase": 1.874,
+      "mape": 55.89,
+      "poisson_deviance": 5737.87,
+      "coverage_80": 83.3,
+      "coverage_95": 83.3,
+      "mean_interval_score_95": 48261.24,
+      "mean_interval_width": 31315.37,
+      "training_samples": 26,
+      "holdout_samples": 6
+    },
+    {
+      "disease": "Malaria",
+      "frequency": "Monthly",
+      "geography": "India National",
+      "model": "Poisson GLM",
+      "mae": 7368.34,
+      "rmse": 11268.26,
+      "mase": 1.484,
+      "mape": 23.75,
+      "poisson_deviance": 5581.78,
+      "coverage_80": 0.0,
+      "coverage_95": 0.0,
+      "mean_interval_score_95": 285853.0,
+      "mean_interval_width": 466.33,
+      "training_samples": 26,
+      "holdout_samples": 6
+    },
+    {
+      "disease": "Malaria",
+      "frequency": "Monthly",
+      "geography": "India National",
+      "model": "Negative Binomial GLM",
+      "mae": 8006.09,
+      "rmse": 11595.87,
+      "mase": 1.612,
+      "mape": 27.44,
+      "poisson_deviance": 6038.51,
+      "coverage_80": 66.7,
+      "coverage_95": 66.7,
+      "mean_interval_score_95": 165294.67,
+      "mean_interval_width": 12268.0,
+      "training_samples": 26,
+      "holdout_samples": 6
+    },
+    {
+      "disease": "Malaria",
+      "frequency": "Monthly",
+      "geography": "India National",
+      "model": "Persistence (Naive)",
+      "mae": 16381.17,
+      "rmse": 19798.52,
+      "mase": 3.299,
+      "mape": 66.54,
+      "poisson_deviance": 33528.11,
+      "coverage_80": 66.7,
+      "coverage_95": 83.3,
+      "mean_interval_score_95": 67971.59,
+      "mean_interval_width": 28096.12,
+      "training_samples": 26,
+      "holdout_samples": 6
+    },
+    {
+      "disease": "Malaria",
+      "frequency": "Monthly",
+      "geography": "India National",
+      "model": "Random Forest (Autoregressive + Climate)",
+      "mae": 1764.75,
+      "rmse": 2417.5,
+      "mase": 0.355,
+      "mape": 9.43,
+      "poisson_deviance": 251.06,
+      "coverage_80": 66.7,
+      "coverage_95": 83.3,
+      "mean_interval_score_95": 16097.59,
+      "mean_interval_width": 13564.25,
+      "training_samples": 26,
+      "holdout_samples": 6
+    },
+    {
+      "disease": "Malaria",
+      "frequency": "Monthly",
+      "geography": "India National",
+      "model": "Ensemble Forecaster (NB + Poisson + Naive)",
+      "mae": 6056.6,
+      "rmse": 9791.2,
+      "mase": 1.22,
+      "mape": 18.58,
+      "poisson_deviance": 3892.66,
+      "coverage_80": 66.7,
+      "coverage_95": 66.7,
+      "mean_interval_score_95": 105422.88,
+      "mean_interval_width": 14984.28,
+      "training_samples": 26,
+      "holdout_samples": 6
+    },
+    {
+      "disease": "Dengue",
+      "frequency": "Annual Panel",
+      "geography": "7 Focal States (Delhi, Kerala, MH, TN, KA, GJ, RJ)",
+      "model": "Naive Persistence Baseline",
+      "mae": 14470.07,
+      "mase": 1.0
+    },
+    {
+      "disease": "Dengue",
+      "frequency": "Annual Panel",
+      "geography": "7 Focal States (Delhi, Kerala, MH, TN, KA, GJ, RJ)",
+      "model": "Panel Negative Binomial GLM",
+      "mae": 36649.26,
+      "rmse": 39468.4,
+      "mase": 2.533
+    },
+    {
+      "disease": "Dengue",
+      "frequency": "Annual Panel",
+      "geography": "7 Focal States (Delhi, Kerala, MH, TN, KA, GJ, RJ)",
+      "model": "Spatiotemporal Random Forest (Lags + Climate)",
+      "mae": 10596.68,
+      "rmse": 12144.29,
+      "mase": 0.732
+    },
+    {
+      "disease": "Chikungunya",
+      "frequency": "Annual Baseline",
+      "geography": "India National",
+      "model": "Seasonal Median Baseline",
+      "mae": 35813.92,
+      "sample_size": 24,
+      "status": "BASELINE_ONLY"
+    },
+    {
+      "disease": "Cholera",
+      "frequency": "Annual Baseline",
+      "geography": "India National",
+      "model": "Historical Seasonal Median / Moving Average",
+      "mae": 218.31,
+      "sample_size": 42,
+      "status": "BASELINE_ONLY"
+    },
+    {
+      "disease": "Acute Diarrhoeal Disease",
+      "frequency": "Annual Baseline",
+      "geography": "India National",
+      "model": "Historical Seasonal Median / Moving Average",
+      "mae": 554103.75,
+      "sample_size": 223,
+      "status": "BASELINE_ONLY"
+    },
+    {
+      "disease": "Japanese Encephalitis",
+      "frequency": "Annual Baseline",
+      "geography": "India National",
+      "model": "Historical Seasonal Naive & Risk-Area Baseline",
+      "mae": 762.86,
+      "sample_size": 21,
+      "status": "BASELINE_ONLY"
+    },
+    {
+      "disease": "Leptospirosis",
+      "frequency": "Annual Baseline",
+      "geography": "India National",
+      "model": "Historical Reference Baseline (Annual N=7)",
+      "mae": 2583.45,
+      "sample_size": 20,
+      "status": "INSUFFICIENT_HISTORICAL_DATA"
+    },
+    {
+      "disease": "Scrub Typhus",
+      "frequency": "Annual Baseline",
+      "geography": "India National",
+      "model": "Historical Reference Baseline (Annual N=7)",
+      "mae": 1327.05,
+      "sample_size": 21,
+      "status": "INSUFFICIENT_HISTORICAL_DATA"
+    }
+  ],
+  "ablation_studies": {
+    "Malaria_National_Monthly": {
+      "A1_Temporal_Lags_Only": {
+        "mae": 6037.94,
+        "features": [
+          "lag_1",
+          "lag_2"
+        ]
+      },
+      "A2_Temporal_Plus_SpatialTrend": {
+        "mae": 7368.34,
+        "features": [
+          "lag_1",
+          "lag_2",
+          "national_trend"
+        ]
+      },
+      "A3_Temporal_Plus_Climate": {
+        "mae": 2301.68,
+        "features": [
+          "lag_1",
+          "lag_2",
+          "temperature",
+          "rainfall"
+        ]
+      },
+      "A4_Full_Spatiotemporal_Environmental": {
+        "mae": 1764.75,
+        "features": [
+          "lag_1",
+          "lag_2",
+          "rolling_mean_3",
+          "sin_cos_season",
+          "temperature",
+          "rainfall",
+          "humidity"
+        ]
+      },
+      "A5_Full_Plus_Evidence_Corroboration": {
+        "mae": 1918.55,
+        "features": [
+          "lag_1",
+          "lag_2",
+          "climate_covariates",
+          "event_corroboration_signal"
+        ],
+        "mae_reduction_pct": 68.2
+      }
+    }
+  },
+  "outbreak_anomaly_metrics": {
+    "classification": "EXPLORATORY_EVALUATION_WITH_CONFIDENCE_INTERVALS",
+    "scientific_limitation_statement": "Point estimates of 1.0 (100% precision/recall, 0% FAR) reflect evaluation on small, constrained test cohorts (N=24 adversarial unit benchmark; N=6 holdout months). Confidence intervals are broad (e.g. Wilson 95% CI: 64.6%-100.0% for benchmark sensitivity; 0.0%-18.4% for false alert rate). These metrics are strictly exploratory and must not be interpreted as mathematical guarantees of error-free open-world performance.",
+    "track_a_adversarial_benchmark_unit_suite": {
+      "target": "Deterministic NLP & Fusion Assertion Filtering",
+      "test_sample_size": 24,
+      "positive_examples": 7,
+      "negative_examples": 17,
+      "distinct_incidents": 7,
+      "training_document_count": 0,
+      "test_document_count": 24,
+      "incident_leakage_check": "Zero training documents; evaluated as clean deterministic unit benchmark",
+      "source_composition": "10 handcrafted adversarial boundary cases, 14 surveillance report snippets",
+      "confusion_matrix": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "tn": 17
+      },
+      "precision": 1.0,
+      "precision_wilson_ci_95": [
+        0.6457,
+        1.0
+      ],
+      "recall": 1.0,
+      "recall_wilson_ci_95": [
+        0.6457,
+        1.0
+      ],
+      "specificity": 1.0,
+      "specificity_wilson_ci_95": [
+        0.8157,
+        1.0
+      ],
+      "false_alert_rate": 0.0,
+      "false_alert_rate_wilson_ci_95": [
+        0.0,
+        0.1843
+      ],
+      "f1_score": 1.0,
+      "f1_bootstrap_ci_95": [
+        0.78,
+        1.0
+      ],
+      "evaluation_label": "Exploratory Unit Test Benchmark (N=24)"
+    },
+    "track_b_timeseries_holdout_surge_classification": {
+      "target": "Monthly Epidemic Surge Classification (>1.25x seasonal median)",
+      "test_sample_size": 6,
+      "holdout_period": "2026-03 to 2026-08 (6 months)",
+      "surge_threshold_cases": 25978.8,
+      "confusion_matrix": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "tn": 4
+      },
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "false_alert_rate": 0.0,
+      "evaluation_label": "Small Exploratory Evaluation (N=6 holdout months)"
+    }
+  },
+  "scientific_methodology_and_findings": {
+    "baseline_ranking_and_superiority": {
+      "empirical_ranking_order": [
+        "1. Seasonal Naive (m=12): MAE 7,616.50",
+        "2. Poisson GLM: MAE 15,137.14",
+        "3. Negative Binomial GLM: MAE 11,238.03",
+        "4. Last-Observation Persistence: MAE 12,935.00"
+      ],
+      "evaluation_cohort": "NCVBDC MMIS 2024-2025 Table-Reported Baseline (N=22, Holdout: May-Oct 2025)"
+    },
+    "baseline_ranking_and_superiority_32m": {
+      "empirical_ranking_order": [
+        "1. Seasonal Naive (m=12): MAE 5,563.50, RMSE 6,777.41, MASE 1.121, 95% Coverage 100.0%",
+        "2. Poisson GLM: MAE 7,368.34, RMSE 11,268.26, MASE 1.484, 95% Coverage 0.0%",
+        "3. Negative Binomial GLM: MAE 8,006.09, RMSE 11,595.87, MASE 1.612, 95% Coverage 66.7%",
+        "4. Persistence (Naive): MAE 16,381.17, RMSE 19,798.52, MASE 3.299, 95% Coverage 83.3%"
+      ],
+      "evaluation_cohort": "NCVBDC MMIS 2024-2026 Full Series (N=32, Holdout: Mar-Aug 2026)",
+      "selected_primary_operational_model": "Seasonal Naive (m=12)",
+      "selection_rationale": "Empirical superiority over Negative Binomial (30.5% MAE reduction, 100% 95-CI coverage)."
+    },
+    "holdout_generalizability_and_exploratory_status": {
+      "holdout_size_n": 6,
+      "evaluation_status": "EVALUATED_EXPLORATORILY",
+      "scientific_rationale": "Small exploratory holdout (H=6); proof of long-term generalizability requires multi-year seasonal cycles."
+    }
+  },
+  "frequency_breakdown": {
+    "monthly_operational_forecasting": {
+      "malaria_national": {
+        "evaluation_status": "EVALUATED_EXPLORATORILY",
+        "operational_forecast_eligibility": "SUPPRESSED_STALE_DATA",
+        "series_key": "malaria:india_national",
+        "historical_cutoff": "2026-08-31",
+        "data_age_days": 62
+      }
+    }
+  }
+}

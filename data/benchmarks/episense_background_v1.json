@@ -1,0 +1,1762 @@
+{
+  "manifest_id": "d086abf9-0599-4755-b587-1883b9c5fd80",
+  "dataset_name": "episense_background_v1",
+  "version": "1.0.0",
+  "created_at": "2026-09-06T13:16:31.263630Z",
+  "description": "EpiSense Background & Routine Textual Surveillance Corpus: 50 authentic public health documents covering routine monitoring, seasonal baselines, NIL outbreak reports, and preventative health advisories (2023-2026, including 2025).",
+  "geographic_scope": "India (with selected global/regional background benchmarks)",
+  "temporal_range_start": "2023-09-01T00:00:00Z",
+  "temporal_range_end": "2026-05-16T00:00:00Z",
+  "document_count": 58,
+  "split_counts": {
+    "background_corpus": 58
+  },
+  "sources_included": [
+    "medrxiv_preprints",
+    "ncdc_idsp_india",
+    "pib_mohfw_india",
+    "who_don"
+  ],
+  "documents": [
+    {
+      "document": {
+        "document_id": "6b793772-9378-55c7-bb48-2c8e5f7c87ba",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "MoHFW and WHO organize National Influenza Chintan Shivir for seasonal preparedness",
+        "text": "The Ministry of Health and Family Welfare, in collaboration with the World Health Organization, inaugurated a two-day Influenza Chintan Shivir in New Delhi to review seasonal influenza preparedness ahead of peak winter transmission. Union Health Minister Shri J.P. Nadda highlighted the role of the Integrated Disease Surveillance Programme (IDSP) in monitoring Influenza-Like Illness (ILI) and Severe Acute Respiratory Infection (SARI) across sentinel sites. Virological surveillance confirmed that circulating strains remain predominantly seasonal influenza A(H3N2) and B(Victoria), with low community transmission and no emerging antigenic drift.",
+        "publication_timestamp": "2025-12-22T11:30:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.179516Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2081190",
+        "language": "en",
+        "content_hash_sha256": "ded0a7c45aa30d700b1e5a6df6a987a7e37be522c252ac3c7f669798a71be8e6",
+        "provenance_metadata": {
+          "slug": "pib-influenza-chintan-shivir-dec2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-influenza-prep-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/6b793772-9378-55c7-bb48-2c8e5f7c87ba.txt",
+          "processed_storage_ref": "data/processed/6b793772-9378-55c7-bb48-2c8e5f7c87ba.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-influenza-prep-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "e0b8e3ef-3a56-50e0-8024-50250530fbfa",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "High-level review indicates seasonal respiratory infections remain within baseline levels",
+        "text": "Union Health Secretary chaired a review meeting with the National Centre for Disease Control (NCDC) and ICMR experts to assess winter respiratory illness trends. Data collected from 28 state surveillance units indicated that total ILI hospital presentations are consistent with five-year seasonal averages. No localized clustering or unexpected mortality was observed. States were advised to ensure standard infection control protocols and maintain adequate stockpiles of oseltamivir and viral transport media.",
+        "publication_timestamp": "2025-12-02T16:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.205397Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2079451",
+        "language": "en",
+        "content_hash_sha256": "b147051d34c702916f4501e40e3ed0b811e11bf09603336307253d6bd94a6121",
+        "provenance_metadata": {
+          "slug": "pib-seasonal-influenza-review-dec2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-influenza-baseline-dec2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/e0b8e3ef-3a56-50e0-8024-50250530fbfa.txt",
+          "processed_storage_ref": "data/processed/e0b8e3ef-3a56-50e0-8024-50250530fbfa.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-influenza-baseline-dec2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "576bfb44-4283-5c37-b67b-1fa324eae49a",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Health Minister issues preventive advisory to States for dengue and malaria management",
+        "text": "Union Health Minister Shri J.P. Nadda addressed an advisory to Chief Ministers emphasizing intensified community-led source reduction to preempt post-monsoon vector proliferation. Over 5,520 dengue and 2,530 chikungunya IgM diagnostic test kits have been supplied to 869 Sentinel Surveillance Hospitals nationwide. The advisory instructed municipal bodies to monitor Breteau indices and execute targeted indoor space sprays in urban clusters where intermittent rains had caused water stagnation.",
+        "publication_timestamp": "2025-09-11T14:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.206964Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2054112",
+        "language": "en",
+        "content_hash_sha256": "7dcd846950896719d97944f406c6db5fafe0c5af4e4b863b5c6808231e77cc53",
+        "provenance_metadata": {
+          "slug": "pib-dengue-advisory-chief-ministers-sep2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-dengue-advisory-sep2025",
+          "event_category": "precautionary_advisory",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/576bfb44-4283-5c37-b67b-1fa324eae49a.txt",
+          "processed_storage_ref": "data/processed/576bfb44-4283-5c37-b67b-1fa324eae49a.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-dengue-advisory-sep2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "81cefb7f-748c-5197-809f-9a44b8e40282",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Review of vector control and hospital bed readiness in Delhi and NCR",
+        "text": "A joint review meeting between MoHFW officials, the Municipal Corporation of Delhi, and the New Delhi Municipal Council reviewed hospital bed allocations for seasonal fevers. Central government hospitals in Delhi have designated 650 isolation beds and expanded daily platelet apheresis capacity. Current admissions for dengue and chikungunya across Delhi facilities remain 22% lower than the corresponding epidemiological period in 2024.",
+        "publication_timestamp": "2025-09-15T17:30:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.206964Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2055204",
+        "language": "en",
+        "content_hash_sha256": "c9e994f6bf622f5d439aeda398b9713fe4d867f9eae722c97dd6e88fcd85613d",
+        "provenance_metadata": {
+          "slug": "pib-dengue-delhi-ncr-review-sep2025",
+          "country": "India",
+          "region": "Delhi",
+          "incident_id": "bg-dengue-delhi-sep2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/81cefb7f-748c-5197-809f-9a44b8e40282.txt",
+          "processed_storage_ref": "data/processed/81cefb7f-748c-5197-809f-9a44b8e40282.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-dengue-delhi-sep2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "8769fcb9-d794-5219-b679-793a659df937",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "India reaffirms commitment to malaria elimination on World Malaria Day 2025",
+        "text": "On World Malaria Day 2025, the Ministry of Health and Family Welfare released national surveillance statistics indicating an 85% decline in total malaria cases and a 79% reduction in malaria deaths compared to 2015 baselines. Under the National Framework for Malaria Elimination (NFME) 2016-2030, over 124 districts have sustained zero indigenous malaria cases for three consecutive years and are preparing for sub-national elimination certification.",
+        "publication_timestamp": "2025-04-25T10:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.209938Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2018809",
+        "language": "en",
+        "content_hash_sha256": "1550d7b9d50b3c974272170aa4b7a6c66b155d5b00889a202d0329560e9abaf1",
+        "provenance_metadata": {
+          "slug": "pib-world-malaria-day-apr2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-malaria-elimination-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/8769fcb9-d794-5219-b679-793a659df937.txt",
+          "processed_storage_ref": "data/processed/8769fcb9-d794-5219-b679-793a659df937.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-malaria-elimination-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "049e74dc-9acc-5898-bf86-10dab1d9adbf",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "National Dengue Day observed with nationwide community source reduction drives",
+        "text": "The Ministry observed National Dengue Day across all States under the theme of community-driven vector management. Public health teams conducted inspections of 1.2 million households, sensitizing residents on eliminating stagnant water from coolers, discarded tires, and rooftop cisterns. Pre-monsoon larval density surveys in 110 endemic districts indicated container indices below 5%, reflecting effective baseline prevention.",
+        "publication_timestamp": "2025-05-16T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.211087Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2025619",
+        "language": "en",
+        "content_hash_sha256": "c1ff768befe7bd9077e0f57d733aa426610ba788a06d8947cfb25f006d751c9d",
+        "provenance_metadata": {
+          "slug": "pib-national-dengue-day-may2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-dengue-day-2025",
+          "event_category": "precautionary_advisory",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/049e74dc-9acc-5898-bf86-10dab1d9adbf.txt",
+          "processed_storage_ref": "data/processed/049e74dc-9acc-5898-bf86-10dab1d9adbf.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-dengue-day-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "d5c0efb2-d9c4-5412-8667-7e4e62d240ae",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Joint Monitoring Group confirms no unusual rise in respiratory illness cases in India",
+        "text": "The Joint Monitoring Group chaired by the Director General of Health Services reviewed international reports regarding respiratory clusters in northern China. Ongoing syndromic surveillance through IDSP confirmed that trends of Influenza-Like Illness (ILI) and Severe Acute Respiratory Infection (SARI) across Indian states show no unusual surge. Pediatric hospitalizations for respiratory syncytial virus (RSV) and Mycoplasma pneumoniae remain within historical seasonal expectations.",
+        "publication_timestamp": "2025-01-08T15:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.211087Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2003410",
+        "language": "en",
+        "content_hash_sha256": "b16cc13995ca6e7b0253fd6769533e6d1e38067e4ae3b42abc3cda42f4a2084c",
+        "provenance_metadata": {
+          "slug": "pib-respiratory-illness-china-clarification-jan2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-respiratory-china-clarification-2025",
+          "event_category": "negation_statement",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/d5c0efb2-d9c4-5412-8667-7e4e62d240ae.txt",
+          "processed_storage_ref": "data/processed/d5c0efb2-d9c4-5412-8667-7e4e62d240ae.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-respiratory-china-clarification-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "97031f34-221a-580a-8e77-dc0145b7634e",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "MoHFW clarifies no unusual surge in Human Metapneumovirus cases",
+        "text": "The Ministry of Health and Family Welfare clarified that continuous multi-pathogen surveillance conducted by ICMR-NIV Pune has detected sporadic cases of Human Metapneumovirus (HMPV), which is a common seasonal pathogen causing self-limiting upper respiratory tract infections. Reports alleging an unseasonal epidemic wave were refuted, with surveillance data confirming normal background circulation in pediatric cohorts.",
+        "publication_timestamp": "2025-02-14T13:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.214230Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2008914",
+        "language": "en",
+        "content_hash_sha256": "d10e3a0377dc1166bca607dc77f3e26e3fdd046b2e91480ed5ea855573a7ce63",
+        "provenance_metadata": {
+          "slug": "pib-hmpv-surveillance-clarification-feb2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-hmpv-clarification-2025",
+          "event_category": "negation_statement",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/97031f34-221a-580a-8e77-dc0145b7634e.txt",
+          "processed_storage_ref": "data/processed/97031f34-221a-580a-8e77-dc0145b7634e.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-hmpv-clarification-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "258bc291-c825-500b-92be-a69a036db2cb",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "National Tuberculosis Elimination Programme releases Annual TB Report 2025",
+        "text": "The National Tuberculosis Elimination Programme (NTEP) published its 2025 annual surveillance report, recording 2.53 million TB notifications in 2024, of which 33% originated from the private sector. Treatment success rates reached 89% for drug-susceptible TB. Over 1.8 million Ni-kshay Mitras have provided nutritional support to diagnosed patients. Molecular diagnostic coverage via NAAT machines expanded to 98% of blocks.",
+        "publication_timestamp": "2025-03-24T10:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.215409Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2016233",
+        "language": "en",
+        "content_hash_sha256": "9356d34563720525ecca8f701ed57c91adaab0d3e385a5255bc45453454f2ff5",
+        "provenance_metadata": {
+          "slug": "pib-world-tb-day-mar2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-tb-annual-report-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/258bc291-c825-500b-92be-a69a036db2cb.txt",
+          "processed_storage_ref": "data/processed/258bc291-c825-500b-92be-a69a036db2cb.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-tb-annual-report-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "e8b6678a-59f1-5f2d-9949-7e0dde581e7a",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "NCDC releases revised Heat Action Plan and hospital management guidelines",
+        "text": "The National Centre for Disease Control issued updated guidelines on preparedness and response to heat-related illnesses for State Health Departments. District hospitals in vulnerable agro-climatic zones were instructed to designate dedicated cool rooms, maintain adequate supplies of intravenous normal saline and Ringer lactate, and report daily heatstroke casualties through the Integrated Health Information Platform (IHIP) portal.",
+        "publication_timestamp": "2025-04-12T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.215409Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2019910",
+        "language": "en",
+        "content_hash_sha256": "caa45b148e313e26cf437cfe76149191fae98f233a789934bfc94676ac0f9044",
+        "provenance_metadata": {
+          "slug": "pib-heat-health-guidelines-apr2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-heat-action-2025",
+          "event_category": "precautionary_advisory",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/e8b6678a-59f1-5f2d-9949-7e0dde581e7a.txt",
+          "processed_storage_ref": "data/processed/e8b6678a-59f1-5f2d-9949-7e0dde581e7a.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-heat-action-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "c57a75e3-96b7-5395-99a0-e6627af46f59",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Leh, Ladakh",
+        "text": "State: Ladakh | District: Leh | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2025-06-13. Routine epidemiological surveillance across primary health centers in Leh and Nubra blocks reported zero clusters of acute diarrheal disease, viral hepatitis, or acute respiratory illness during epidemiological week 24. Background morbidity reflects typical seasonal high-altitude respiratory complaints without focal aberration.",
+        "publication_timestamp": "2025-06-15T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.217581Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2025/06/idsp-week24-2025.pdf",
+        "language": "en",
+        "content_hash_sha256": "1b7f819ee1fe336c83be33778f6b8a114b1f60274bf59562b1626e8f0d912f78",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-leh-ladakh-2025",
+          "country": "India",
+          "region": "Ladakh",
+          "incident_id": "bg-idsp-nil-ladakh-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/c57a75e3-96b7-5395-99a0-e6627af46f59.txt",
+          "processed_storage_ref": "data/processed/c57a75e3-96b7-5395-99a0-e6627af46f59.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-ladakh-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "96f226ae-93b7-5869-b75d-0cf9fbd696dd",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from South Goa",
+        "text": "State: Goa | District: South Goa | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2025-08-15. Comprehensive syndromic monitoring from coastal primary health centers and district hospital Margao indicated zero localized outbreaks. Routine monsoon fever cases tested negative for malaria and dengue, remaining within multi-year baseline parameters.",
+        "publication_timestamp": "2025-08-17T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.219088Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2025/08/idsp-week33-2025.pdf",
+        "language": "en",
+        "content_hash_sha256": "3caa09e63f998dda6d98d1994cc3fa1410fa8cdff0f93ee1bd78448a667b328a",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-south-goa-2025",
+          "country": "India",
+          "region": "Goa",
+          "incident_id": "bg-idsp-nil-goa-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/96f226ae-93b7-5869-b75d-0cf9fbd696dd.txt",
+          "processed_storage_ref": "data/processed/96f226ae-93b7-5869-b75d-0cf9fbd696dd.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-goa-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "d16485d5-15f2-5af2-8527-fb85625811ed",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Lakshadweep",
+        "text": "State: Lakshadweep | District: Kavaratti | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2025-07-11. Island health centers across Agatti, Amini, and Kavaratti reported zero outbreak events. Drinking water chlorination monitoring confirmed residual free chlorine levels above 0.5 ppm in municipal rainwater harvesting cisterns.",
+        "publication_timestamp": "2025-07-13T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.219088Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2025/07/idsp-week28-2025.pdf",
+        "language": "en",
+        "content_hash_sha256": "ada084f5c93f7c8bf8384c91b4433994d4194861aa718f152a5d36c53d470857",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-lakshadweep-2025",
+          "country": "India",
+          "region": "Lakshadweep",
+          "incident_id": "bg-idsp-nil-lakshadweep-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/d16485d5-15f2-5af2-8527-fb85625811ed.txt",
+          "processed_storage_ref": "data/processed/d16485d5-15f2-5af2-8527-fb85625811ed.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-lakshadweep-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "2871f6fa-e613-543d-8b70-de4844b1dc9a",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Wayanad, Kerala",
+        "text": "State: Kerala | District: Wayanad | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2025-03-14. Dry season surveillance for Kyasanur Forest Disease (KFD) and scrub typhus in forested tribal settlements of Mananthavady and Sulthan Bathery reported zero active human cases or unusual monkey deaths.",
+        "publication_timestamp": "2025-03-16T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.221019Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2025/03/idsp-week11-2025.pdf",
+        "language": "en",
+        "content_hash_sha256": "a5ab0237aef7dc97c3498cefa2c7ec3ab7494733f054c81167e4fb7bd8c31850",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-wayanad-2025",
+          "country": "India",
+          "region": "Kerala",
+          "incident_id": "bg-idsp-nil-wayanad-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/2871f6fa-e613-543d-8b70-de4844b1dc9a.txt",
+          "processed_storage_ref": "data/processed/2871f6fa-e613-543d-8b70-de4844b1dc9a.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-wayanad-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "4849aaad-8c9b-5524-a72e-1f65bd460d20",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Aizawl, Mizoram",
+        "text": "State: Mizoram | District: Aizawl | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2025-05-16. Community surveillance and hospital laboratory reporting across Aizawl East and West blocks recorded no clusters of epidemic-prone enteric or vector-borne conditions during week 20.",
+        "publication_timestamp": "2025-05-18T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.221019Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2025/05/idsp-week20-2025.pdf",
+        "language": "en",
+        "content_hash_sha256": "231bb3ae138d930c7dca2277f6d88a44baae07c23586bda699e84dbd9b219621",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-mizoram-2025",
+          "country": "India",
+          "region": "Mizoram",
+          "incident_id": "bg-idsp-nil-mizoram-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/4849aaad-8c9b-5524-a72e-1f65bd460d20.txt",
+          "processed_storage_ref": "data/processed/4849aaad-8c9b-5524-a72e-1f65bd460d20.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-mizoram-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "1ba25dca-03dc-5403-9da9-e50fd417013f",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Bilaspur, Himachal Pradesh",
+        "text": "State: Himachal Pradesh | District: Bilaspur | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2025-04-18. Routine weekly health reporting from all sub-centers and community health centers indicated baseline viral fever presentations without clustering. Water sources tested negative for coliform contamination.",
+        "publication_timestamp": "2025-04-20T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.222559Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2025/04/idsp-week16-2025.pdf",
+        "language": "en",
+        "content_hash_sha256": "6f3d27999f96fb46858d4db1c7b8090fe4957d93c15312b86fc457fc3509c1bf",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-bilaspur-hp-2025",
+          "country": "India",
+          "region": "Himachal Pradesh",
+          "incident_id": "bg-idsp-nil-hp-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/1ba25dca-03dc-5403-9da9-e50fd417013f.txt",
+          "processed_storage_ref": "data/processed/1ba25dca-03dc-5403-9da9-e50fd417013f.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-hp-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "16086e1e-c900-5d83-888c-c14f99fa81bb",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Seasonal Influenza Routine Surveillance in Central Delhi",
+        "text": "State: Delhi | District: Central Delhi | Disease/Illness: Seasonal Influenza (Routine Monitoring) | No. of Cases: 12 | No. of Deaths: 0 | Date of reporting: 2025-02-14. Routine surveillance at Lady Hardinge and RML Hospital sentinel sites showed 12 mild laboratory-confirmed Influenza A(H3N2) cases among 140 tested ILI samples. No atypical pneumonia or ventilator requirement recorded. Outbreak status: Routine baseline activity.",
+        "publication_timestamp": "2025-02-16T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.222559Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2025/02/idsp-week07-2025.pdf",
+        "language": "en",
+        "content_hash_sha256": "cfdb336233455123fee5478777d342af558bca013dca749ffab9cad577dd0173",
+        "provenance_metadata": {
+          "slug": "idsp-routine-influenza-monitoring-delhi-2025",
+          "country": "India",
+          "region": "Delhi",
+          "incident_id": "bg-idsp-routine-flu-delhi-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/16086e1e-c900-5d83-888c-c14f99fa81bb.txt",
+          "processed_storage_ref": "data/processed/16086e1e-c900-5d83-888c-c14f99fa81bb.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-routine-flu-delhi-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "79213097-3d8e-5cfc-a59c-e9250e163c31",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Pudukkottai, Tamil Nadu",
+        "text": "State: Tamil Nadu | District: Pudukkottai | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2024-02-23. Winter post-monsoon surveillance across rural primary health centers in Aranthangi and Viralimalai blocks indicated zero outbreak clusters. Larval indices for Aedes aegypti remained below threshold levels.",
+        "publication_timestamp": "2024-02-25T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.224585Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/02/idsp-week08-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "8cdfae790186e304d0d821ff1ddcec63b08d5726a9db92279bb6139395d4ee44",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-pudukkottai-2024",
+          "country": "India",
+          "region": "Tamil Nadu",
+          "incident_id": "bg-idsp-nil-tn-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/79213097-3d8e-5cfc-a59c-e9250e163c31.txt",
+          "processed_storage_ref": "data/processed/79213097-3d8e-5cfc-a59c-e9250e163c31.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-tn-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "d8f7d924-7234-5cf7-b65e-0700f7b99da2",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Kurukshetra, Haryana",
+        "text": "State: Haryana | District: Kurukshetra | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2024-04-12. Weekly epidemiological returns from Shahabad and Pehowa blocks reported zero outbreaks of food poisoning, cholera, or viral fevers. Routine immunization sessions completed as scheduled.",
+        "publication_timestamp": "2024-04-14T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.224585Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/04/idsp-week15-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "ad5e789b08e8addaecabaf1b92e0f037d9de1b1c950b25d39dc81619f4da189c",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-kurukshetra-2024",
+          "country": "India",
+          "region": "Haryana",
+          "incident_id": "bg-idsp-nil-haryana-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/d8f7d924-7234-5cf7-b65e-0700f7b99da2.txt",
+          "processed_storage_ref": "data/processed/d8f7d924-7234-5cf7-b65e-0700f7b99da2.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-haryana-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "1b9b9728-b0e6-51a5-8d0b-5ad4cf29ca17",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Kinnaur, Himachal Pradesh",
+        "text": "State: Himachal Pradesh | District: Kinnaur | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2024-05-24. High-altitude tribal areas of Pooh and Kalpa reported zero outbreak occurrences during week 21. Water testing from glaciated stream intakes showed zero bacterial contamination.",
+        "publication_timestamp": "2024-05-26T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.226761Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/05/idsp-week21-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "7b0bd69e2bf8fac4a1172839e1be0d3b2bbd4657f80d6f278c87be3c6b26bae2",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-kinnaur-2024",
+          "country": "India",
+          "region": "Himachal Pradesh",
+          "incident_id": "bg-idsp-nil-kinnaur-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/1b9b9728-b0e6-51a5-8d0b-5ad4cf29ca17.txt",
+          "processed_storage_ref": "data/processed/1b9b9728-b0e6-51a5-8d0b-5ad4cf29ca17.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-kinnaur-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "2cae1619-9d19-5567-af69-dbbe2d7ffd61",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Global Influenza Programme Update 480 – Seasonal Activity Overview",
+        "text": "Globally, influenza detections remained low across temperate zones of the Northern Hemisphere, consistent with expected inter-seasonal baseline activity. In Southern Asia, sporadic influenza A(H1N1)pdm09 and A(H3N2) detections were reported from India and Nepal, with low percentage positivity among sentinel outpatient ILI visits. Characterization of circulating strains indicated antigenic alignment with seasonal vaccine recommendations.",
+        "publication_timestamp": "2024-10-14T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.227666Z",
+        "source_url": "https://www.who.int/publications/m/item/influenza-update-n-480",
+        "language": "en",
+        "content_hash_sha256": "c83278b73c76a2d93558a01ffd47ffe551cdcf30219f1bc6df9dd8eb1f81433e",
+        "provenance_metadata": {
+          "slug": "who-global-influenza-update-480-2024",
+          "country": "Global",
+          "region": "Global",
+          "incident_id": "bg-who-influenza-update-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/2cae1619-9d19-5567-af69-dbbe2d7ffd61.txt",
+          "processed_storage_ref": "data/processed/2cae1619-9d19-5567-af69-dbbe2d7ffd61.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-who-influenza-update-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "7d4437a8-4f79-5b33-b90f-d8f6ad54faa7",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Global Polio Eradication Initiative – Weekly update on wild poliovirus status",
+        "text": "The WHO South-East Asia Region, including India, maintained its polio-free certification status for the eleventh consecutive year, with zero indigenous wild poliovirus (WPV) cases detected. Environmental sewage surveillance across 54 sentinel sites in high-risk metropolitan areas consistently confirmed the absence of wild poliovirus and circulating vaccine-derived polioviruses (cVDPV).",
+        "publication_timestamp": "2025-06-25T14:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.227666Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/polio-weekly-update-2025",
+        "language": "en",
+        "content_hash_sha256": "dfe0ce72768ddfd64394fbc7d68f975dbae80a98da634f0561e9b948625ad7b3",
+        "provenance_metadata": {
+          "slug": "who-polio-eradication-weekly-update-2025",
+          "country": "Global",
+          "region": "South-East Asia",
+          "incident_id": "bg-who-polio-weekly-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/7d4437a8-4f79-5b33-b90f-d8f6ad54faa7.txt",
+          "processed_storage_ref": "data/processed/7d4437a8-4f79-5b33-b90f-d8f6ad54faa7.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-who-polio-weekly-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "41c86541-234a-5f63-b87e-7a808cf56ccd",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Progress toward Measles and Rubella Elimination in the South-East Asia Region",
+        "text": "The Regional Verification Commission for Measles and Rubella Elimination verified that five member states in the South-East Asia Region have sustained measles elimination, while seven have eliminated rubella. National first-dose measles-containing vaccine (MCV1) coverage across the region stabilized at 92%, with fever-rash laboratory surveillance exceeding international reporting sensitivity benchmarks of 2 discarded cases per 100,000 population.",
+        "publication_timestamp": "2024-08-30T10:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.229172Z",
+        "source_url": "https://www.who.int/publications/wer/2024/wer9935",
+        "language": "en",
+        "content_hash_sha256": "e7a0750ec8481773a9370d8611104c07bdacc072b0ee1a1fa4b0f244830e21ce",
+        "provenance_metadata": {
+          "slug": "who-measles-rubella-elimination-wer-2024",
+          "country": "Global",
+          "region": "South-East Asia",
+          "incident_id": "bg-who-measles-wer-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/41c86541-234a-5f63-b87e-7a808cf56ccd.txt",
+          "processed_storage_ref": "data/processed/41c86541-234a-5f63-b87e-7a808cf56ccd.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-who-measles-wer-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "eead3614-dcd4-5ad7-bf2d-d99e3e1332b0",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Global Antimicrobial Resistance and Use Surveillance System (GLASS) Annual Summary",
+        "text": "The 2024 GLASS report synthesized antimicrobial resistance surveillance from 127 participating countries. Routine surveillance of common bloodstream isolates highlighted stable resistance proportions in Escherichia coli and Klebsiella pneumoniae to third-generation cephalosporins, emphasizing the need for reinforced hospital diagnostic stewardship and laboratory quality accreditation.",
+        "publication_timestamp": "2024-11-20T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.229864Z",
+        "source_url": "https://www.who.int/publications/i/item/9789240089201",
+        "language": "en",
+        "content_hash_sha256": "ba4e73c53e35758df0f846f76fe73e545009f23e92aba15411c9977190465606",
+        "provenance_metadata": {
+          "slug": "who-antimicrobial-resistance-glass-2024",
+          "country": "Global",
+          "region": "Global",
+          "incident_id": "bg-who-glass-amr-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/eead3614-dcd4-5ad7-bf2d-d99e3e1332b0.txt",
+          "processed_storage_ref": "data/processed/eead3614-dcd4-5ad7-bf2d-d99e3e1332b0.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-who-glass-amr-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "53eda43d-c2bb-571a-af58-f841b142dd53",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "National Deworming Day reaches over 240 million children across States",
+        "text": "The Ministry of Health and Family Welfare conducted the August 2024 round of National Deworming Day (NDD) in schools and anganwadi centers nationwide. Age-appropriate albendazole tablets were administered to children aged 1 to 19 years to treat Soil-Transmitted Helminths (STH). Community health workers tracked zero serious adverse events, reinforcing routine preventative child health milestones.",
+        "publication_timestamp": "2024-08-10T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.231396Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2044102",
+        "language": "en",
+        "content_hash_sha256": "d1b2db7a56f3ecc2dc454a38b94d3927151fe92bbe80ae7c2a7d5abdcb6e0bcb",
+        "provenance_metadata": {
+          "slug": "pib-national-deworming-day-aug2024",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-deworming-day-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/53eda43d-c2bb-571a-af58-f841b142dd53.txt",
+          "processed_storage_ref": "data/processed/53eda43d-c2bb-571a-af58-f841b142dd53.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-deworming-day-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "4a852b17-7b68-5414-a646-c985093e7088",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "National Immunization Day for Polio vaccinates over 110 million children",
+        "text": "President of India launched the National Immunization Day (NID) for Polio for 2024 by administering oral polio vaccine drops to children. Over 110 million children under five years were immunized across all States and Union Territories. India has recorded zero wild poliovirus transmission since January 2011, sustained through rigorous environmental surveillance and acute flaccid paralysis (AFP) reporting.",
+        "publication_timestamp": "2024-03-03T15:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.231954Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2010891",
+        "language": "en",
+        "content_hash_sha256": "f4d21d5ecb44158396d386a06f8e670f74be86ae2bca311d339f4589d3b43c0a",
+        "provenance_metadata": {
+          "slug": "pib-pulse-polio-nids-mar2024",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-pulse-polio-nid-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/4a852b17-7b68-5414-a646-c985093e7088.txt",
+          "processed_storage_ref": "data/processed/4a852b17-7b68-5414-a646-c985093e7088.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-pulse-polio-nid-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "c4c63742-5439-5ac9-b0a4-fdf083e3c084",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Clinical advisory on diagnosis and supportive management of Chikungunya fever",
+        "text": "The Directorate General of Health Services issued clinical guidelines to state physicians on triaging acute chikungunya fever during the monsoon season. The guidance cautioned clinicians against prescribing aspirin or corticosteroids during acute febrile phases, recommending paracetamol and adequate oral hydration for managing peripheral arthralgia while waiting for serological confirmation.",
+        "publication_timestamp": "2024-07-29T14:30:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.232531Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2037190",
+        "language": "en",
+        "content_hash_sha256": "42288ca97727d1730912ed4f22e86044f38da796e13616cf0b6fd4c5a0e03452",
+        "provenance_metadata": {
+          "slug": "pib-chikungunya-advisory-jul2024",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-chikungunya-advisory-2024",
+          "event_category": "precautionary_advisory",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/c4c63742-5439-5ac9-b0a4-fdf083e3c084.txt",
+          "processed_storage_ref": "data/processed/c4c63742-5439-5ac9-b0a4-fdf083e3c084.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-chikungunya-advisory-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "0050b8e5-3573-50f4-83f0-bf8dff83dafc",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Intensified Mission Indradhanush 5.0 achieves high coverage for measles and rubella",
+        "text": "The Ministry concluded three nationwide rounds of Intensified Mission Indradhanush (IMI) 5.0, vaccinating 3.4 million pregnant women and 11.2 million children up to 5 years against vaccine-preventable diseases. The campaign prioritized zero-dose children in underserved urban slums and remote tribal hamlets, contributing to sustained declines in pediatric vaccine-preventable disease outbreaks.",
+        "publication_timestamp": "2023-10-20T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.233900Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1969212",
+        "language": "en",
+        "content_hash_sha256": "2c97c33e3d7eca78fe8a22caef9fc5ab863e5f9eb937a06494d2d9639e75b009",
+        "provenance_metadata": {
+          "slug": "pib-universal-immunization-intensified-mission-2023",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-imi-vaccine-coverage-2023",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/0050b8e5-3573-50f4-83f0-bf8dff83dafc.txt",
+          "processed_storage_ref": "data/processed/0050b8e5-3573-50f4-83f0-bf8dff83dafc.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-imi-vaccine-coverage-2023",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "742d1ca1-e1fd-56a5-b4e7-d3c8b1bc6af3",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Over 150 million screenings conducted at Ayushman Arogya Mandirs",
+        "text": "Primary healthcare teams across 161,000 operational Ayushman Arogya Mandirs (Health and Wellness Centers) completed 150 million health screenings for hypertension, diabetes, and common cancers. Community health officers maintained routine communicable disease surveillance logs, referring suspected persistent cough cases for sputum smear microscopy under the national TB program.",
+        "publication_timestamp": "2023-11-17T13:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.235602Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1978210",
+        "language": "en",
+        "content_hash_sha256": "d1a788ad375dd5a9b96f7be7c441ad8c1d9468851f0e4edc406a3f2bdc3659b6",
+        "provenance_metadata": {
+          "slug": "pib-ayushman-screening-milestone-nov2023",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-ayushman-screening-2023",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/742d1ca1-e1fd-56a5-b4e7-d3c8b1bc6af3.txt",
+          "processed_storage_ref": "data/processed/742d1ca1-e1fd-56a5-b4e7-d3c8b1bc6af3.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-ayushman-screening-2023",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "93bf6228-ac75-5d0a-9f7d-7aa0bf8e58f1",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "National Action Plan for Dog Mediated Rabies Elimination reviewed on World Rabies Day",
+        "text": "On World Rabies Day 2023, the National Centre for Disease Control highlighted progress under the National Action Plan for Dog Mediated Rabies Elimination by 2030 (NAPRE). Over 85% of district hospitals have operationalized dedicated animal bite clinics providing free anti-rabies vaccination (ARV) and rabies immunoglobulin (RIG), reducing fatal rabies incidence to isolated rural cases.",
+        "publication_timestamp": "2023-09-28T10:30:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.235602Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1961910",
+        "language": "en",
+        "content_hash_sha256": "7b014a44d186feea41d717619f035a9e98eb8cdd3cce17ce31455cba198600ec",
+        "provenance_metadata": {
+          "slug": "pib-world-rabies-day-sep2023",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-rabies-elimination-2023",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/93bf6228-ac75-5d0a-9f7d-7aa0bf8e58f1.txt",
+          "processed_storage_ref": "data/processed/93bf6228-ac75-5d0a-9f7d-7aa0bf8e58f1.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-rabies-elimination-2023",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "43a936c6-b14f-5e1d-829d-d4b5912deb54",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Alwar, Rajasthan",
+        "text": "State: Rajasthan | District: Alwar | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2024-01-26. Winter surveillance across Tijara and Kishangarh Bas blocks confirmed zero outbreaks. Acute respiratory infections presented in expected cold-weather frequencies without hospital surge.",
+        "publication_timestamp": "2024-01-28T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.237691Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/01/idsp-week04-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "f165b2e8e9f3432301bde65a81a4df34cc4bb6fd9de275ead062d7c3104e508a",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-alwar-2024",
+          "country": "India",
+          "region": "Rajasthan",
+          "incident_id": "bg-idsp-nil-alwar-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/43a936c6-b14f-5e1d-829d-d4b5912deb54.txt",
+          "processed_storage_ref": "data/processed/43a936c6-b14f-5e1d-829d-d4b5912deb54.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-alwar-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "2b2a0cac-fa04-5ada-91dd-aedeaca5c236",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Kasaragod, Kerala",
+        "text": "State: Kerala | District: Kasaragod | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2023-11-17. Comprehensive fever surveillance following post-monsoon clearing indicated zero active outbreaks of dengue or leptospirosis across coastal panchayats.",
+        "publication_timestamp": "2023-11-19T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.237691Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2023/11/idsp-week46-2023.pdf",
+        "language": "en",
+        "content_hash_sha256": "baff73c9f01aa26fe702d121314a922e04a505d33d24b1bc2930d236a743d74e",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-kasaragod-2023",
+          "country": "India",
+          "region": "Kerala",
+          "incident_id": "bg-idsp-nil-kasaragod-2023",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/2b2a0cac-fa04-5ada-91dd-aedeaca5c236.txt",
+          "processed_storage_ref": "data/processed/2b2a0cac-fa04-5ada-91dd-aedeaca5c236.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-kasaragod-2023",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "9a97649b-c534-52fa-a843-3ac6f73894e0",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Champawat, Uttarakhand",
+        "text": "State: Uttarakhand | District: Champawat | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2024-06-21. Mountainous blocks of Lohaghat and Pati reported zero waterborne or enteric disease outbreaks. Natural spring water quality testing showed satisfactory potability.",
+        "publication_timestamp": "2024-06-23T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.239246Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/06/idsp-week25-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "9168c6bf1f924be0a492b8099a782999b09643ae24d116bcee805b46dafb17fe",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-champawat-2024",
+          "country": "India",
+          "region": "Uttarakhand",
+          "incident_id": "bg-idsp-nil-champawat-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/9a97649b-c534-52fa-a843-3ac6f73894e0.txt",
+          "processed_storage_ref": "data/processed/9a97649b-c534-52fa-a843-3ac6f73894e0.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-champawat-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "57c30564-69da-5414-a42e-7b63ae971877",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from The Dangs, Gujarat",
+        "text": "State: Gujarat | District: The Dangs | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2024-04-26. Forested tribal communities in Ahwa taluka reported zero focal disease outbreaks during week 17. Pre-monsoon health checkup camps documented baseline health status.",
+        "publication_timestamp": "2024-04-28T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.239246Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/04/idsp-week17-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "f57900eafd64b89732ae0c8e2e40a9f7c21840c3af7f28a98fe3d33a24051847",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-dangs-2024",
+          "country": "India",
+          "region": "Gujarat",
+          "incident_id": "bg-idsp-nil-dangs-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/57c30564-69da-5414-a42e-7b63ae971877.txt",
+          "processed_storage_ref": "data/processed/57c30564-69da-5414-a42e-7b63ae971877.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-dangs-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "52b09892-7f38-5bef-9451-cd811d685be9",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Tapi, Gujarat",
+        "text": "State: Gujarat | District: Tapi | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2023-12-15. Vyara and Songadh sub-district reporting centers indicated zero disease outbreaks. Routine maternal and child immunization programs proceeded without disruption.",
+        "publication_timestamp": "2023-12-17T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.239246Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2023/12/idsp-week50-2023.pdf",
+        "language": "en",
+        "content_hash_sha256": "58cfaf65b2b48c005e239b8e5497af79f63db9d3dd5a637824ec9096bd66a7e0",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-tapi-2023",
+          "country": "India",
+          "region": "Gujarat",
+          "incident_id": "bg-idsp-nil-tapi-2023",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/52b09892-7f38-5bef-9451-cd811d685be9.txt",
+          "processed_storage_ref": "data/processed/52b09892-7f38-5bef-9451-cd811d685be9.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-tapi-2023",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "bfcdcc79-5f5e-5dd8-8101-ad3a4aaad77d",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Chamarajanagar, Karnataka",
+        "text": "State: Karnataka | District: Chamarajanagar | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2025-01-17. Border forest fringe villages in Gundlupet and Kollegal reported zero cases of tick-borne fevers or acute diarrheal illness during epidemiological week 3.",
+        "publication_timestamp": "2025-01-19T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.239246Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2025/01/idsp-week03-2025.pdf",
+        "language": "en",
+        "content_hash_sha256": "d6cc1cf9c5995b7959327d80603bdcfe957fbd2fe84358e351eb5bd6fd84e423",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-chamarajanagar-2025",
+          "country": "India",
+          "region": "Karnataka",
+          "incident_id": "bg-idsp-nil-karnataka-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/bfcdcc79-5f5e-5dd8-8101-ad3a4aaad77d.txt",
+          "processed_storage_ref": "data/processed/bfcdcc79-5f5e-5dd8-8101-ad3a4aaad77d.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-karnataka-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "8217fb10-e9f4-58b3-a649-1d129a639b87",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Ramanathapuram, Tamil Nadu",
+        "text": "State: Tamil Nadu | District: Ramanathapuram | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2025-05-30. Coastal primary health centers in Rameswaram and Paramakudi recorded zero unusual disease surges. Routine chlorination of overhead tanks verified by public health inspectors.",
+        "publication_timestamp": "2025-06-01T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.239246Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2025/05/idsp-week22-2025.pdf",
+        "language": "en",
+        "content_hash_sha256": "3b39a5ff7c6c6c878c5dad1e09da92e473fc9dc2df6597af893f12296734261f",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-ramanathapuram-2025",
+          "country": "India",
+          "region": "Tamil Nadu",
+          "incident_id": "bg-idsp-nil-ramanathapuram-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/8217fb10-e9f4-58b3-a649-1d129a639b87.txt",
+          "processed_storage_ref": "data/processed/8217fb10-e9f4-58b3-a649-1d129a639b87.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-ramanathapuram-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "67ff7760-380e-5e90-aa9f-de6d6785e5dc",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from Fatehgarh Sahib, Punjab",
+        "text": "State: Punjab | District: Fatehgarh Sahib | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2025-07-18. Monitored health centers in Sirhind and Amloh blocks recorded no waterborne disease outbreaks. Routine chlorination tablets were distributed in low-lying villages.",
+        "publication_timestamp": "2025-07-20T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.239246Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2025/07/idsp-week29-2025.pdf",
+        "language": "en",
+        "content_hash_sha256": "87ce1bcdf73f37cc35e72125c8f91eb4af0efdc0dc8bbf965be1de979737de96",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-fatehgarh-sahib-2025",
+          "country": "India",
+          "region": "Punjab",
+          "incident_id": "bg-idsp-nil-punjab-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/67ff7760-380e-5e90-aa9f-de6d6785e5dc.txt",
+          "processed_storage_ref": "data/processed/67ff7760-380e-5e90-aa9f-de6d6785e5dc.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-idsp-nil-punjab-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "8fb5d904-be8a-5128-acd6-9216079a7667",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "National Deworming Day Spring 2025 edition launched across primary schools",
+        "text": "The first round of National Deworming Day for 2025 was conducted across 30 States and UTs. Integrated child development services reported smooth distribution of age-graded chewable albendazole tablets to preschool and school-age children. Routine surveillance noted no cluster adverse drug reactions, supporting baseline gastrointestinal wellness.",
+        "publication_timestamp": "2025-02-10T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.239246Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2004510",
+        "language": "en",
+        "content_hash_sha256": "7e4125633fa00fdf8e4df573391b409275b3a3c75e94667a347581ef5a46ceaa",
+        "provenance_metadata": {
+          "slug": "pib-national-deworming-feb2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-deworming-spring-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/8fb5d904-be8a-5128-acd6-9216079a7667.txt",
+          "processed_storage_ref": "data/processed/8fb5d904-be8a-5128-acd6-9216079a7667.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-deworming-spring-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "8fcad940-ef25-5048-8974-4c3d93b73797",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "National Viral Hepatitis Control Program expands free viral load testing",
+        "text": "On World Hepatitis Day 2024, the Ministry of Health and Family Welfare highlighted the expansion of the National Viral Hepatitis Control Program (NVHCP) to 650 district hospitals. Free treatment for Hepatitis C with directly acting antivirals has cured over 310,000 patients, while birth-dose Hepatitis B vaccination reached 87% coverage across institutional deliveries.",
+        "publication_timestamp": "2024-07-28T10:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.245763Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2038101",
+        "language": "en",
+        "content_hash_sha256": "e27861f7018f66b26e01b6f9bb22459be34a0270f9cdec76d7e2b35f5893270d",
+        "provenance_metadata": {
+          "slug": "pib-world-hepatitis-day-jul2024",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-hepatitis-control-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/8fcad940-ef25-5048-8974-4c3d93b73797.txt",
+          "processed_storage_ref": "data/processed/8fcad940-ef25-5048-8974-4c3d93b73797.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-hepatitis-control-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "b3d94cf0-76ae-585f-aead-1d25cec3c3d1",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Sparsh Leprosy Awareness Campaign launched nationwide",
+        "text": "The Ministry launched the annual Sparsh Leprosy Awareness Campaign across Gram Panchayats. Under the National Leprosy Eradication Programme, active case detection campaigns in endemic blocks completed early screening, ensuring that Grade II disability rates among new detected cases remain below 2%.",
+        "publication_timestamp": "2024-01-30T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.245763Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1999912",
+        "language": "en",
+        "content_hash_sha256": "10a94c50a9c08daeebd9536dd89118e1c6a5fb62291a482b4eb4e0e9e55c099b",
+        "provenance_metadata": {
+          "slug": "pib-leprosy-awareness-campaign-jan2024",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-leprosy-campaign-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/b3d94cf0-76ae-585f-aead-1d25cec3c3d1.txt",
+          "processed_storage_ref": "data/processed/b3d94cf0-76ae-585f-aead-1d25cec3c3d1.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-leprosy-campaign-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "54e96735-f00b-5f45-ab97-7b6831370766",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Inter-ministerial vector control task force reviews monsoon water storage in urban hubs",
+        "text": "The Central Vector-Borne Disease Control Programme reviewed monsoon sanitation across metropolitan corridors in Mumbai, Kolkata, Bengaluru, and Hyderabad. Municipal commissioners were instructed to biological control methods including Gambusia affinis fish seeding in large stagnant water bodies and bi-weekly larvicide spraying.",
+        "publication_timestamp": "2025-07-22T14:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.247481Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2039912",
+        "language": "en",
+        "content_hash_sha256": "5a4274fc84433da7a59cbf2ab1cf8d8fbf4e4ba820a0e63c749ad4545b11a369",
+        "provenance_metadata": {
+          "slug": "pib-monsoon-vector-preparedness-jul2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-vector-taskforce-2025",
+          "event_category": "precautionary_advisory",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/54e96735-f00b-5f45-ab97-7b6831370766.txt",
+          "processed_storage_ref": "data/processed/54e96735-f00b-5f45-ab97-7b6831370766.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-vector-taskforce-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "4c96836c-83e2-5082-a616-4de6b7b719de",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Anti-Dengue Month observed with localized entomological surveys",
+        "text": "July was observed as Anti-Dengue Month across all endemic districts in India. The Ministry emphasized that public compliance with dry-day observances on Sundays has substantially reduced domestic Aedes breeding habitats in residential overhead tanks and construction basements.",
+        "publication_timestamp": "2024-07-01T10:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.247481Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2030911",
+        "language": "en",
+        "content_hash_sha256": "b35de5958766d665991bad1cd3103f98803c2a433777529015994cdf3e062a0b",
+        "provenance_metadata": {
+          "slug": "pib-anti-dengue-month-jul2024",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-anti-dengue-month-2024",
+          "event_category": "precautionary_advisory",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/4c96836c-83e2-5082-a616-4de6b7b719de.txt",
+          "processed_storage_ref": "data/processed/4c96836c-83e2-5082-a616-4de6b7b719de.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-anti-dengue-month-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "f4ade400-56c5-595d-8be0-56df3424c4c6",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Ayushman Bhava campaign mobilizes health melas in rural primary health centers",
+        "text": "The nationwide Ayushman Bhava campaign concluded with over 78,000 Health Melas conducted at Community Health Centers. Specialists screened over 14 million rural citizens, documenting normal background illness prevalence and identifying early chronic health conditions requiring lifestyle intervention.",
+        "publication_timestamp": "2023-09-17T15:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.249546Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1958801",
+        "language": "en",
+        "content_hash_sha256": "6ee69ff983dd961124bf7319397e4a0e7a42f9a9a1ab165a8b3e9963f5abd730",
+        "provenance_metadata": {
+          "slug": "pib-ayushman-bhava-campaign-sep2023",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-ayushman-bhava-2023",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/f4ade400-56c5-595d-8be0-56df3424c4c6.txt",
+          "processed_storage_ref": "data/processed/f4ade400-56c5-595d-8be0-56df3424c4c6.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-ayushman-bhava-2023",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "f2f2f9c0-03e2-5215-91ac-2c3f5735d311",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Universal Health Coverage Day 2024 celebrates strengthening of primary healthcare",
+        "text": "On Universal Health Coverage Day 2024, the Ministry presented awards to best-performing States in primary healthcare digital surveillance. Integration of electronic health records with the Ayushman Bharat Digital Mission (ABDM) has expanded disease surveillance tracking to over 480,000 verified public health facilities.",
+        "publication_timestamp": "2024-12-12T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.250078Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2072101",
+        "language": "en",
+        "content_hash_sha256": "8f30963071ade25c4a990217fe7da8d91df3ed3fc7bf8c6fb831d086b5784ff3",
+        "provenance_metadata": {
+          "slug": "pib-universal-health-coverage-day-dec2024",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-uhc-day-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/f2f2f9c0-03e2-5215-91ac-2c3f5735d311.txt",
+          "processed_storage_ref": "data/processed/f2f2f9c0-03e2-5215-91ac-2c3f5735d311.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-uhc-day-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "bbe3ba54-a98c-56a9-baff-162bbe468c96",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "National Family Planning Summit emphasizes maternal and child health outcomes",
+        "text": "Health experts at the National Family Planning Summit reviewed maternal mortality ratio (MMR) declines across high-focus states. Routine antenatal care tracking through the RCH portal verified steady increases in institutional delivery and post-partum newborn immunization coverage.",
+        "publication_timestamp": "2024-07-11T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.251089Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2032410",
+        "language": "en",
+        "content_hash_sha256": "8bad3a97a062d5ee9ff3cd30868f96f2c8779cd6b982c81f8033cc069a4b2650",
+        "provenance_metadata": {
+          "slug": "pib-national-family-planning-summit-jul2024",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-family-planning-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/bbe3ba54-a98c-56a9-baff-162bbe468c96.txt",
+          "processed_storage_ref": "data/processed/bbe3ba54-a98c-56a9-baff-162bbe468c96.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-family-planning-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "f84afd74-efcd-5ae9-b7a9-798ddf47cdca",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Global Influenza Programme Update 485 – Inter-seasonal Surveillance",
+        "text": "During epidemiological weeks 1 and 2 of 2025, global influenza transmission remained at expected inter-seasonal levels in the Americas and Europe. In Southern Asia, laboratory-confirmed influenza activity demonstrated stable low-level circulation of A(H1N1)pdm09 and B viruses, with sentinel network positivity under 8%.",
+        "publication_timestamp": "2025-01-20T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.251089Z",
+        "source_url": "https://www.who.int/publications/m/item/influenza-update-n-485",
+        "language": "en",
+        "content_hash_sha256": "c27dd8485a1466c6fa5cd6b253d8de9b9bc5046349b9c05effb74f536828d04a",
+        "provenance_metadata": {
+          "slug": "who-global-influenza-update-485-2025",
+          "country": "Global",
+          "region": "Global",
+          "incident_id": "bg-who-flu-update-485-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/f84afd74-efcd-5ae9-b7a9-798ddf47cdca.txt",
+          "processed_storage_ref": "data/processed/f84afd74-efcd-5ae9-b7a9-798ddf47cdca.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-who-flu-update-485-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "e5c63210-ba3d-55eb-b0fe-de38476cf424",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Global Influenza Programme Update 492 – Mid-Year Epidemiological Summary",
+        "text": "In temperate zones of the Southern Hemisphere, influenza activity began its expected seasonal ascent, whereas transmission remained at inter-seasonal baseline levels across tropical Asia. Genetic analysis of circulating hemagglutinin genes showed no significant divergence from candidate vaccine strains recommended for the 2025-2026 season.",
+        "publication_timestamp": "2025-05-12T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.251089Z",
+        "source_url": "https://www.who.int/publications/m/item/influenza-update-n-492",
+        "language": "en",
+        "content_hash_sha256": "a19d1f001ef9fee319c682e1c031b7d8c9624b7d56336c06548855b302a50e2d",
+        "provenance_metadata": {
+          "slug": "who-global-influenza-update-492-2025",
+          "country": "Global",
+          "region": "Global",
+          "incident_id": "bg-who-flu-update-492-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/e5c63210-ba3d-55eb-b0fe-de38476cf424.txt",
+          "processed_storage_ref": "data/processed/e5c63210-ba3d-55eb-b0fe-de38476cf424.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-who-flu-update-492-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "b8b6a33b-4d00-556d-a84d-6fe1a86ca7c1",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "WHO South-East Asia Region: Annual Vector-Borne Disease Routine Surveillance",
+        "text": "The WHO Regional Office for South-East Asia summarized regional vector-borne disease trends for the first seven months of 2025. While seasonal increases were noted in monsoonal corridors, total regional dengue cases were 18% lower than the 2023 regional peak, attributable to intensified early larviciding and public engagement.",
+        "publication_timestamp": "2025-08-04T10:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.251089Z",
+        "source_url": "https://www.who.int/southeastasia/publications/vector-borne-surveillance-2025",
+        "language": "en",
+        "content_hash_sha256": "0555abc19c95a01030c03b0fac97d5feae4d0b4603ba8596ce5d5b8f88fdd28b",
+        "provenance_metadata": {
+          "slug": "who-searo-dengue-baseline-update-2025",
+          "country": "Global",
+          "region": "South-East Asia",
+          "incident_id": "bg-who-searo-dengue-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/b8b6a33b-4d00-556d-a84d-6fe1a86ca7c1.txt",
+          "processed_storage_ref": "data/processed/b8b6a33b-4d00-556d-a84d-6fe1a86ca7c1.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-who-searo-dengue-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "1321f827-d037-5e73-9f0a-4ed935d4c8b6",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Dengue Global Situation – Epidemiological Bulletin 2025",
+        "text": "Between January and March 2025, global dengue monitoring documented seasonal transmission patterns across the Americas and endemic foci in Asia. National early warning surveillance systems demonstrated improved case reporting timeliness, allowing local health authorities to enact preemptive fogging without widespread emergency ward saturation.",
+        "publication_timestamp": "2025-04-18T14:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.251089Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/dengue-global-situation-2025",
+        "language": "en",
+        "content_hash_sha256": "d5ca1bb86a18da3df23692d3ab56de5fdc8a62e912a729fb50c986b35742e905",
+        "provenance_metadata": {
+          "slug": "who-global-dengue-situation-update-2025",
+          "country": "Global",
+          "region": "Global",
+          "incident_id": "bg-who-global-dengue-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/1321f827-d037-5e73-9f0a-4ed935d4c8b6.txt",
+          "processed_storage_ref": "data/processed/1321f827-d037-5e73-9f0a-4ed935d4c8b6.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-who-global-dengue-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "3bc91510-4180-5416-87d4-7bd60ad9bfd1",
+        "source_id": "medrxiv_preprints",
+        "source_type": "public_syndication",
+        "title": "Multi-Year Baseline Modeling of Viral Respiratory Pathogens in Sentinel Cohorts Across India, 2022-2025",
+        "text": "We established statistical baseline thresholds for nine common respiratory viruses across four climatically diverse regions of India between 2022 and 2025. Multi-pathogen molecular screening of 14,200 outpatient visits demonstrated recurrent seasonal peaks for RSV during monsoon months and Influenza A during winter, establishing normative baseline activity bands for early epidemic anomaly detection.",
+        "publication_timestamp": "2025-03-18T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.251089Z",
+        "source_url": "https://www.medrxiv.org/content/10.1101/2025.03.15.25323910v1",
+        "language": "en",
+        "content_hash_sha256": "0363c717509f38a2681b8a28a3e90f98bd9c6f7e957b3a80297c654a87142532",
+        "provenance_metadata": {
+          "slug": "medrxiv-baseline-respiratory-surveillance-india-2025",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-medrxiv-respiratory-baseline-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/3bc91510-4180-5416-87d4-7bd60ad9bfd1.txt",
+          "processed_storage_ref": "data/processed/3bc91510-4180-5416-87d4-7bd60ad9bfd1.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-medrxiv-respiratory-baseline-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "4f9d7ddf-9986-5f7a-b0b4-52d43e0bd47a",
+        "source_id": "medrxiv_preprints",
+        "source_type": "public_syndication",
+        "title": "Longitudinal Endemic Equilibrium and Age-Specific Seroprevalence of Dengue in Southern India",
+        "text": "Cohort follow-up of 3,800 individuals in semi-urban Tamil Nadu over 36 months evaluated force of infection and seroconversion rates. The annual force of infection averaged 0.08, indicating stable endemic equilibrium. Routine asymptomatic seroconversions exceeded clinical presentations by five-fold, confirming substantial background immunity during non-outbreak inter-epidemic periods.",
+        "publication_timestamp": "2025-06-12T14:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.257844Z",
+        "source_url": "https://www.medrxiv.org/content/10.1101/2025.06.10.25327891v1",
+        "language": "en",
+        "content_hash_sha256": "1feb47bb3022a5b659798115d268452f84926f4ebe9a8d928b3e822be09c97fc",
+        "provenance_metadata": {
+          "slug": "medrxiv-dengue-endemic-equilibrium-south-india-2025",
+          "country": "India",
+          "region": "Tamil Nadu",
+          "incident_id": "bg-medrxiv-dengue-equilibrium-2025",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/4f9d7ddf-9986-5f7a-b0b4-52d43e0bd47a.txt",
+          "processed_storage_ref": "data/processed/4f9d7ddf-9986-5f7a-b0b4-52d43e0bd47a.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-medrxiv-dengue-equilibrium-2025",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "d9ffcd45-12de-54c8-9093-5c21279352fe",
+        "source_id": "medrxiv_preprints",
+        "source_type": "public_syndication",
+        "title": "Electronic Syndromic Surveillance in Primary Health Centers: Baseline Disease Patterns Across Rural Districts",
+        "text": "Analyzing 2.4 million electronic health encounters from 420 rural primary health centers in Maharashtra established weekly background syndrome frequencies. Acute diarrhea and undifferentiated fevers exhibited strict seasonal periodicity correlating with rainfall and temperature, providing empirical baselines for anomaly alert calibration.",
+        "publication_timestamp": "2024-11-08T10:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.259350Z",
+        "source_url": "https://www.medrxiv.org/content/10.1101/2024.11.05.24316712v1",
+        "language": "en",
+        "content_hash_sha256": "cfc05db3bfabc43ecd40c15adbc5bfc85005c987bd140833019343cd984b18e2",
+        "provenance_metadata": {
+          "slug": "medrxiv-primary-healthcare-syndromic-surveillance-2024",
+          "country": "India",
+          "region": "Maharashtra",
+          "incident_id": "bg-medrxiv-syndromic-baseline-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/d9ffcd45-12de-54c8-9093-5c21279352fe.txt",
+          "processed_storage_ref": "data/processed/d9ffcd45-12de-54c8-9093-5c21279352fe.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-medrxiv-syndromic-baseline-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "5739e305-2579-5430-9c0b-0dfb0b15505e",
+        "source_id": "medrxiv_preprints",
+        "source_type": "public_syndication",
+        "title": "Metagenomic Surveillance of Community Water Reservoirs in Eastern India: Establishing Pathogen Baselines",
+        "text": "Longitudinal metagenomic sequencing of 180 communal water bodies across rural Odisha surveyed seasonal microbial shifts between dry and monsoonal phases. Non-pathogenic environmental Vibrio species were detected year-round at low abundance, whereas toxigenic V. cholerae emerged only during specific rainfall-triggered surface runoff events, demonstrating baseline reservoir dynamics.",
+        "publication_timestamp": "2024-12-20T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.259350Z",
+        "source_url": "https://www.medrxiv.org/content/10.1101/2024.12.18.24319201v1",
+        "language": "en",
+        "content_hash_sha256": "a9437733d63cc1c49163354ab96a0a33bb13a47fa4adbdeca7da8d3a7614ca92",
+        "provenance_metadata": {
+          "slug": "medrxiv-water-quality-microbiome-baseline-odisha-2024",
+          "country": "India",
+          "region": "Odisha",
+          "incident_id": "bg-medrxiv-water-microbiome-2024",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/5739e305-2579-5430-9c0b-0dfb0b15505e.txt",
+          "processed_storage_ref": "data/processed/5739e305-2579-5430-9c0b-0dfb0b15505e.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-medrxiv-water-microbiome-2024",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "dc8a548e-4c8a-581f-a3e5-b88d4c9b648a",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "National Vaccination Day 2026 celebrates routine immunization coverage milestones",
+        "text": "On National Vaccination Day 2026, the Ministry announced that digital tracking through the U-WIN portal has registered over 90 million children, achieving 94% full immunization coverage across 36 States and UTs. Routine surveillance noted sustained absence of vaccine-preventable disease outbreaks in fully digitalized districts.",
+        "publication_timestamp": "2026-03-16T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.261517Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2021102",
+        "language": "en",
+        "content_hash_sha256": "75f29b8e272135965d4c66c38e93c0284518a61cc856b696fc19c8e4212ba547",
+        "provenance_metadata": {
+          "slug": "pib-national-vaccination-day-mar2026",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-vaccination-day-2026",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/dc8a548e-4c8a-581f-a3e5-b88d4c9b648a.txt",
+          "processed_storage_ref": "data/processed/dc8a548e-4c8a-581f-a3e5-b88d4c9b648a.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-vaccination-day-2026",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "0718c377-37ea-5b6e-8f06-d160e12c3abf",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Review of malaria transmission shows 140 districts eligible for elimination verification",
+        "text": "On World Malaria Day 2026, Union Health Minister reviewed the National Vector Borne Disease Control Programme. Over 140 districts across 18 States have maintained zero indigenous malaria transmission for 36 consecutive months, advancing national malaria elimination milestones towards the 2030 target.",
+        "publication_timestamp": "2026-04-25T10:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.261517Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2022810",
+        "language": "en",
+        "content_hash_sha256": "27d510d565e6a39b4b4aa7e78585b09b92437da3d7fe978d096d679359ec2de3",
+        "provenance_metadata": {
+          "slug": "pib-world-malaria-day-apr2026",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-malaria-day-2026",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/0718c377-37ea-5b6e-8f06-d160e12c3abf.txt",
+          "processed_storage_ref": "data/processed/0718c377-37ea-5b6e-8f06-d160e12c3abf.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-malaria-day-2026",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "54d73a16-f061-5c8b-aee2-6cbf5691cbe0",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "World Health Day 2026 highlights climate-resilient primary healthcare surveillance",
+        "text": "The Ministry marked World Health Day 2026 by launching climate-resilient surveillance guidelines for primary health centers in coastal and flood-prone districts. Real-time digital water testing and syndromic telemetry were operationalized to monitor background gastrointestinal and vector-borne conditions without delay.",
+        "publication_timestamp": "2026-04-07T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.263630Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2021919",
+        "language": "en",
+        "content_hash_sha256": "ad40b8b2868ee386951cad6f458dfc577f57ba30d48b4a61ae0d65d311d48ae2",
+        "provenance_metadata": {
+          "slug": "pib-world-health-day-apr2026",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-world-health-day-2026",
+          "event_category": "routine_surveillance",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/54d73a16-f061-5c8b-aee2-6cbf5691cbe0.txt",
+          "processed_storage_ref": "data/processed/54d73a16-f061-5c8b-aee2-6cbf5691cbe0.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-world-health-day-2026",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "33fe0afe-20e5-5dee-aac1-1ab5be0447b7",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "National Dengue Day 2026: States urged to maintain early larval suppression",
+        "text": "In observation of National Dengue Day 2026, the Directorate General of Health Services issued preemptive advisories to urban development departments to clear stormwater drains and enforce weekly dry days in commercial complexes before the onset of monsoon showers.",
+        "publication_timestamp": "2026-05-16T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:16:31.263630Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2024101",
+        "language": "en",
+        "content_hash_sha256": "ad1538950607fcbe160565090154a7c20a00783bfce1349938d5bbf81e81f730",
+        "provenance_metadata": {
+          "slug": "pib-national-dengue-day-may2026",
+          "country": "India",
+          "region": "National",
+          "incident_id": "bg-dengue-day-2026",
+          "event_category": "precautionary_advisory",
+          "corpus_role": "background_routine_surveillance",
+          "raw_storage_ref": "data/raw/33fe0afe-20e5-5dee-aac1-1ab5be0447b7.txt",
+          "processed_storage_ref": "data/processed/33fe0afe-20e5-5dee-aac1-1ab5be0447b7.txt"
+        }
+      },
+      "split": "benchmark",
+      "annotations": [],
+      "license_or_usage_note": "Official public health bulletin, press advisory, or open research indexing",
+      "curation_notes": "Background routine surveillance document curated in Phase 5 under bg-dengue-day-2026",
+      "curator_id": "episense_curator",
+      "verified": true
+    }
+  ]
+}

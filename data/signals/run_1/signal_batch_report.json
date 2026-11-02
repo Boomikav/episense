@@ -1,0 +1,19 @@
+{
+  "total_fused_events_consumed": 2,
+  "total_time_series_bins": 2,
+  "total_distinct_series": 1,
+  "total_baseline_estimates": 2,
+  "insufficient_history_estimates": 2,
+  "sparse_history_estimates": 0,
+  "stable_baseline_estimates": 0,
+  "total_signals_detected": 0,
+  "signals_by_level": {
+    "no_signal": 2
+  },
+  "signals_by_detector": {},
+  "signals_by_disease": {},
+  "signals_by_geo": {},
+  "elapsed_seconds": 0.0,
+  "pipeline_version": "1.0.0",
+  "generated_at": "2026-11-01T18:29:17.830849+00:00"
+}

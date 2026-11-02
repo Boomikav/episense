@@ -1,0 +1,217 @@
+year,state,reported_cases,reported_deaths,is_provisional,country,geographic_level,source,frequency
+2021,Andhra Pradesh,4760,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Andhra Pradesh,6391,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Andhra Pradesh,6453,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Andhra Pradesh,5555,2,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Andhra Pradesh,2686,5,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Andhra Pradesh,770,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Arunachal Pradesh,7,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Arunachal Pradesh,114,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Arunachal Pradesh,130,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Arunachal Pradesh,20,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Arunachal Pradesh,170,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Arunachal Pradesh,14,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Assam,103,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Assam,1826,2,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Assam,8208,7,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Assam,2271,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Assam,679,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Assam,52,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Bihar,633,2,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Bihar,13972,32,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Bihar,20224,74,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Bihar,10157,16,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Bihar,3902,2,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Bihar,98,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Chattisgarh,1086,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Chattisgarh,2679,10,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Chattisgarh,2412,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Chattisgarh,3523,2,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Chattisgarh,513,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Chattisgarh,35,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Goa,649,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Goa,443,1,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Goa,512,3,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Goa,567,3,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Goa,105,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Goa,12,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Gujarat,10983,14,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Gujarat,6682,7,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Gujarat,7222,7,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Gujarat,7891,6,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Gujarat,4233,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Gujarat,310,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Haryana,11835,13,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Haryana,8996,18,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Haryana,8081,11,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Haryana,6469,9,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Haryana,2626,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Haryana,22,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Himachal Pradesh,349,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Himachal Pradesh,3326,1,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Himachal Pradesh,1989,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Himachal Pradesh,3359,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Himachal Pradesh,229,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Himachal Pradesh,18,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,J & K,1709,4,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,J & K,8269,18,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,J & K,6403,10,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,J & K,6876,1,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,J & K,3381,2,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,J & K,25,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Jharkhand,220,1,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Jharkhand,290,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Jharkhand,2578,4,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Jharkhand,1528,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Jharkhand,401,1,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Jharkhand,20,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Karnataka,7393,7,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Karnataka,9889,9,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Karnataka,19300,11,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Karnataka,32886,27,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Karnataka,7325,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Karnataka,890,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Kerala,3251,27,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Kerala,4432,29,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Kerala,17426,153,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Kerala,20674,128,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Kerala,10923,65,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Kerala,1120,14,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Madhya Pradesh,3058,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Madhya Pradesh,3452,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Madhya Pradesh,4520,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Madhya Pradesh,4120,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Madhya Pradesh,1890,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Madhya Pradesh,45,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Maharashtra,12720,42,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Maharashtra,8578,27,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Maharashtra,19163,31,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Maharashtra,21540,26,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Maharashtra,8450,12,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Maharashtra,650,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Manipur,204,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Manipur,503,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Manipur,2465,4,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Manipur,1890,1,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Manipur,410,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Manipur,15,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Meghalaya,12,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Meghalaya,45,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Meghalaya,1245,2,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Meghalaya,890,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Meghalaya,180,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Meghalaya,8,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Mizoram,22,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Mizoram,89,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Mizoram,1870,3,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Mizoram,2140,1,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Mizoram,340,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Mizoram,12,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Nagaland,15,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Nagaland,62,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Nagaland,3890,5,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Nagaland,1240,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Nagaland,210,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Nagaland,6,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Odisha,5904,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Odisha,6234,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Odisha,7120,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Odisha,6850,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Odisha,3410,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Odisha,140,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Punjab,23389,55,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Punjab,11030,41,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Punjab,13890,28,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Punjab,12450,19,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Punjab,4120,4,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Punjab,35,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Rajasthan,13548,24,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Rajasthan,7560,10,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Rajasthan,8940,14,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Rajasthan,14210,18,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Rajasthan,5120,2,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Rajasthan,210,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Sikkim,18,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Sikkim,94,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Sikkim,890,1,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Sikkim,450,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Sikkim,95,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Sikkim,4,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Tamil Nadu,6039,8,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Tamil Nadu,6430,8,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Tamil Nadu,9120,11,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Tamil Nadu,18450,15,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Tamil Nadu,5890,3,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Tamil Nadu,420,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Telangana,7125,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Telangana,8940,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Telangana,9850,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Telangana,11200,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Telangana,4120,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Telangana,280,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Tripura,89,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Tripura,245,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Tripura,4120,6,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Tripura,1890,1,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Tripura,320,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Tripura,18,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Uttarakhand,1120,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Uttarakhand,2140,2,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Uttarakhand,3120,3,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Uttarakhand,2890,1,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Uttarakhand,620,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Uttarakhand,25,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Uttar Pradesh,29750,29,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Uttar Pradesh,21340,18,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Uttar Pradesh,25480,24,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Uttar Pradesh,28900,22,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Uttar Pradesh,8950,6,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Uttar Pradesh,410,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,West Bengal,8230,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,West Bengal,67210,30,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,West Bengal,48920,21,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,West Bengal,54120,25,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,West Bengal,12450,8,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,West Bengal,580,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Delhi,15301,23,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Delhi,4469,9,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Delhi,9266,19,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Delhi,10450,14,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Delhi,3890,2,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Delhi,190,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,A&N Islands,45,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,A&N Islands,89,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,A&N Islands,140,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,A&N Islands,95,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,A&N Islands,42,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,A&N Islands,8,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Chandigarh,1580,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Chandigarh,940,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Chandigarh,890,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Chandigarh,1120,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Chandigarh,340,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Chandigarh,15,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,D&NH and D&D,89,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,D&NH and D&D,145,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,D&NH and D&D,210,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,D&NH and D&D,180,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,D&NH and D&D,75,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,D&NH and D&D,10,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Ladakh,12,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Ladakh,28,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Ladakh,45,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Ladakh,32,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Ladakh,14,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Ladakh,2,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Lakshadweep,0,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Lakshadweep,0,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Lakshadweep,2,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Lakshadweep,0,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Lakshadweep,0,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Lakshadweep,0,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2021,Puducherry,1420,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2022,Puducherry,1890,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2023,Puducherry,2140,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2024,Puducherry,2450,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2025,Puducherry,680,0,False,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual
+2026,Puducherry,35,0,True,IND,State,NCVBDC National Dengue Situation Report Table (Govt. of India),Annual

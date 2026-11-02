@@ -1,0 +1,14 @@
+year,month,period_start,period_end,reported_cases,observation_status,country,geographic_level,source,frequency
+2024,1,2024-01-01,2024-01-31,5079.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2024,2,2024-02-01,2024-02-29,5429.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2024,3,2024-03-01,2024-03-31,5597.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2024,4,2024-04-01,2024-04-30,3342.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2024,5,2024-05-01,2024-05-31,5145.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2024,6,2024-06-01,2024-06-30,7499.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2024,7,2024-07-01,2024-07-31,27675.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2024,8,2024-08-01,2024-08-31,32388.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2024,9,2024-09-01,2024-09-30,41375.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2024,10,2024-10-01,2024-10-31,51183.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2024,11,2024-11-01,2024-11-30,30354.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2024,12,2024-12-01,2024-12-31,,Missing (unrecorded in WHO SEARO feed),IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly
+2025,1,2025-01-01,2025-01-31,4700.0,Observed,IND,National,OpenDengue V1.3 Temporal Extract (WHO-ALL-2025-Y01-00),Monthly

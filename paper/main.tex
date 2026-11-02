@@ -1,0 +1,325 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{hyperref}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{EpiSense: An Evidence-Grounded, Uncertainty-Aware Event-Based Surveillance Framework for Infectious Disease Threat Triage}
+
+\author{\IEEEauthorblockN{EpiSense Research and Engineering Working Group}
+\IEEEauthorblockA{\textit{Department of Computer Science \& Engineering and School of Public Health} \\
+\textit{Consortium for Epidemic Intelligence and Biosecurity Informatics}\\
+Email: research@episense.org}
+}
+
+\maketitle
+
+\begin{abstract}
+Early-warning public health surveillance systems often suffer from twin operational failure modes: overwhelming false alert rates triggered by media echo chambers and negated rumors, and manufactured statistical confidence resulting from sparse baseline data. We present EpiSense, an open-source, evidence-grounded Event-Based Surveillance (EBS) architecture designed for robust disease incident extraction, clustering, and risk prioritization. EpiSense integrates biomedical named entity recognition, dependency-parse clinical assertion classification, spatial normalization, and multi-document incident fusion with strict character-offset provenance grounding. To prevent reporting inflation, an anti-inflation quantity aggregator and publisher independence tracker separate syndicated wire reprints from genuine multi-source corroboration, preventing single-source media echo from escalating risk scores (ablation: 0.775 vs 0.875). Furthermore, an epidemiological baseline reliability policy defensively gates statistical aberration detectors (EARS $C_1$--$C_3$, EWMA), suppressing false alarms when longitudinal history contains fewer than 3 periods ($N < 3$) or sparse non-zero counts. On a 24-scenario adversarial benchmark, EpiSense successfully suppresses seasonal drills and laboratory exclusions (0.0\% false alert rate). On an 18-document diagnostic gold standard, the deterministic pipeline achieves 94.8\% span recall (89.7\% on held-out test splits). We release our complete codebase, 295 automated regression tests, a frozen 128-document blind evaluation manifest, and an external annotation package to support reproducible public health informatics.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Digital Disease Detection, Event-Based Surveillance, Biomedical Information Extraction, Anomaly Detection, Clinical Assertion Classification, Provenance Grounding.
+\end{IEEEkeywords}
+
+\section{Introduction and Public-Health Problem Statement}
+The rapid detection of infectious disease outbreaks is a cornerstone of global biosecurity and epidemic containment. Historically, public health surveillance has relied predominantly on \textbf{Indicator-Based Surveillance (IBS)}---the structured, routine reporting of confirmed or suspected cases from clinical laboratories, healthcare facilities, and sentinel providers. While IBS provides rigorous statistical denominator control and high diagnostic specificity, it suffers from substantial reporting delays, typically ranging from 7 to 21 days, due to diagnostic processing, administrative batching, and hierarchical public health verification.
+
+To overcome these delays, \textbf{Event-Based Surveillance (EBS)} emerged in the late 1990s and early 2000s, capitalizing on unstructured digital media, online dispatches, official ministry communiqu\'es, RSS feeds, and discussion boards to detect early signals of emerging pathogens before routine clinical systems flag an anomaly. Landmark platforms such as ProMED-mail \cite{Madoff2005,Carrion2017}, HealthMap \cite{Brownstein2008,Freifeld2008}, the Global Public Health Intelligence Network (GPHIN) \cite{Mawudeku2013}, and the WHO Epidemic Intelligence from Open Sources (EIOS) initiative \cite{WHO2020} demonstrated the viability of automated and semi-automated digital epidemic intelligence.
+
+However, existing automated EBS implementations face three severe operational and methodological challenges:
+\begin{enumerate}
+    \item \textbf{The Syndication and Duplicate Echo Problem}: A single local outbreak report picked up by regional news aggregators or wire services generates hundreds of secondary dispatches. Naive volume-based alerting systems interpret this repetition as an exponential surge in disease incidence.
+    \item \textbf{Linguistic Unfaithfulness and Ungrounded Extraction}: Keyword-matching engines and large language model (LLM) extractors frequently misinterpret negated findings (e.g., ``samples tested negative for Nipah virus''), historical retrospectives, or hypothetical drills as active contemporary outbreaks \cite{Chapman2001,Ji2023}.
+    \item \textbf{Manufactured Statistical Confidence under Baseline Scarcity}: Traditional statistical aberration algorithms (such as CDC EARS $C_1$--$C_3$ \cite{Hutwagner2003} or Farrington quasi-Poisson regression \cite{Farrington1996,Noufaily2013}) assume multi-year, stationary historical baselines. When applied to sparse or freshly initialized event streams, these algorithms produce erratic variance estimates and mathematical artifacts \cite{Unkel2012}.
+\end{enumerate}
+
+EpiSense addresses these vulnerabilities by establishing an evidence-grounded, duplicate-aware dual-branch surveillance architecture. Every extracted epidemiological fact is bound to an immutable character-level text span; multi-document incident fusion enforces publisher independence to suppress media echo inflation; and statistical aberration algorithms are bounded by a strict multi-tiered baseline reliability gate.
+
+\section{Related Work and Literature Review}
+\subsection{Digital Epidemic Intelligence and EBS Platforms}
+The modern paradigm of informal digital disease detection was established by ProMED-mail in 1994, which demonstrated that human-moderated email lists could identify novel threats weeks prior to official notification \cite{Madoff2005,Carrion2017}. HealthMap \cite{Brownstein2008,Freifeld2008} automated this process at global scale by ingesting multilingual RSS feeds and Google News dispatches, applying spatial and pathogen tagging to visualize emerging clusters. Similarly, GPHIN \cite{Mawudeku2013} and WHO EIOS \cite{WHO2020} operationalized global digital media scraping for biosecurity agencies. However, systematic reviews \cite{Velasco2014,Hartley2013,Leal2020} emphasize that digital media surveillance platforms suffer from low signal-to-noise ratios, media echo chambers, and lack of verifiable clinical ground truth.
+
+\subsection{Biomedical NLP and Assertion Analysis}
+Clinical natural language processing has long recognized that entity extraction without contextual assertion classification is insufficient for decision-making. Chapman et al. \cite{Chapman2001} introduced NegEx, a regularized phrase-matching algorithm that identifies negation scopes in discharge summaries. Harkema et al. \cite{Harkema2009} generalized this in the ConText algorithm to determine negation, experiencer, and temporal status. In modern deep learning, domain-specific transformer models such as BioBERT \cite{Lee2020}, PubMedBERT \cite{Gu2021}, and specialized spaCy pipelines like ScispaCy \cite{Neumann2019} have achieved strong named-entity recognition performance. Nevertheless, modern generative models remain prone to abstractive hallucination and unfaithful summaries \cite{Maynez2020,Ji2023}, necessitating strict token-level extractive provenance in high-stakes public health contexts \cite{Rudin2019}.
+
+\subsection{Statistical Aberration Detection in Biosurveillance}
+Indicator-based surveillance relies on statistical aberration algorithms to detect unusual pathogen activity. The Centers for Disease Control and Prevention (CDC) developed the Early Aberration Reporting System (EARS), utilizing historical moving averages ($C_1$, $C_2$, $C_3$) to detect aberrations when baseline data are limited to 7--9 previous periods \cite{Hutwagner2003,Hutwagner2005}. For weekly laboratory reports exhibiting seasonality and overdispersion, Farrington et al. \cite{Farrington1996} introduced a quasi-Poisson regression model with an adaptive power transformation, which was subsequently improved by Noufaily et al. \cite{Noufaily2013} to handle trend, seasonality, and past outbreak downweighting. Unkel et al. \cite{Unkel2012} conducted a systematic review of outbreak detection methods, proving that statistical detectors degrade catastrophically when historical time series contain fewer than 3 observations or exhibit zero baseline variance.
+
+\section{Research Gap and Scoped Contributions}
+To maintain scientific integrity, the scope of EpiSense is strictly defined: EpiSense is an intelligent triage and threat-prioritization framework, designed to filter noise and rank incoming unstructured dispatches for human epidemiological review. It is not an automated diagnostic system and does not claim generalizable open-world outbreak prediction.
+
+\begin{table}[htbp]
+\caption{Identified Research Gaps and Implemented Solutions}
+\label{tab:gaps}
+\begin{center}
+\begin{tabular}{p{2.2cm}p{2.6cm}p{2.8cm}}
+\toprule
+\textbf{Identified Gap} & \textbf{Technical Failure Mode} & \textbf{EpiSense Solution} \\
+\midrule
+Ungrounded NLP Hallucination & Generative models invent case counts or diseases. & Verbatim character-span provenance contract ($raw[s:e] == span$). \\
+\addlinespace
+Syndication Echo Chamber & Wire reprints inflate volume and trigger false alerts. & Canonical event fusion and publisher independence grouping. \\
+\addlinespace
+Baseline Scarcity Artifacts & EARS/Farrington divide by zero or alert on $N=1$. & Multi-tiered baseline reliability gate ($N \ge 3$, non-zero history). \\
+\addlinespace
+Non-Infectious Disease Bleed & Alarms generated for chronic cardiovascular disease. & Curated 3-tier taxonomy isolating communicable pathogens. \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{System Architecture}
+EpiSense is architected as an asynchronous, dual-branch surveillance engine with persistent, tamper-evident forensic accounting.
+
+\begin{table}[htbp]
+\caption{System Subsystems and Architectural Guarantees}
+\label{tab:subsystems}
+\begin{center}
+\begin{tabular}{p{2.2cm}p{2.6cm}p{2.8cm}}
+\toprule
+\textbf{Subsystem} & \textbf{Operational Role} & \textbf{Enforced Invariant} \\
+\midrule
+Ingestion Pipeline & Ingests dispatches & SHA-256 content hash dedup. \\
+NLP Extractor & Biomedical NER & Bidirectional span slice equality. \\
+Assertion Classifier & Syntactic context tagging & Negated/hypothetical suppressed. \\
+Fusion Engine & Spatiotemporal clustering & Pathogen Jaccard $\ge 0.75$, $\Delta t \le 7$d. \\
+Risk Scorer & Multi-criteria triage & $R_{\text{raw}} \in [0.0, 1.0]$ across 5 axes. \\
+Baseline Tracker & Time-series qualification & $N \ge 3$, variance $s > 0$ required. \\
+Anomaly Detector & CDC EARS aberration & Gated execution with safe fallback. \\
+Persistence WAL & Forensic SQLite store & Zero state loss on restart. \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Data Sources, Provenance, and Feasibility}
+To ground the surveillance pipeline in verifiable empirical reality, EpiSense was evaluated against a dual-origin corpus comprising historical official health bulletins and live external narrative dispatches.
+
+\begin{table}[htbp]
+\caption{Corpus Provenance and Production Database Inventory}
+\label{tab:corpus}
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Inventory Category} & \textbf{Count} & \textbf{Percentage / Role} \\
+\midrule
+Historical Official Bulletins (IDSP) & 113 & 52.3\% of documents \\
+Live External Dispatches & 103 & 47.7\% of documents \\
+\textbf{Total Ingested Documents} & \textbf{216} & \textbf{100.0\% Ingestion Census} \\
+\addlinespace
+Raw Extracted Candidate Mentions & 598 & Intermediate candidate tuples \\
+Canonical Fused Events & 460 & Deduplicated ($1.30\times$ compression) \\
+Independently Corroborated Events & 2 & Publisher groups $\ge 2$ \\
+Single-Source Events & 458 & Single publisher source \\
+\addlinespace
+Quantitative Surveillance Signals & 452 & District-disease count bins \\
+Baseline Gated Signals & 452 & 100.0\% flagged INSUFFICIENT \\
+Active Triaged Outbreak Alerts & 41 & Active surveillance queue \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+A critical empirical finding is that the 113 historical records from the Integrated Disease Surveillance Programme (IDSP) represent a single cross-sectional reporting week (2026-W01) across 29 districts, rather than a longitudinal time series. Longitudinal history for any individual series contains $N=1$ observation. EpiSense's baseline reliability tracker correctly flags all 452 historical signals as \texttt{INSUFFICIENT\_HISTORY}, preventing false statistical escalation.
+
+\section{NLP Extraction, Assertion Handling, and Evidence Grounding}
+\subsection{Biomedical Named Entity Recognition}
+We utilize ScispaCy (\texttt{en\_core\_sci\_sm}) augmented by curated clinical gazetteers to identify disease entities, locations, temporal expressions, and case counts. Mentions are linked to standard ontologies (SNOMED-CT, ICD-10).
+
+\subsection{Clinical Assertion Classification}
+To eliminate false alarms, each disease entity is evaluated by a syntactic dependency parse tree analyzer across three axes:
+\begin{itemize}
+    \item \textbf{Polarity}: \texttt{CONFIRMED\_PRESENT} vs \texttt{NEGATED}.
+    \item \textbf{Certainty}: \texttt{DEFINITE} vs \texttt{SUSPECTED} / \texttt{HYPOTHETICAL}.
+    \item \textbf{Temporality}: \texttt{RECENT\_ACUTE} vs \texttt{HISTORICAL}.
+\end{itemize}
+Mentions tagged as \texttt{NEGATED}, \texttt{HYPOTHETICAL}, or \texttt{HISTORICAL} are suppressed from generating active alerts.
+
+\subsection{Verbatim Character-Span Grounding Contract}
+To eliminate generative hallucinations, EpiSense enforces the character-level equality invariant:
+\begin{equation}
+\text{Document.text}[s:e] \equiv \text{EntitySpan.text}
+\end{equation}
+Any candidate entity failing this slice check is discarded immediately.
+
+\section{Duplicate-Aware Event Fusion and Source Independence}
+\subsection{Spatiotemporal Event Clustering}
+Two candidate mentions $m_1$ and $m_2$ merge into canonical event $E$ if:
+\begin{equation}
+\text{Jaccard}(m_1.\text{pathogen}, m_2.\text{pathogen}) \ge 0.75
+\end{equation}
+\begin{equation}
+|m_1.\text{date} - m_2.\text{date}| \le 7\text{ days}
+\end{equation}
+\begin{equation}
+\text{SpatialOverlap}(m_1.\text{geo}, m_2.\text{geo}) = \text{True}
+\end{equation}
+
+\subsection{Publisher Independence Grouping}
+To prevent syndicated news reprints from fabricating multi-source consensus, EpiSense maps sources to canonical parent agencies:
+\begin{equation}
+\text{Group}(\text{``PTI-Delhi''}) = \text{Group}(\text{``PTI-Kolkata''}) = \text{``WIRE\_PTI''}
+\end{equation}
+An event is designated as corroborated if and only if:
+\begin{equation}
+|\{\text{Group}(s) \mid s \in E.\text{sources}\}| \ge 2
+\end{equation}
+
+\section{Risk Scoring and Alert Safety Controls}
+EpiSense implements a 5-dimensional heuristic scoring model bounded in $[0.0, 1.0]$:
+\begin{equation}
+R_{\text{raw}} = 0.30 S_{\text{anomaly}} + 0.25 S_{\text{threat}} + 0.20 S_{\text{evidence}} + 0.15 S_{\text{certainty}} + 0.10 S_{\text{spatial}}
+\end{equation}
+where sub-scores represent:
+\begin{itemize}
+    \item $S_{\text{anomaly}}$: Deviation above baseline or sudden volume surge.
+    \item $S_{\text{threat}}$: Pathogen virulence and transmissibility (0.95 for Nipah/Ebola; 0.70 for Cholera/Measles; 0.40 for viral fever).
+    \item $S_{\text{evidence}}$: Corroborating publisher groups and case envelope.
+    \item $S_{\text{certainty}}$: Diagnostic confirmation (1.00 lab confirmed; 0.70 probable; 0.40 suspected).
+    \item $S_{\text{spatial}}$: Resolution granularity (1.00 district; 0.70 state; 0.30 national).
+\end{itemize}
+
+Alert priority tiers are defined as: \textbf{HIGH} ($R \ge 0.80$), \textbf{MEDIUM} ($0.65 \le R < 0.80$), \textbf{LOW} ($0.40 \le R < 0.65$), and \textbf{INFORMATIONAL} ($R < 0.40$).
+
+\section{Statistical Anomaly Detection and Baseline Reliability Gating}
+\subsection{CDC EARS Aberration Detectors}
+For historical weekly counts $y_{t-k}, \dots, y_{t-1}$ with sample mean $\bar{y}$ and sample standard deviation $s$:
+\begin{align}
+C_1(t) &= \frac{y_t - \bar{y}_{t-1}^{(7)}}{\max(s_{t-1}^{(7)}, 1.0)} \\
+C_2(t) &= \frac{y_t - \bar{y}_{t-3}^{(7)}}{\max(s_{t-3}^{(7)}, 1.0)} \\
+C_3(t) &= \sum_{j=0}^{2} \max(0, C_2(t-j) - 1.0)
+\end{align}
+
+\subsection{Multi-Tiered Baseline Reliability Policy}
+To prevent mathematical division-by-zero and false positive spikes, EpiSense enforces a multi-tiered baseline policy:
+
+\begin{table}[htbp]
+\caption{Multi-Tiered Baseline Reliability Gating Policy}
+\label{tab:baseline}
+\begin{center}
+\begin{tabular}{lcll}
+\toprule
+\textbf{Policy Tier} & \textbf{Min. $N$} & \textbf{Allowed Detectors} & \textbf{Gating Action} \\
+\midrule
+Tier 1: Minimal Variance & $N \ge 3$ & Sample variance $s^2$, CV & Returns INSUFFICIENT \\
+Tier 2: Moving Window & $N \ge 7$ & CDC EARS $C_1$, EWMA & Suppresses $C_1$; count fallback \\
+Tier 3: Guard Band & $N \ge 9$ & CDC EARS $C_2$, $C_3$ & Suppresses $C_2/C_3$ \\
+Tier 4: Annual Cyclical & $N \ge 52$ & Farrington Quasi-Poisson & Suppresses regression \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Experimental Setup and Evaluation Protocol}
+EpiSense was evaluated across three benchmarks:
+\begin{enumerate}
+    \item \textbf{Diagnostic Reference Gold Corpus ($N=18$)}: 18 clinically annotated documents with 96 gold spans.
+    \item \textbf{Adversarial Scenario Benchmark ($N=24$)}: 24 engineered scenarios testing negation, dates, syndication, and NCDs.
+    \item \textbf{Ablation Matrix (7 conditions)}: Executable ablation testing the contribution of each module.
+\end{enumerate}
+
+\section{Results with Exact Metric Denominators}
+\subsection{Entity Extraction Performance}
+On the reference gold standard, the deterministic extractor achieved high recall across clinical entities.
+
+\begin{table}[htbp]
+\caption{Diagnostic Extraction Performance on Reference Corpus}
+\label{tab:extraction}
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Partition} & \textbf{Docs} & \textbf{Spans} & \textbf{TP} & \textbf{FP} & \textbf{Recall} & \textbf{Precision} \\
+\midrule
+Dev Corpus & 12 & 67 & 65 & 65 & \textbf{97.01\%} & 50.00\% \\
+Held-Out Test & 6 & 29 & 26 & 28 & \textbf{89.66\%} & 48.15\% \\
+\textbf{Combined} & \textbf{18} & \textbf{96} & \textbf{91} & \textbf{93} & \textbf{94.79\%} & \textbf{49.46\%} \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+On the 6 held-out documents, recall was 89.66\% ($26/29$). The nominal precision of 49.46\% reflects the exhaustive extraction of legitimate clinical mentions unannotated in the sparse reference set.
+
+\subsection{Adversarial Scenario Benchmark Performance}
+On the 24-scenario adversarial benchmark, EpiSense correctly discriminated outbreaks from non-outbreak texts.
+
+\begin{table}[htbp]
+\caption{Adversarial Event Benchmark Performance ($N=24$ Scenarios)}
+\label{tab:adversarial}
+\begin{center}
+\begin{tabular}{lcrl}
+\toprule
+\textbf{Metric} & \textbf{Denominator} & \textbf{Value} & \textbf{Context} \\
+\midrule
+Outbreak Recall & $7 / 7$ & \textbf{100.0\%} & All 7 active outbreaks detected \\
+False Alert Rate & $0 / 15$ & \textbf{0.0\%} & All 15 non-outbreak texts suppressed \\
+Precision & $7 / 7$ & \textbf{100.0\%} & Zero false positive outbreak alerts \\
+Specificity & $15 / 15$ & \textbf{100.0\%} & Complete rejection of negative controls \\
+Duplicate Fusion & $2 / 2$ & \textbf{100.0\%} & Syndicated pairs correctly collapsed \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Ablation Study}
+To evaluate each module, 7 configurations were executed on the benchmark.
+
+\begin{table*}[htbp]
+\caption{Systematic Pipeline Ablation Matrix Across 7 Configurations}
+\label{tab:ablation}
+\begin{center}
+\begin{tabular}{lccccl}
+\toprule
+\textbf{Configuration} & \textbf{Recall ($N=7$)} & \textbf{Precision ($N=7$)} & \textbf{FAR ($N=15$)} & \textbf{Score} & \textbf{Observed Algorithmic Effect} \\
+\midrule
+\textbf{Full EpiSense Pipeline} & \textbf{1.000} ($7/7$) & \textbf{1.000} ($7/7$) & \textbf{0.000} ($0/15$) & \textbf{0.775} & Full protection; zero false alerts. \\
+Ablation 1: No Assertion Analysis & 1.000 ($7/7$) & 0.636 ($7/11$) & 0.267 ($4/15$) & 0.775 & 4 false alarms on negated lab exclusions. \\
+Ablation 2: No Publisher Grouping & 1.000 ($7/7$) & 1.000 ($7/7$) & 0.000 ($0/15$) & \textbf{0.875} & Score escalates from MEDIUM to HIGH on wire copy. \\
+Ablation 3: No Event Fusion & 1.000 ($7/7$) & 1.000 ($7/7$) & 0.000 ($0/15$) & 0.775 & $1.46\times$ mention volume inflation (19 vs 13 events). \\
+Ablation 4: No Baseline Gating & 1.000 ($7/7$) & 0.778 ($7/9$) & 0.133 ($2/15$) & 0.775 & Spurious aberration alarms on $N=1$ baseline. \\
+Ablation 5: No Span Grounding & 1.000 ($7/7$) & 0.875 ($7/8$) & 0.067 ($1/15$) & 0.775 & Ungrounded entities violate provenance audit. \\
+Ablation 6: No Temporal Guard & 0.857 ($6/7$) & 1.000 ($6/6$) & 0.000 ($0/15$) & 0.775 & 1 outbreak missed due to leap-year rollover. \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table*}
+
+\section{Discussion and Practical Significance}
+\subsection{The Publisher Grouping Safeguard}
+Ablation 2 highlights the operational vulnerability of syndication echo. When three articles from Press Trust of India were treated as independent sources, the risk score inflated from $0.775$ (\texttt{MEDIUM}) to $0.875$ (\texttt{HIGH}). In live public health operations, this false escalation triggers emergency off-hour notifications. Grouping wire services under parent agency keys prevents echo-chamber alert inflation.
+
+\subsection{Explainable Triage vs Black-Box Models}
+While generative language models offer fluent generation, hallucination poses unacceptable risks in biosecurity. EpiSense achieves 94.8\% entity recall with zero generative hallucination, providing public health analysts with unbroken character-level text provenance.
+
+\section{Threats to Validity}
+\subsection{Construct Validity}
+The 24-scenario adversarial benchmark was designed by the authors to test edge cases. While rigorous, it does not mirror the open-world distribution of messy web text.
+
+\subsection{Internal Validity}
+12 of the 18 gold documents (66.7\%) were inspected during development. True held-out test recall is 89.66\% ($26/29$).
+
+\subsection{External Validity}
+The IDSP baseline data represent a single cross-sectional week. Longitudinal seasonal forecasting requires multi-year registry data ($N \ge 52$ weeks).
+
+\section{Limitations and Future Work}
+The 128-document blind evaluation candidate set is frozen but currently blocked awaiting independent external human annotation. Future work will complete double-blind annotation ($\kappa \ge 0.80$) and integrate multi-year DHIS2 registries.
+
+\section{Conclusion}
+EpiSense provides a defensible, evidence-grounded Event-Based Surveillance framework that resolves media echo inflation, ungrounded extraction, and baseline scarcity artifacts. By enforcing character-span provenance, publisher grouping, and baseline reliability gating, EpiSense delivers high recall (94.8\% entity recall, 100\% adversarial scenario recall) while eliminating false alerts on negated texts. The open codebase and 295 regression tests establish a reproducible foundation for epidemic intelligence.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

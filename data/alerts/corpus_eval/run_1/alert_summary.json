@@ -1,0 +1,35 @@
+{
+  "total_alerts": 169,
+  "high_alerts": 0,
+  "medium_alerts": 2,
+  "low_alerts": 95,
+  "informational_alerts": 72,
+  "top_actionable_alerts": [
+    {
+      "alert_id": "76f8fdcb-537a-518d-96c9-eb3d04db939f",
+      "disease": "nipah virus disease",
+      "geography": "kozhikode",
+      "period": "2023-09-11",
+      "tier": "MEDIUM",
+      "score": 0.75,
+      "threat": "tier_4_high_consequence",
+      "sources": 2,
+      "summary": "[MEDIUM] Nipah Virus Disease in kozhikode (Score: 0.75, MEDIUM) - Observed: 2023.0 vs Expected: 1.00.",
+      "is_gated": true,
+      "gating_reason": "Conflicting quantity reports detected across sources: -0.10 penalty applied"
+    },
+    {
+      "alert_id": "96479edc-7f1d-52ed-8c1f-f4b99f05c623",
+      "disease": "chandipura virus",
+      "geography": "gujarat",
+      "period": "2024-08-19",
+      "tier": "MEDIUM",
+      "score": 0.655,
+      "threat": "tier_4_high_consequence",
+      "sources": 1,
+      "summary": "[MEDIUM] Chandipura Virus in gujarat (Score: 0.66, MEDIUM) - Observed: 64.0 vs Expected: 1.00.",
+      "is_gated": true,
+      "gating_reason": "Conflicting quantity reports detected across sources: -0.10 penalty applied"
+    }
+  ]
+}

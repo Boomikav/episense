@@ -1,0 +1,510 @@
+{
+  "summary": {
+    "total_downloaded_pdfs": 34,
+    "unique_pdf_hashes": 34,
+    "extracted_report_rows": 1414,
+    "valid_source_observations": 1396,
+    "priority_disease_observations": 353,
+    "non_priority_observations": 1043,
+    "total_reported_cases": 41167,
+    "total_reported_deaths": 100,
+    "missing_cases_count": 11,
+    "missing_deaths_count": 12,
+    "missing_samples_count": 863
+  },
+  "weekly_table": [
+    {
+      "week": 1,
+      "filename": "week1_1788853592.pdf",
+      "sha256": "3e24b6d111b2",
+      "total_obs": 29,
+      "priority_obs": 9,
+      "reported_cases": 1110,
+      "reported_deaths": 4,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 2,
+      "filename": "week2_1788856445.pdf",
+      "sha256": "ba9325315ec2",
+      "total_obs": 25,
+      "priority_obs": 7,
+      "reported_cases": 881,
+      "reported_deaths": 0,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 3,
+      "filename": "week3_1788857181.pdf",
+      "sha256": "d2ee6236f49f",
+      "total_obs": 19,
+      "priority_obs": 2,
+      "reported_cases": 522,
+      "reported_deaths": 1,
+      "missing_cases": 1,
+      "missing_deaths": 1
+    },
+    {
+      "week": 4,
+      "filename": "week4_1788856484.pdf",
+      "sha256": "bd5c4c6a6fc7",
+      "total_obs": 38,
+      "priority_obs": 2,
+      "reported_cases": 1056,
+      "reported_deaths": 0,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 5,
+      "filename": "week5_1788856507.pdf",
+      "sha256": "4e545c582558",
+      "total_obs": 39,
+      "priority_obs": 5,
+      "reported_cases": 1574,
+      "reported_deaths": 0,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 6,
+      "filename": "week6_1788856531.pdf",
+      "sha256": "2e30da7610eb",
+      "total_obs": 40,
+      "priority_obs": 5,
+      "reported_cases": 1030,
+      "reported_deaths": 2,
+      "missing_cases": 1,
+      "missing_deaths": 1
+    },
+    {
+      "week": 7,
+      "filename": "week7_1788856546.pdf",
+      "sha256": "ccc536b7bb23",
+      "total_obs": 42,
+      "priority_obs": 4,
+      "reported_cases": 1421,
+      "reported_deaths": 1,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 8,
+      "filename": "week8_1788856560.pdf",
+      "sha256": "93fdf17d8ec7",
+      "total_obs": 58,
+      "priority_obs": 5,
+      "reported_cases": 2149,
+      "reported_deaths": 2,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 9,
+      "filename": "week9_1788856576.pdf",
+      "sha256": "a16f2ac15d6e",
+      "total_obs": 68,
+      "priority_obs": 17,
+      "reported_cases": 1523,
+      "reported_deaths": 3,
+      "missing_cases": 1,
+      "missing_deaths": 1
+    },
+    {
+      "week": 10,
+      "filename": "week10_1788856598.pdf",
+      "sha256": "384074ca19ae",
+      "total_obs": 41,
+      "priority_obs": 10,
+      "reported_cases": 799,
+      "reported_deaths": 0,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 11,
+      "filename": "week11_1788856616.pdf",
+      "sha256": "f618e91077e9",
+      "total_obs": 41,
+      "priority_obs": 8,
+      "reported_cases": 1255,
+      "reported_deaths": 0,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 12,
+      "filename": "week12_1788856634.pdf",
+      "sha256": "abf6ead79543",
+      "total_obs": 34,
+      "priority_obs": 9,
+      "reported_cases": 901,
+      "reported_deaths": 1,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 13,
+      "filename": "week13_1788856653.pdf",
+      "sha256": "f8b3f4203e37",
+      "total_obs": 43,
+      "priority_obs": 12,
+      "reported_cases": 1069,
+      "reported_deaths": 3,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 14,
+      "filename": "week14_1788856669.pdf",
+      "sha256": "b5455283a963",
+      "total_obs": 39,
+      "priority_obs": 14,
+      "reported_cases": 1240,
+      "reported_deaths": 0,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 15,
+      "filename": "week15_1788856683.pdf",
+      "sha256": "23d53e75b31c",
+      "total_obs": 53,
+      "priority_obs": 14,
+      "reported_cases": 1668,
+      "reported_deaths": 5,
+      "missing_cases": 1,
+      "missing_deaths": 1
+    },
+    {
+      "week": 16,
+      "filename": "week16_1788856701.pdf",
+      "sha256": "ac7800136c47",
+      "total_obs": 34,
+      "priority_obs": 7,
+      "reported_cases": 866,
+      "reported_deaths": 0,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 17,
+      "filename": "week17_1788856716.pdf",
+      "sha256": "88988a925e92",
+      "total_obs": 34,
+      "priority_obs": 8,
+      "reported_cases": 823,
+      "reported_deaths": 5,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 18,
+      "filename": "week18_1788856733.pdf",
+      "sha256": "777fb9cbb953",
+      "total_obs": 32,
+      "priority_obs": 2,
+      "reported_cases": 726,
+      "reported_deaths": 2,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 19,
+      "filename": "week19_1788856754.pdf",
+      "sha256": "74d0548fc944",
+      "total_obs": 39,
+      "priority_obs": 11,
+      "reported_cases": 696,
+      "reported_deaths": 0,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 20,
+      "filename": "week20_1788856772.pdf",
+      "sha256": "79121908e049",
+      "total_obs": 56,
+      "priority_obs": 15,
+      "reported_cases": 1790,
+      "reported_deaths": 1,
+      "missing_cases": 2,
+      "missing_deaths": 2
+    },
+    {
+      "week": 21,
+      "filename": "week21_1788856793.pdf",
+      "sha256": "20be926ec1a8",
+      "total_obs": 45,
+      "priority_obs": 13,
+      "reported_cases": 945,
+      "reported_deaths": 7,
+      "missing_cases": 1,
+      "missing_deaths": 2
+    },
+    {
+      "week": 22,
+      "filename": "week22_1788856809.pdf",
+      "sha256": "8601f2a2e089",
+      "total_obs": 33,
+      "priority_obs": 5,
+      "reported_cases": 1238,
+      "reported_deaths": 0,
+      "missing_cases": 1,
+      "missing_deaths": 1
+    },
+    {
+      "week": 23,
+      "filename": "week23_1788856825.pdf",
+      "sha256": "7b40c5357e83",
+      "total_obs": 31,
+      "priority_obs": 9,
+      "reported_cases": 879,
+      "reported_deaths": 2,
+      "missing_cases": 1,
+      "missing_deaths": 1
+    },
+    {
+      "week": 24,
+      "filename": "week24_1788856872.pdf",
+      "sha256": "d2b2de13e5e8",
+      "total_obs": 43,
+      "priority_obs": 11,
+      "reported_cases": 1669,
+      "reported_deaths": 5,
+      "missing_cases": 1,
+      "missing_deaths": 1
+    },
+    {
+      "week": 25,
+      "filename": "week25_1788856887.pdf",
+      "sha256": "30470dd6f6ab",
+      "total_obs": 40,
+      "priority_obs": 22,
+      "reported_cases": 902,
+      "reported_deaths": 5,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 26,
+      "filename": "week26_1788856902.pdf",
+      "sha256": "75a91dc0cc22",
+      "total_obs": 42,
+      "priority_obs": 19,
+      "reported_cases": 1170,
+      "reported_deaths": 4,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 27,
+      "filename": "week27_1788856919.pdf",
+      "sha256": "35620384a372",
+      "total_obs": 45,
+      "priority_obs": 19,
+      "reported_cases": 1136,
+      "reported_deaths": 6,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 28,
+      "filename": "week28_1788942657.pdf",
+      "sha256": "1e5e364f171f",
+      "total_obs": 40,
+      "priority_obs": 12,
+      "reported_cases": 986,
+      "reported_deaths": 11,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 29,
+      "filename": "week29_1789533489.pdf",
+      "sha256": "51dde029b48f",
+      "total_obs": 49,
+      "priority_obs": 7,
+      "reported_cases": 1879,
+      "reported_deaths": 7,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 30,
+      "filename": "week30_1789731731.pdf",
+      "sha256": "d4aad17bb321",
+      "total_obs": 51,
+      "priority_obs": 12,
+      "reported_cases": 1844,
+      "reported_deaths": 6,
+      "missing_cases": 1,
+      "missing_deaths": 1
+    },
+    {
+      "week": 31,
+      "filename": "week31_1790077762.pdf",
+      "sha256": "1dbef0ae7da9",
+      "total_obs": 46,
+      "priority_obs": 20,
+      "reported_cases": 1654,
+      "reported_deaths": 9,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 32,
+      "filename": "week32_1790680151.pdf",
+      "sha256": "f34bba8a6f0c",
+      "total_obs": 51,
+      "priority_obs": 18,
+      "reported_cases": 1453,
+      "reported_deaths": 3,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 33,
+      "filename": "week33_1791440820.pdf",
+      "sha256": "ba8ae5d304ba",
+      "total_obs": 28,
+      "priority_obs": 11,
+      "reported_cases": 1072,
+      "reported_deaths": 2,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    },
+    {
+      "week": 34,
+      "filename": "week34_1792755440.pdf",
+      "sha256": "1686f862ca3a",
+      "total_obs": 48,
+      "priority_obs": 9,
+      "reported_cases": 1241,
+      "reported_deaths": 3,
+      "missing_cases": 0,
+      "missing_deaths": 0
+    }
+  ],
+  "priority_breakdown": {
+    "Dengue": {
+      "total_obs": 79,
+      "exact_matches": 79,
+      "validated_synonyms": 0,
+      "reported_cases": 2373,
+      "reported_deaths": 2,
+      "missing_cases": 0,
+      "raw_labels": {
+        "Dengue": 79
+      }
+    },
+    "Malaria": {
+      "total_obs": 28,
+      "exact_matches": 28,
+      "validated_synonyms": 0,
+      "reported_cases": 1571,
+      "reported_deaths": 3,
+      "missing_cases": 0,
+      "raw_labels": {
+        "Malaria": 28
+      }
+    },
+    "Chikungunya": {
+      "total_obs": 5,
+      "exact_matches": 5,
+      "validated_synonyms": 0,
+      "reported_cases": 204,
+      "reported_deaths": 0,
+      "missing_cases": 0,
+      "raw_labels": {
+        "Chikungunya": 5
+      }
+    },
+    "Leptospirosis": {
+      "total_obs": 7,
+      "exact_matches": 7,
+      "validated_synonyms": 0,
+      "reported_cases": 252,
+      "reported_deaths": 1,
+      "missing_cases": 0,
+      "raw_labels": {
+        "Leptospirosis": 7
+      }
+    },
+    "Cholera": {
+      "total_obs": 6,
+      "exact_matches": 6,
+      "validated_synonyms": 0,
+      "reported_cases": 100,
+      "reported_deaths": 0,
+      "missing_cases": 0,
+      "raw_labels": {
+        "Cholera": 6
+      }
+    },
+    "Acute Diarrhoeal Disease": {
+      "total_obs": 210,
+      "exact_matches": 210,
+      "validated_synonyms": 0,
+      "reported_cases": 8833,
+      "reported_deaths": 13,
+      "missing_cases": 0,
+      "raw_labels": {
+        "Acute Diarrhoeal Disease": 210
+      }
+    },
+    "Japanese Encephalitis": {
+      "total_obs": 11,
+      "exact_matches": 11,
+      "validated_synonyms": 0,
+      "reported_cases": 34,
+      "reported_deaths": 10,
+      "missing_cases": 0,
+      "raw_labels": {
+        "Japanese Encephalitis": 11
+      }
+    },
+    "Scrub Typhus": {
+      "total_obs": 7,
+      "exact_matches": 7,
+      "validated_synonyms": 0,
+      "reported_cases": 133,
+      "reported_deaths": 0,
+      "missing_cases": 0,
+      "raw_labels": {
+        "Scrub Typhus": 7
+      }
+    }
+  },
+  "top_out_of_scope": {
+    "Chickenpox": 191,
+    "Measles": 186,
+    "Suspected Food Poisoning": 185,
+    "Hepatitis A": 128,
+    "Suspected Typhoid": 36,
+    "Fever with Rash": 33,
+    "Acute Gastroenteriti s": 23,
+    "Fever": 22,
+    "Acute": 20,
+    "Jaundice": 17,
+    "Mumps": 13,
+    "Acute Gastroenteri tis": 12,
+    "Suspected": 11,
+    "Hepatitis A & E": 11,
+    "Chickenpo x": 10,
+    "West Nile Fever": 10,
+    "Suspected Food Poisoning No. of Deaths": 9,
+    "Human Rabies": 9,
+    "Shigellosis": 7,
+    "Acute Gastroente ritis": 7
+  },
+  "status_counts": {
+    "Under Surveillance": 1237,
+    "Under Control": 110,
+    "Under control": 9,
+    "Under Surveillanc e": 38,
+    "Under Surveillanc": 2
+  }
+}

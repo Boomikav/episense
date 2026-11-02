@@ -1,0 +1,15 @@
+{
+  "documents_received": 110,
+  "documents_accepted": 110,
+  "duplicates_skipped": 0,
+  "documents_rejected": 0,
+  "fused_events_created": 170,
+  "fused_events_updated": 334,
+  "bins_created": 170,
+  "bins_updated": 280,
+  "signals_generated": 450,
+  "alerts_generated": 170,
+  "alerts_updated": 15,
+  "processing_failures": 0,
+  "provenance_failures": 0
+}

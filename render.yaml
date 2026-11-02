@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: episense-api
+    runtime: python
+    buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
+    startCommand: "python run_server.py"
+    plan: starter
+    region: oregon
+    healthCheckPath: /api/v1/health
+    disk:
+      name: episense-storage
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: EPISENSE_DB_PATH
+        value: /var/data/surveillance_store.sqlite
+      - key: CORS_ORIGINS
+        value: "https://*.vercel.app,http://localhost:5173"
+      - key: EPISENSE_PRELOAD_CORPUS
+        value: "1"

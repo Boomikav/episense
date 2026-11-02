@@ -1,0 +1,135 @@
+{
+  "inventory_version": "1.0.0",
+  "generated_at": "2026-10-24T21:30:00Z",
+  "audit_decision": "IMPLEMENTED PROTOTYPE — ADDITIONAL VALIDATION REQUIRED",
+  "database_path": "data/surveillance_store.sqlite",
+  "telemetry_summary": {
+    "raw_documents": {
+      "total": 216,
+      "historical_corpus": 113,
+      "live_external": 103,
+      "provenance": {
+        "historical_source": "Integrated Disease Surveillance Programme (IDSP) Weekly Outbreak Bulletin, Week 1 (2026-W01)",
+        "historical_temporal_structure": "Single cross-sectional epidemiological week (2026-W01) spanning 29 administrative districts; NOT 29 consecutive longitudinal weeks",
+        "live_sources": [
+          "Promed-mail RSS dispatches",
+          "WHO Disease Outbreak News (DON)",
+          "National Health Portal / MoHFW Press Information Bureau (PIB)",
+          "Regional Public Health Bulletins (e.g. Kerala DHS, Gujarat HFW, Bengal Health)"
+        ]
+      }
+    },
+    "extracted_mentions": {
+      "total_candidate_mentions": 598,
+      "extraction_engine": "Deterministic ScispaCy (en_core_sci_sm) + Rule-Based Syntactic Dependency Assertion Parsing",
+      "pipeline_traces": {
+        "total": 215,
+        "completed": 187,
+        "no_event_found": 28
+      }
+    },
+    "fused_canonical_events": {
+      "total": 486,
+      "active": 460,
+      "superseded": 26,
+      "active_breakdown_by_origin": {
+        "historical_corpus": 415,
+        "live_external": 45
+      },
+      "corroboration_status": {
+        "corroborated_multi_source": 2,
+        "single_source_unverified": 484,
+        "syndication_deduplication": "Enforced by source group clustering (e.g. PTI Delhi vs PTI Kolkata wire reprints clustered into 1 event, not 2 independent corroborations)"
+      }
+    },
+    "epidemiological_time_bins": {
+      "total": 177,
+      "numerical_bins_with_positive_cases": 16,
+      "zero_or_unquantified_bins": 161
+    },
+    "early_warning_signals": {
+      "total": 452,
+      "gated_blocked_signals": 452,
+      "reliable_ungated_signals": 0,
+      "gating_rationale": "100% of historical series gated with INSUFFICIENT_HISTORY (N=1 < 3 required reference periods) or SPARSE_HISTORY to prevent manufactured false confidence."
+    },
+    "epidemiological_alerts": {
+      "total": 460,
+      "active": 436,
+      "superseded": 24,
+      "active_breakdown_by_origin": {
+        "historical_corpus": 395,
+        "live_external": 41
+      },
+      "active_breakdown_by_tier": {
+        "informational": 227,
+        "low": 206,
+        "medium": 3,
+        "high": 0
+      },
+      "high_alert_safeguard": "0 ungrounded high alerts generated. High alerts strictly require corroboration from >= 2 independent publisher groups plus active statistical aberration."
+    }
+  },
+  "benchmarks_and_evaluation_corpora": {
+    "track_a_nlp_extraction": {
+      "corpus_path": "data/benchmarks/annotations/gold_standard_v2.json",
+      "total_gold_documents": 18,
+      "total_annotated_spans": 96,
+      "spans_by_entity_type": {
+        "LOCATION": 31,
+        "DISEASE": 23,
+        "QUANTITY": 18,
+        "DATE": 12,
+        "SYMPTOM": 6,
+        "POPULATION": 6
+      },
+      "splits": {
+        "dev": 18,
+        "held_out": 0
+      },
+      "blind_frozen_candidate_pool": {
+        "directory": "data/gold_standard/eval_frozen_128/",
+        "manifest_path": "data/benchmarks/blind_evaluation_manifest_v1.json",
+        "total_documents": 128,
+        "status": "Frozen, deduplicated, isolated from prompt and rule tuning; awaiting independent human double-annotation"
+      }
+    },
+    "track_b_event_fusion": {
+      "benchmark_path": "scratch/run_evaluation_harness.py",
+      "total_core_conditions": 7,
+      "conditions": [
+        "P1_same_event_independent",
+        "P2_syndicated_wire_reprint",
+        "P3_different_diseases",
+        "P4_different_locations",
+        "P5_different_temporal_episodes",
+        "P6_confirmed_vs_negated",
+        "P7_conflicting_counts"
+      ],
+      "accuracy": "100.0% (7/7 passed)"
+    },
+    "track_c_statistical_aberration": {
+      "methods_evaluated": ["EARS C1", "EARS C2", "EARS C3", "Bounded Farrington (Anscombe 2/3)", "Baseline Reliability Tracker"],
+      "invariants_verified": [
+        "Stable baseline sequence suppression (Statistic=0.00, Threshold=16.80, Alert=False)",
+        "Sudden outbreak spike detection (Statistic=40.00, Threshold=16.80, Alert=True)",
+        "Zero-variance historical stream gating (Reliability=SPARSE_HISTORY)",
+        "Short history gating (N=1 < 3, Reliability=INSUFFICIENT_HISTORY)"
+      ]
+    },
+    "track_d_system_comparison": {
+      "benchmark_path": "data/benchmarks/event_benchmark/event_ground_truth_v2_adversarial.json",
+      "total_scenarios": 24,
+      "composition": {
+        "true_outbreaks": 7,
+        "negative_controls": 15,
+        "duplicate_syndications": 2
+      },
+      "evaluated_systems": [
+        "Naive Keyword Matching",
+        "Simple Document Count Volume Baseline",
+        "Full Evidence-Grounded EpiSense Architecture"
+      ]
+    }
+  }
+}

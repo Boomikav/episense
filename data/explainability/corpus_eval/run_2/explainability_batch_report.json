@@ -1,0 +1,15 @@
+{
+  "total_alerts_processed": 169,
+  "provenance_complete_alerts_count": 169,
+  "provenance_incomplete_alerts_count": 0,
+  "total_evidence_spans_reconstructed": 364,
+  "valid_evidence_spans_count": 364,
+  "invalid_evidence_spans_count": 0,
+  "total_audit_trails_generated": 169,
+  "total_provenance_graphs_generated": 169,
+  "average_nodes_per_graph": 8.17,
+  "average_edges_per_graph": 8.31,
+  "elapsed_seconds": 0.038,
+  "pipeline_version": "1.0.0",
+  "generated_at": "2026-09-06T14:59:36.916443+00:00"
+}

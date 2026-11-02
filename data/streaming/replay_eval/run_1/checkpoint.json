@@ -1,0 +1,26 @@
+{
+  "checkpoint_id": "8c15646d-8d78-5e66-96f3-35ba8cec7958",
+  "sequence_number": 110,
+  "timestamp": "2026-01-01T00:00:00Z",
+  "metrics": {
+    "documents_received": 110,
+    "documents_accepted": 110,
+    "duplicates_skipped": 0,
+    "documents_rejected": 0,
+    "fused_events_created": 170,
+    "fused_events_updated": 334,
+    "bins_created": 170,
+    "bins_updated": 280,
+    "signals_generated": 450,
+    "alerts_generated": 170,
+    "alerts_updated": 15,
+    "processing_failures": 0,
+    "provenance_failures": 0
+  },
+  "state_checksum_sha256": "0a22fdd8f4f17960177c37fc6d94f03297e1396c66bcd5bb0c67b371cc76f5b9",
+  "total_documents_processed": 110,
+  "total_fused_events": 170,
+  "total_bins": 170,
+  "total_alerts": 170,
+  "dead_letter_count": 0
+}

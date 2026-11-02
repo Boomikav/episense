@@ -1,0 +1,13 @@
+{
+  "total_documents_processed": 110,
+  "total_candidates_extracted": 190,
+  "total_fused_events": 187,
+  "multi_observation_event_count": 3,
+  "single_observation_event_count": 184,
+  "conflicting_quantity_event_count": 2,
+  "average_observations_per_event": 1.02,
+  "elapsed_seconds": 0.19,
+  "fusion_window_days": 7,
+  "pipeline_version": "1.0.0",
+  "generated_at": "2026-09-06T14:10:34.832843+00:00"
+}

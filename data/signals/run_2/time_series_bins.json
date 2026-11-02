@@ -1,0 +1,74 @@
+[
+  {
+    "bin_id": "5f6c95c3-775c-5900-afe9-71ac23d3b042",
+    "disease_key": "nipah virus disease",
+    "geo_key": "kozhikode",
+    "period_start": "2024-07-08T00:00:00Z",
+    "period_end": "2024-07-14T23:59:59Z",
+    "reporting_timezone": "UTC",
+    "boundary_type": "inclusive_start_inclusive_end",
+    "iso_year": 2024,
+    "iso_week": 28,
+    "source_reporting_weeks": [],
+    "observed_case_count": 2,
+    "observed_death_count": 1,
+    "fused_event_count": 1,
+    "independent_source_count": 2,
+    "supporting_observation_count": 2,
+    "has_conflicts": false,
+    "conflicting_quantities": {},
+    "is_zero_reporting": false,
+    "completeness_status": "observed",
+    "fused_event_ids": [
+      "e281414e-5ca2-4ad7-9f00-1fe7ca285855"
+    ],
+    "origin": "HISTORICAL_CORPUS",
+    "provenance_references": [
+      {
+        "document_id": "b1723dac-4f30-4744-87ca-b27ed28410ad",
+        "source_id": "who_don",
+        "start_char": 10,
+        "end_char": 25,
+        "span_text": "2 confirmed cases",
+        "extraction_method": "rule_based",
+        "attribute_role": "case_count"
+      }
+    ]
+  },
+  {
+    "bin_id": "a71532c2-c957-508a-8dc7-a924a761eb72",
+    "disease_key": "nipah virus disease",
+    "geo_key": "kozhikode",
+    "period_start": "2024-07-15T00:00:00Z",
+    "period_end": "2024-07-21T23:59:59Z",
+    "reporting_timezone": "UTC",
+    "boundary_type": "inclusive_start_inclusive_end",
+    "iso_year": 2024,
+    "iso_week": 29,
+    "source_reporting_weeks": [],
+    "observed_case_count": 8,
+    "observed_death_count": 1,
+    "fused_event_count": 1,
+    "independent_source_count": 2,
+    "supporting_observation_count": 3,
+    "has_conflicts": false,
+    "conflicting_quantities": {},
+    "is_zero_reporting": false,
+    "completeness_status": "observed",
+    "fused_event_ids": [
+      "2ab4064e-2327-4c8c-8852-5a58cb10ade3"
+    ],
+    "origin": "HISTORICAL_CORPUS",
+    "provenance_references": [
+      {
+        "document_id": "13bdb4da-a95b-44a6-a4a0-b1345d99e210",
+        "source_id": "who_don",
+        "start_char": 10,
+        "end_char": 25,
+        "span_text": "8 confirmed cases",
+        "extraction_method": "rule_based",
+        "attribute_role": "case_count"
+      }
+    ]
+  }
+]

@@ -1,0 +1,751 @@
+<USER_REQUEST>
+
+PROJECT: EpiSense — Live Surveillance Acquisition, NLP Extraction,
+Evidence Qualification and Dashboard Reconciliation
+
+WORKSPACE:
+C:\Users\ajaya\Desktop\NLP
+
+OBJECTIVE
+
+Perform a complete implementation-level audit and correction of
+EpiSense live external surveillance.
+
+The present application reports zero actionable October 2026 alerts,
+despite having configured external feeds and showing discovered and
+ingested documents.
+
+The objective is NOT to manufacture positive alerts or populate
+the dashboard with historical events.
+
+The objective is to retrieve accessible external sources, extract
+their actual epidemiological content, qualify it correctly, and
+make every meaningful processing outcome visible.
+
+Keep the finalized eight-disease priority registry unchanged:
+
+1. Dengue
+2. Malaria
+3. Chikungunya
+4. Leptospirosis
+5. Cholera
+6. Acute Diarrhoeal Disease (ADD)
+7. Japanese Encephalitis (JE)
+8. Scrub Typhus
+
+Do not remove existing project functionality or modify the
+forecasting methodology unless a concrete defect requires it.
+
+==================================================
+PHASE 1 — AUDIT THE EXISTING LIVE INGESTION PIPELINE
+==================================================
+
+Inspect the actual implementations of:
+
+- Source connector configuration
+- Polling and HTTP response handling
+- Document discovery and downloading
+- Raw document storage
+- SHA-256 deduplication
+- PDF, HTML and RSS extraction
+- NLP pipeline execution
+- Disease and location recognition
+- Assertion and quantity extraction
+- Event candidate generation
+- Multi-source fusion
+- Current-window classification
+- Dashboard APIs and frontend counters
+
+Trace individual documents from source discovery to final UI.
+
+For every source, establish:
+
+1. Configured URL and adapter.
+2. Actual request URL.
+3. HTTP response code.
+4. Response content type.
+5. Number of discovered entries.
+6. Number of downloaded documents.
+7. Number of unique documents.
+8. Number of duplicate documents.
+9. Number of successfully extracted texts.
+10. Number of NLP-completed documents.
+11. Number of priority-disease documents.
+12. Number of event candidates.
+13. Number of validated events.
+14. Number of current-window events.
+15. Number of archived or backfilled events.
+16. Number of rejected, out-of-scope and administrative documents.
+17. Exact failure or suppression reasons.
+
+A connector reporting HTTP 200 must not automatically be
+considered successful at epidemiological extraction.
+
+A source reporting 109 discovered items and 15 ingested documents
+must have those 15 documents traceable to actual records.
+
+Reconcile the current dashboard's:
+- 4 unique current-window documents
+- 6 raw ingested documents
+- 2 duplicate documents
+- 1 negative rule-out
+- 1 out-of-scope document
+- 2 administrative documents
+- 0 actionable positive reports
+
+with the source connector's cumulative figures.
+
+These counts must not be mixed.
+
+==================================================
+PHASE 2 — ADD WORKING EXTERNAL SOURCE ADAPTERS
+==================================================
+
+A. PRIMARY INDIA SOURCE: NCDC WEEKLY OUTBREAK REPORTS
+
+Official directory:
+
+https://ncdc.mohfw.gov.in/uploads/weekly_outbreaks/
+
+2026 directory:
+
+https://ncdc.mohfw.gov.in/uploads/weekly_outbreaks/2026/
+
+Known available file:
+
+https://ncdc.mohfw.gov.in/uploads/weekly_outbreaks/2026/week34_1792755440.pdf
+
+This actual PDF covers 17–23 August 2026 and contains 25 pages.
+
+IMPORTANT:
+The directory currently lists weekly reports through Week 34.
+The application reports 29 historical reports audited.
+
+Reconcile the discrepancy between the 34 publicly listed 2026
+weekly files and the 29 documents currently reported.
+
+IMPLEMENTATION:
+
+1. Crawl the public directory dynamically.
+2. Identify all linked PDF files and their last-modified timestamps.
+3. Do not hardcode a specific week or filename.
+4. Maintain a manifest of discovered report URLs and SHA-256 hashes.
+5. Download files that are new or have changed.
+6. Verify content type and PDF validity.
+7. Extract every page using PyMuPDF/pdfplumber or an appropriate
+   table extraction method.
+8. Handle multi-page table rows and repeated headers correctly.
+9. Use OCR only when the page genuinely contains no usable text.
+10. Never infer numerical values from chart coordinates.
+11. Retain source page, table row and original PDF URL for every
+    extracted record.
+
+Extract the following fields:
+
+- Source outbreak unique ID
+- State/UT
+- District
+- Sub-district/locality, when available
+- Original disease/illness label
+- Canonical disease or syndrome mapping
+- Reported cases
+- Reported deaths
+- Outbreak start date
+- Reporting date
+- Reporting week
+- Current status
+- Investigation findings
+- Laboratory evidence
+- Sample count
+- Positive sample count
+- Negative sample count
+- Action taken
+- Original source text
+- Evidence page and row
+
+SMOKE TEST USING WEEK 34:
+
+The parser must locate and correctly extract, at minimum:
+
+1. Assam, Nagaon:
+   Dengue, 22 reported cases, 0 deaths,
+   outbreak start 20-08-2026,
+   reporting date 21-08-2026.
+   Six of the 22 collected serum samples are described
+   as dengue-positive in the report.
+
+2. Kerala, Ernakulam:
+   Dengue, 20 reported cases,
+   outbreak start 19-08-2026,
+   reporting date 20-08-2026.
+
+3. Kerala, Malappuram:
+   Dengue, 12 reported cases,
+   outbreak start 14-08-2026,
+   reporting date 17-08-2026.
+
+4. Gujarat, Anand:
+   Acute Diarrhoeal Disease, 20 reported cases,
+   outbreak start 21-08-2026,
+   reporting date 21-08-2026.
+
+5. Karnataka, Haveri:
+   Acute Diarrhoeal Disease, 81 reported cases,
+   outbreak start 20-08-2026,
+   reporting date 20-08-2026.
+
+These are extraction test cases, not October 2026 events.
+
+The Nagaon record must preserve 22 reported cases separately
+from six positive laboratory samples. Never replace 22 with 6.
+
+Preserve the source's reporting status. Do not automatically
+change every "Under Surveillance" entry to "Confirmed".
+
+Where the source uses "Acute Gastroenteritis" or another related
+syndrome, retain the original label and use only validated
+canonical synonym mappings.
+
+A report published or uploaded in October describing an August
+event must be classified as:
+
+RECENTLY_PUBLISHED_HISTORICAL_EVENT
+
+It must not be falsely shown as an October outbreak.
+
+B. WHO DISEASE OUTBREAK NEWS — STRUCTURED REST API
+
+Use the official WHO REST API:
+
+https://www.who.int/api/default/diseaseoutbreaknews
+
+Use the structured query:
+
+$orderby=PublicationDate desc&$top=50
+
+Endpoint example:
+
+https://www.who.int/api/default/diseaseoutbreaknews?$orderby=PublicationDate%20desc&$top=50
+
+Implement pagination using the API's returned pagination links
+or supported OData continuation mechanism.
+
+Extract:
+
+- WHO record ID
+- DON ID
+- Title
+- Publication date
+- Last modified date
+- Summary
+- Overview
+- Epidemiology
+- Assessment
+- Response
+- Advice
+- Affected countries and locations
+- Reported case and death quantities
+- Evidence URLs
+- Original report URL
+
+Strip HTML safely while preserving evidence references.
+
+Test the actual API response and pagination.
+
+This is international outbreak intelligence. A WHO report about
+an out-of-scope disease or another country must not be converted
+into an Indian priority-disease event.
+
+C. CDC CONTENT SERVICES API
+
+Replace the dormant/empty CDC RSS configuration with a tested
+official Content Services API adapter.
+
+API:
+
+https://tools.cdc.gov/api/v2/resources/media
+
+Example search:
+
+https://tools.cdc.gov/api/v2/resources/media?q=outbreak&max=100&pagenum=1&format=json
+
+Use documented full-text search, pagination and item retrieval.
+
+Search relevant terms for the eight priority diseases and
+other emerging infectious disease signals.
+
+Do not assume CDC data are India-specific.
+Keep this as a secondary international evidence source.
+
+D. GDELT DOC 2.0 — MEDIA DISCOVERY
+
+Use the official GDELT DOC API:
+
+https://api.gdeltproject.org/api/v2/doc/doc
+
+Implement JSON article search for:
+
+- India
+- Dengue
+- Malaria
+- Chikungunya
+- Leptospirosis
+- Cholera
+- Acute diarrhoeal disease
+- Japanese encephalitis
+- Scrub typhus
+
+Use a recent time window and descending publication-date ordering.
+
+Fetch article details where accessible.
+
+GDELT results are discovery signals only:
+- They are not official case counts.
+- They are not laboratory confirmations.
+- They are not independent corroboration until source relationships
+  have been checked.
+- They must never directly create confirmed outbreak alerts.
+
+E. STATE PUBLIC HEALTH SOURCES
+
+Audit public State Health Department and NHM sources,
+beginning with:
+
+https://nhm.tn.gov.in/integrated-disease-surveillance-programme-idsp/
+
+Discover publicly accessible:
+- Health department bulletins
+- District outbreak notifications
+- Official press releases
+- Vector-borne disease situation reports
+- Public surveillance summaries
+
+Do not bypass login, authentication, CAPTCHA or institutional
+access controls for IHIP or IDSP data.
+
+Add only public, accessible sources and test their actual
+content extraction.
+
+==================================================
+PHASE 3 — CORRECT NLP RELEVANCE AND ENTITY EXTRACTION
+==================================================
+
+The current NLP Workbench shows a WHO document:
+
+"Joint Leaders' statement - Violence against children:
+A hidden crisis of the COVID-19 pandemic"
+
+It is dated 2020, has no outbreak-specific location, quantity
+or event date, yet is classified as:
+
+ACUTE_OUTBREAK_REPORT
+Eligible for Downstream Fusion
+
+It also labels "children" as a disease entity.
+
+This is scientifically incorrect.
+
+Correct the relevance classifier and extraction pipeline.
+
+Separate:
+
+- Disease
+- Pathogen
+- Syndrome
+- Population group
+- Person
+- Location
+- Administrative geography
+- Case quantity
+- Death quantity
+- Tested samples
+- Positive samples
+- Negative samples
+- Publication date
+- Event start date
+- Reporting period
+- Assertion
+- Negation
+- Uncertainty
+- Clinical confirmation status
+
+Examples:
+
+COVID-19 = disease.
+SARS-CoV-2 = pathogen.
+Children = population group.
+Coronavirus = virus/pathogen reference.
+
+Do not classify a document as an acute outbreak report merely
+because a disease or pathogen is mentioned.
+
+A valid outbreak candidate must contain contextual evidence
+of an actual disease event, outbreak, case cluster, surge,
+or official surveillance observation.
+
+Distinguish these relevance outcomes:
+
+- ACUTE_OUTBREAK_REPORT
+- SURVEILLANCE_REPORT
+- CASE_CLUSTER_REPORT
+- NEGATIVE_RULE_OUT
+- CONTEXTUAL_HEALTH_NEWS
+- HEALTH_POLICY_OR_ADMINISTRATION
+- GENERAL_DISEASE_REFERENCE
+- OUT_OF_SCOPE_EVENT
+- IRRELEVANT
+
+Add a test proving that the 2020 child-violence article is not
+eligible for outbreak fusion.
+
+Also test:
+- Disease mentions without an event.
+- Population words not classified as diseases.
+- Negated and ruled-out cases.
+- Historical outbreak descriptions.
+- Current surveillance reports.
+- Reports with multiple diseases.
+- Reports with incomplete locations.
+- Reports with sample counts different from case counts.
+
+==================================================
+PHASE 4 — FIX QUANTITY, DATE AND GEOGRAPHIC SEMANTICS
+==================================================
+
+A. MISSING QUANTITIES
+
+Missing values must remain NULL.
+
+Do not convert missing reported cases or deaths to zero.
+
+UI display:
+
+- Explicit source value of zero: 0
+- Missing quantity: Not reported
+- Quantity not extractable: Unresolved
+- Conflicting quantities: Conflicting source values
+
+B. QUANTITY SEMANTICS
+
+Keep separate:
+
+- Suspected cases
+- Probable cases
+- Confirmed cases
+- Total reported outbreak cases
+- Deaths
+- Tested samples
+- Positive laboratory samples
+- Negative laboratory samples
+- Recovered cases
+
+Do not add sample counts to cases.
+
+Do not sum duplicated or overlapping outbreak reports.
+
+C. DATE SEMANTICS
+
+Preserve separate fields:
+
+- event_start_date
+- event_end_date, if present
+- reporting_period_start
+- reporting_period_end
+- publication_date
+- source_modified_date
+- retrieval_timestamp
+- first_seen_timestamp
+- processing_timestamp
+
+Validate chronology.
+
+If a source row contains a future sample date relative to
+its reporting date, retain the raw values and flag the
+inconsistency for review. Never silently rewrite it.
+
+Use unambiguous ISO dates internally and a consistent
+DD MMM YYYY display format.
+
+D. GEOGRAPHY
+
+Use authoritative Indian state/district gazetteer mappings.
+
+Retain original locality text.
+
+Resolve district and state only when supported by evidence.
+
+Do not create synthetic coordinates.
+
+Separate foreign events from the India priority surveillance view.
+
+Unresolved locations must remain visible as unresolved records.
+
+==================================================
+PHASE 5 — FIX SOURCE ORIGIN, FRESHNESS AND DOCUMENT STATES
+==================================================
+
+LIVE_EXTERNAL currently appears to include old 2020 documents.
+
+Correct this architecture.
+
+Source origin and freshness are different attributes.
+
+For example:
+
+origin = LIVE_EXTERNAL
+published_at = 2020-04-08
+freshness = HISTORICAL
+
+A document retrieved today is not necessarily a current event.
+
+Implement explicit freshness classifications:
+
+- CURRENT
+- RECENT
+- HISTORICAL
+- BACKFILLED
+- UNKNOWN_DATE
+
+Implement separate document lifecycle states:
+
+- DISCOVERED
+- FETCHED
+- RAW_STORED
+- TEXT_EXTRACTED
+- NLP_COMPLETED
+- EVENT_CANDIDATE
+- VALIDATED
+- REJECTED
+- DUPLICATE
+
+A 304 Not Modified response must preserve the last content
+modification time. It must not reset document age or imply
+new information.
+
+Idempotent ingestion is required.
+
+Do not skip NLP processing merely because a downloaded
+document already exists if it has never been parsed successfully.
+
+==================================================
+PHASE 6 — CORRECT CURRENT AND HISTORICAL DASHBOARD BEHAVIOUR
+==================================================
+
+Do not change the rule that only genuinely current events
+belong in the October 2026 operational alert window.
+
+Instead, add proper visibility for newly discovered but older
+surveillance evidence.
+
+OVERVIEW
+
+Show clearly separated counters:
+
+1. New publications discovered
+2. Unique documents fetched
+3. Successfully parsed documents
+4. Priority-disease documents
+5. Candidate epidemiological events
+6. Current operational events
+7. Recently published historical/backfilled events
+8. Negative rule-outs
+9. Out-of-scope events
+10. Administrative/background items
+11. Failed or unresolved extractions
+
+For each counter, explain the time scope and counting unit.
+
+EVENT INTELLIGENCE
+
+Maintain separate views:
+
+- Current operational events
+- Recent publications with historical event dates
+- Historical reference records
+- Evidence-qualified early signals
+- Explainable alerts
+
+The NCDC Week 34 report must be visible as a recent publication
+with its actual August reporting period.
+
+Do not convert it into an October active event.
+
+NLP FORENSIC WORKBENCH
+
+The LIVE EXTERNAL filter must not display old 2020 records
+as current live surveillance.
+
+Add clear filters for:
+- External source
+- Publication date
+- Event date
+- Current/recent/historical status
+- NLP relevance class
+- Processing status
+- Priority disease
+
+Show why every document is eligible or ineligible for fusion.
+
+GEOGRAPHIC VIEW
+
+Current-window map may remain empty if there are no
+current verified events with grounded coordinates.
+
+Historical map must preserve actual historical coordinates.
+Show unresolved locations separately.
+
+Never plot synthetic coordinates.
+
+SOURCE HEALTH
+
+Each connector must show:
+- Real latest poll time
+- HTTP result
+- Latest source publication
+- Latest event/reporting period
+- Items discovered
+- Documents fetched
+- Unique documents
+- Duplicates
+- Successfully extracted documents
+- Priority events extracted
+- Last successful extraction
+- Exact reason for failure or suppression
+
+FORECASTING
+
+Do not change scientific data-sufficiency rules.
+
+Reconcile:
+- 11 versus 13 displayed historical datasets.
+- Dengue's 11 consecutive periods versus the audit log's 12.
+- Total valid observations versus longest consecutive run.
+
+Keep historical forecast evaluations exploratory.
+
+Keep operational forecasting suppressed when data are stale
+or insufficient.
+
+==================================================
+PHASE 7 — REQUIRED END-TO-END ACCEPTANCE TESTS
+==================================================
+
+Create automated tests for:
+
+1. NCDC directory discovery.
+2. Identification of all 2026 weekly PDF files.
+3. Week 34 PDF downloading and SHA-256 verification.
+4. Multi-page PDF text/table extraction.
+5. Exact Nagaon Dengue record extraction.
+6. Exact Ernakulam Dengue record extraction.
+7. Exact Anand ADD record extraction.
+8. Separation of cases and positive laboratory samples.
+9. Correct outbreak, reporting and publication dates.
+10. WHO DON API JSON retrieval and pagination.
+11. CDC API retrieval and search behaviour.
+12. GDELT discovery-only classification.
+13. 2020 contextual article relevance rejection.
+14. Correct disease versus pathogen versus population entities.
+15. Missing values not rendered as zero.
+16. 304 responses not resetting freshness.
+17. Same PDF not being re-ingested repeatedly.
+18. Same event not being double-counted across sources.
+19. Historical August events not being classified as October events.
+20. Out-of-country events excluded from India current KPIs.
+21. Dashboard counters matching backend records.
+22. Map rejecting ungrounded coordinates.
+
+Use captured real-source fixtures for repeatable automated tests.
+Also run live source smoke tests separately against actual external
+endpoints from the development environment.
+
+Do not fabricate source records to make tests pass.
+
+==================================================
+PHASE 8 — FINAL LIVE EXTRACTION RUN
+==================================================
+
+After implementation, execute actual polling and ingestion.
+
+Do not stop after writing adapters or editing JSON.
+
+Run the actual application pipeline against:
+
+- NCDC 2026 weekly outbreak directory
+- WHO Disease Outbreak News API
+- CDC Content Services API
+- GDELT DOC API
+- Existing working official RSS/HTML sources
+
+Produce a source-by-source extraction table showing:
+
+Source | HTTP | Discovered | Downloaded | Unique |
+Text Extracted | NLP Completed | Priority Documents |
+Event Candidates | Current Events | Archived Events |
+Failed/Unresolved
+
+For NCDC Week 34, show actual extracted event records with
+their outbreak IDs, disease labels, locations, counts,
+dates, source pages, and evidence snippets.
+
+Verify the records are persisted in the database and can be
+opened in Event Intelligence and the NLP Workbench.
+
+Verify Overview counters against persisted database records.
+
+Do not make a current positive October alert from an August event.
+
+If a source returns zero qualifying events, show what it actually
+returned, what was parsed, and why no event was created.
+
+==================================================
+PHASE 9 — VERIFICATION AND FINAL REPORT
+==================================================
+
+Run:
+
+- Complete backend pytest suite.
+- Frontend Vitest suite.
+- Frontend production build.
+- Actual live source smoke tests.
+- Database count and provenance audit.
+- End-to-end browser verification of all modified views.
+
+Capture actual exit codes and results.
+
+Create:
+
+docs/LIVE_SURVEILLANCE_EXTRACTION_AND_VALIDATION_REPORT.md
+
+The report must include:
+
+1. Root cause of the zero-current-alert issue.
+2. Working and unavailable source connectors.
+3. New APIs and adapters implemented.
+4. Actual extraction counts per source.
+5. Exact NCDC Week 34 extracted observations.
+6. NLP relevance corrections.
+7. Quantity/date/geography validation.
+8. Deduplication results.
+9. Current versus historical event counts.
+10. Dashboard counter reconciliation.
+11. Tests and build results.
+12. Remaining access and source-coverage limitations.
+
+Do not report success merely because HTTP status is 200.
+
+Do not report successful extraction unless actual text,
+entities, dates, quantities and evidence provenance were
+persisted and verified.
+
+Do not modify the finalized eight-disease registry.
+
+Do not manufacture positive outbreak reports.
+
+The objective is genuine live-source extraction and
+evidence-grounded epidemiological intelligence.
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-30T23:29:36+05:30.
+</ADDITIONAL_METADATA>

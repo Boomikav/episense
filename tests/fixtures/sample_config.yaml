@@ -1,0 +1,75 @@
+# ==============================================================================
+# EpiSense Framework Configuration (Reference / Example)
+# ==============================================================================
+
+app:
+  name: "EpiSense"
+  environment: "development"
+  debug: true
+  log_level: "INFO"
+
+storage:
+  database_url: "sqlite:///./data/processed/episense.sqlite"
+  data_raw_dir: "./data/raw"
+  data_interim_dir: "./data/interim"
+  data_processed_dir: "./data/processed"
+  data_benchmarks_dir: "./data/benchmarks"
+
+nlp:
+  default_backend: "spacy"
+  ner_model_name: "en_core_sci_sm"
+  language: "en"
+  max_sentence_length: 512
+  confidence_threshold: 0.50
+
+assertion:
+  method: "rule_based"
+  confidence_threshold: 0.60
+  enable_context_window: true
+  context_window_tokens: 12
+
+temporal:
+  reference_timezone: "UTC"
+  default_relative_anchor: "publication_date"
+  max_lookback_days: 365
+
+geospatial:
+  target_scope: "India"
+  gazetteer_provider: "sqlite_local"
+  admin_level_default: 2  # District level
+  fuzzy_match_threshold: 85.0
+
+fusion:
+  # Approved Architectural Decision D05
+  temporal_window_days: 7
+  spatial_aggregation_level: "admin_2"
+  jaccard_dedup_threshold: 0.80
+  min_source_diversity_for_high_alert: 2
+
+baseline:
+  method: "historical_rolling"
+  lookback_weeks: 7
+  min_sample_size: 3
+
+anomaly:
+  algorithm: "EARS_C2"
+  z_score_threshold: 2.0
+  p_value_threshold: 0.01
+  smoothing_epsilon: 0.001
+
+scoring:
+  # WARNING: The weights below are PROVISIONAL — REQUIRES EMPIRICAL CALIBRATION.
+  # They are initial operational heuristics from Phase 1 and must be calibrated on historical benchmarks.
+  weight_anomaly: 0.40
+  weight_diversity: 0.30
+  weight_assertion: 0.15
+  weight_spatial: 0.15
+  threshold_informational: 0.00
+  threshold_low: 0.40
+  threshold_medium: 0.65
+  threshold_high: 0.80
+
+api:
+  host: "127.0.0.1"
+  port: 8000
+  reload: false

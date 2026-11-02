@@ -1,0 +1,1533 @@
+{
+  "manifest_id": "b2589275-e218-42b0-baaa-e00336738257",
+  "dataset_name": "episense_benchmark_v1",
+  "version": "1.0.0",
+  "created_at": "2026-09-06T13:05:49.814330Z",
+  "description": "EpiSense Curated Real-World Benchmark Corpus: 52 authentic public health documents covering acute infectious diseases, routine surveillance, advisories, and negations.",
+  "geographic_scope": "India (with selected regional/global benchmarks)",
+  "temporal_range_start": "2023-01-01T00:00:00Z",
+  "temporal_range_end": "2026-09-06T00:00:00Z",
+  "document_count": 52,
+  "split_counts": {
+    "development": 37,
+    "validation": 6,
+    "test": 9
+  },
+  "sources_included": [
+    "medrxiv_preprints",
+    "ncdc_idsp_india",
+    "pib_mohfw_india",
+    "promed_mail",
+    "who_don"
+  ],
+  "documents": [
+    {
+      "document": {
+        "document_id": "8a919512-1b53-5800-b6d2-d05c2957fb5a",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Nipah virus disease – India (Kerala)",
+        "text": "On 18 June 2026, the Ministry of Health and Family Welfare, Government of India, notified WHO of a laboratory-confirmed case of Nipah virus disease in Kozhikode district, Kerala state. The patient, an adult male, presented with fever, headache, cough, and shortness of breath, which rapidly progressed to acute respiratory distress syndrome and altered sensorium. The patient was admitted to an intensive care unit and required mechanical ventilation. Throat swab, urine, and blood samples tested positive for Nipah virus RNA by reverse transcription-polymerase chain reaction (RT-PCR) at the National Institute of Virology (NIV), Pune. A total of 178 contacts were identified and placed under institutional quarantine and daily active symptom surveillance. As of 25 June 2026, none of the high-risk contacts had tested positive, and no secondary transmissions were detected in the community.",
+        "publication_timestamp": "2026-06-28T10:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.761419Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON-nipah-kerala",
+        "language": "en",
+        "content_hash_sha256": "c3cb0835799dd9702092665713f00bfe249d1148081b5ccaf64be833a32e446a",
+        "provenance_metadata": {
+          "slug": "who-nipah-kerala-jun2026",
+          "country": "India",
+          "region": "Kerala",
+          "incident_id": "inc-nipah-kerala-2026",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/8a919512-1b53-5800-b6d2-d05c2957fb5a.txt",
+          "processed_storage_ref": "data/processed/8a919512-1b53-5800-b6d2-d05c2957fb5a.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-nipah-kerala-2026 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "783b302c-90ba-52c6-a341-49635cc8ce8b",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Nipah virus disease – India (West Bengal)",
+        "text": "Between 12 and 18 January 2026, two laboratory-confirmed cases of Nipah virus disease were reported among healthcare workers in North 24 Parganas district, West Bengal. Both patients had histories of treating patients with severe febrile illness prior to developing high fever, severe myalgia, and encephalitic symptoms. RT-PCR testing conducted at NIV Pune confirmed Nipah virus infection. The state health department initiated contact tracing, monitoring 94 contacts. No epidemiological linkage to bat roosts or consumption of raw date palm sap was established in the initial investigation. Both patients received supportive clinical management.",
+        "publication_timestamp": "2026-01-26T14:30:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.762515Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON-nipah-westbengal",
+        "language": "en",
+        "content_hash_sha256": "98142370d541a22aeaeac54eeb700adef1a3b1b90fdd0c802a6d1a90f1daeb9f",
+        "provenance_metadata": {
+          "slug": "who-nipah-bengal-jan2026",
+          "country": "India",
+          "region": "West Bengal",
+          "incident_id": "inc-nipah-bengal-2026",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/783b302c-90ba-52c6-a341-49635cc8ce8b.txt",
+          "processed_storage_ref": "data/processed/783b302c-90ba-52c6-a341-49635cc8ce8b.txt"
+        }
+      },
+      "split": "test",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-nipah-bengal-2026 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "e2655445-4397-5957-bfea-150662323040",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Acute Encephalitis Syndrome due to Chandipura virus – India",
+        "text": "Between early June and 15 August 2024, a total of 245 cases of Acute Encephalitis Syndrome (AES) including 82 deaths (case fatality ratio 33.5%) were reported across 43 districts in India. The majority of cases occurred in Gujarat (61 confirmed Chandipura virus cases out of 210 AES cases), followed by Rajasthan (3 confirmed cases) and Madhya Pradesh. Chandipura virus (CHPV), a member of the Rhabdoviridae family transmitted by phlebotomine sandflies, was confirmed by RT-PCR and IgM ELISA in 64 cases. Children aged under 15 years were predominantly affected, presenting with rapid onset of high fever, vomiting, convulsions, and coma. This represents the largest recorded Chandipura outbreak in India since 2004.",
+        "publication_timestamp": "2024-08-23T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.764524Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON529",
+        "language": "en",
+        "content_hash_sha256": "cf70b95e57a32e1cf25b99d445fb3bf3eae4e2d0b7cd476b2b1b11c77d72ed3d",
+        "provenance_metadata": {
+          "slug": "who-chandipura-gujarat-aug2024",
+          "country": "India",
+          "region": "Gujarat",
+          "incident_id": "inc-chandipura-western-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/e2655445-4397-5957-bfea-150662323040.txt",
+          "processed_storage_ref": "data/processed/e2655445-4397-5957-bfea-150662323040.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-chandipura-western-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "129acfd5-cd7e-5258-8c5b-422787c425e9",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Human infection caused by avian influenza A(H9N2) – India",
+        "text": "On 22 May 2024, WHO was notified of a laboratory-confirmed human case of avian influenza A(H9N2) virus infection in a 4-year-old resident of Malda district, West Bengal, India. The child presented with persistent fever, severe respiratory distress, and recurrent wheezing, requiring admission to a pediatric intensive care unit and oxygen support. Nasopharyngeal swabs sent to ICMR-National Institute of Virology tested positive for influenza A(H9N2). The child had contact with domestic backyard poultry prior to symptom onset. No respiratory symptoms were reported among family or healthcare contacts, and no human-to-human transmission was observed.",
+        "publication_timestamp": "2024-06-11T16:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.764524Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON521",
+        "language": "en",
+        "content_hash_sha256": "3dfa7fd79f2783b42f3632e65d44e4aaf09af43d0387bc5f67f93028763febc8",
+        "provenance_metadata": {
+          "slug": "who-avian-h9n2-bengal-jun2024",
+          "country": "India",
+          "region": "West Bengal",
+          "incident_id": "inc-h9n2-bengal-2024",
+          "event_category": "confirmed_case",
+          "raw_storage_ref": "data/raw/129acfd5-cd7e-5258-8c5b-422787c425e9.txt",
+          "processed_storage_ref": "data/processed/129acfd5-cd7e-5258-8c5b-422787c425e9.txt"
+        }
+      },
+      "split": "dev",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-h9n2-bengal-2024 (confirmed_case)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "6ecb752a-66f5-5d02-9e92-aa8b238ed00d",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Zika virus disease – India",
+        "text": "As of 21 July 2024, a total of 151 laboratory-confirmed cases of Zika virus disease have been reported in India during 2024. Maharashtra state recorded the highest burden, with 140 cases centered in Pune Municipal Corporation, while Karnataka reported 10 cases and Gujarat reported one case. Among confirmed cases in Pune, 42 were pregnant women undergoing active antenatal fetal monitoring for congenital microcephaly. Vector control measures, intensified entomological surveillance for Aedes aegypti, and public health advisories to pregnant women were deployed by state health departments.",
+        "publication_timestamp": "2024-07-31T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.767042Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON-zika-india",
+        "language": "en",
+        "content_hash_sha256": "2c46f6439f8ebd06bbf89fc70d033445b1cd331312b3cf740f3d5b0099fe6182",
+        "provenance_metadata": {
+          "slug": "who-zika-maharashtra-jul2024",
+          "country": "India",
+          "region": "Maharashtra",
+          "incident_id": "inc-zika-maharashtra-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/6ecb752a-66f5-5d02-9e92-aa8b238ed00d.txt",
+          "processed_storage_ref": "data/processed/6ecb752a-66f5-5d02-9e92-aa8b238ed00d.txt"
+        }
+      },
+      "split": "test",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-zika-maharashtra-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "964a043d-8f1f-5eb6-b91b-34e6ad194645",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Nipah virus disease – India (Kerala 2023)",
+        "text": "Between 12 and 15 September 2023, six laboratory-confirmed cases of Nipah virus infection, including two deaths, were reported in Kozhikode district, Kerala. All confirmed cases were males aged between 9 and 49 years. An initial index patient presented with pneumonia and acute respiratory distress syndrome before succumbing to encephalitic illness. Epidemiological investigation linked five secondary cases to direct contact with the index patient in healthcare and familial settings. Over 1,288 contacts were traced, quarantined, and monitored for 21 days. The outbreak was declared contained on 27 September 2023 following negative repeat testing.",
+        "publication_timestamp": "2023-10-03T15:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.767042Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2023-DON490",
+        "language": "en",
+        "content_hash_sha256": "e3cfc2f0f42385f12a11478a4459bdedce718fddac48eb1eb94c3f239ecd748c",
+        "provenance_metadata": {
+          "slug": "who-nipah-kerala-sep2023",
+          "country": "India",
+          "region": "Kerala",
+          "incident_id": "inc-nipah-kerala-2023",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/964a043d-8f1f-5eb6-b91b-34e6ad194645.txt",
+          "processed_storage_ref": "data/processed/964a043d-8f1f-5eb6-b91b-34e6ad194645.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-nipah-kerala-2023 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "c73e657f-de18-5c4e-958d-5e1b12f9a41a",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Cholera – Global situation (including South Asia)",
+        "text": "From 1 January through 28 April 2024, a cumulative total of 145,900 cholera and acute watery diarrhea cases with 1,766 deaths were reported globally from 24 countries. In the South-East Asia Region, persistent focal transmissions and sporadic localized outbreaks were reported in flood-affected and peri-urban settlements lacking adequate water, sanitation, and hygiene infrastructure. Oral cholera vaccine (OCV) global stockpiles remain constrained, prompting the International Coordinating Group to prioritize single-dose reactive vaccination campaigns in emergency settings.",
+        "publication_timestamp": "2024-05-15T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.768868Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON-cholera-global",
+        "language": "en",
+        "content_hash_sha256": "e1c65a99ba0be3fd918b254d51b6386899ac6f2eee66bce88404a431fe824a81",
+        "provenance_metadata": {
+          "slug": "who-cholera-global-overview-2024",
+          "country": "Global",
+          "region": "South Asia",
+          "incident_id": "inc-cholera-regional-2024",
+          "event_category": "routine_surveillance",
+          "raw_storage_ref": "data/raw/c73e657f-de18-5c4e-958d-5e1b12f9a41a.txt",
+          "processed_storage_ref": "data/processed/c73e657f-de18-5c4e-958d-5e1b12f9a41a.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-cholera-regional-2024 (routine_surveillance)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "2d5a9358-f08a-5f1c-8a29-79944fdb5823",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Dengue – Global situation (South-East Asia and Western Pacific)",
+        "text": "In 2023, global dengue incidence surged to historic highs, with over 5 million cases and 5,000 dengue-related deaths reported across more than 80 countries. In the South-East Asia Region, high transmission was sustained through the prolonged monsoon season, driven by favorable climate conditions for Aedes albopictus and Aedes aegypti breeding, urban density, and circulating dengue virus serotypes DENV-1, DENV-2, and DENV-3. Public health authorities expanded integrated vector management and hospital triaging protocols.",
+        "publication_timestamp": "2023-12-21T13:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.769794Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2023-DON498",
+        "language": "en",
+        "content_hash_sha256": "ab9389262151476ab436fd8e495a33b73920c5840db35830a3bb0b65db6d6d53",
+        "provenance_metadata": {
+          "slug": "who-dengue-global-surge-2023",
+          "country": "Global",
+          "region": "South-East Asia",
+          "incident_id": "inc-dengue-regional-2023",
+          "event_category": "routine_surveillance",
+          "raw_storage_ref": "data/raw/2d5a9358-f08a-5f1c-8a29-79944fdb5823.txt",
+          "processed_storage_ref": "data/processed/2d5a9358-f08a-5f1c-8a29-79944fdb5823.txt"
+        }
+      },
+      "split": "test",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-dengue-regional-2023 (routine_surveillance)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "4b82fe70-1839-569a-818a-c3da9f4bb9ff",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Mpox – Multi-country external situation report",
+        "text": "On 14 August 2024, the WHO Director-General determined that the upsurge of mpox in the Democratic Republic of the Congo and an expanding number of countries in Africa constitutes a Public Health Emergency of International Concern (PHEIC). The emergence and rapid spread of clade Ib mpox, coupled with continued transmission of clade II in other regions, underscores the need for coordinated surveillance, genomic sequencing, contact tracing, and access to vaccines for high-risk populations.",
+        "publication_timestamp": "2024-08-19T14:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.769794Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON-mpox-global",
+        "language": "en",
+        "content_hash_sha256": "ede9cdf6eb93526c06681f3e1ac18d66523aff28f4060d8f0e8f545cdfba914d",
+        "provenance_metadata": {
+          "slug": "who-mpox-multi-country-2024",
+          "country": "Global",
+          "region": "Multi-country",
+          "incident_id": "inc-mpox-global-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/4b82fe70-1839-569a-818a-c3da9f4bb9ff.txt",
+          "processed_storage_ref": "data/processed/4b82fe70-1839-569a-818a-c3da9f4bb9ff.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-mpox-global-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "e47fd17d-722b-54af-8726-01e72b48842c",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Marburg virus disease – Rwanda",
+        "text": "On 27 September 2024, the Ministry of Health of Rwanda confirmed the country's first outbreak of Marburg virus disease. As of 29 September 2024, a total of 26 confirmed cases, including eight fatalities, were reported across seven districts. Over 70% of confirmed cases were healthcare workers from two health facilities in Kigali. Patients presented with high fever, severe headache, malaise, vomiting, and diarrhea, with some developing severe hemorrhagic manifestations. WHO deployed epidemiological and infection prevention experts to support outbreak response.",
+        "publication_timestamp": "2024-09-30T10:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.771261Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON537",
+        "language": "en",
+        "content_hash_sha256": "a4a69b756aea0f03c09de939150db465bcfba6d7c7a62d4b4f1268f382d3456f",
+        "provenance_metadata": {
+          "slug": "who-marburg-rwanda-2024",
+          "country": "Rwanda",
+          "region": "Kigali",
+          "incident_id": "inc-marburg-rwanda-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/e47fd17d-722b-54af-8726-01e72b48842c.txt",
+          "processed_storage_ref": "data/processed/e47fd17d-722b-54af-8726-01e72b48842c.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-marburg-rwanda-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "ed9feb6e-d234-59ff-ae72-5f5b99459b6d",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Dengue – Bangladesh",
+        "text": "Between 1 January and 7 August 2023, the Ministry of Health and Family Welfare of Bangladesh reported 69,483 laboratory-confirmed dengue cases and 327 related deaths (case fatality rate 0.47%). Transmission accelerated sharply in July 2023, accounting for 63% of total cases. All 64 districts in Bangladesh reported active cases, with Dhaka division experiencing the highest burden. High temperatures and unprecedented heavy monsoon rainfall created extensive breeding habitats for Aedes mosquitoes, overwhelming specialized fever clinics.",
+        "publication_timestamp": "2023-08-11T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.771261Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2023-DON481",
+        "language": "en",
+        "content_hash_sha256": "056ae32e4c73c6d6ec077b9d43e52ebcd3b8fd499e65ef60807d48027de27d1e",
+        "provenance_metadata": {
+          "slug": "who-dengue-bangladesh-2023",
+          "country": "Bangladesh",
+          "region": "Dhaka",
+          "incident_id": "inc-dengue-bangladesh-2023",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/ed9feb6e-d234-59ff-ae72-5f5b99459b6d.txt",
+          "processed_storage_ref": "data/processed/ed9feb6e-d234-59ff-ae72-5f5b99459b6d.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-dengue-bangladesh-2023 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "676fef13-2873-5fa5-af9b-6f17384d5efc",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Avian Influenza A(H5N1) – Cambodia",
+        "text": "Between 26 January and 20 February 2024, the Ministry of Health of Cambodia notified WHO of five laboratory-confirmed human cases of avian influenza A(H5N1) infection, including one fatality. The cases occurred in Kratie, Siem Reap, and Prey Veng provinces. All patients had documented exposure to sick or dead poultry in their villages prior to symptom onset. Throat swabs confirmed clade 2.3.2.1e influenza A(H5N1). Active contact tracing identified 144 close contacts who tested negative and completed 14 days of quarantine.",
+        "publication_timestamp": "2024-02-26T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.773994Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON506",
+        "language": "en",
+        "content_hash_sha256": "6f082891adfd6348873f9012b686ffe87accf83fc82181104a5b00e4430454b5",
+        "provenance_metadata": {
+          "slug": "who-avian-h5n1-cambodia-2024",
+          "country": "Cambodia",
+          "region": "Kratie",
+          "incident_id": "inc-h5n1-cambodia-2024",
+          "event_category": "confirmed_case",
+          "raw_storage_ref": "data/raw/676fef13-2873-5fa5-af9b-6f17384d5efc.txt",
+          "processed_storage_ref": "data/processed/676fef13-2873-5fa5-af9b-6f17384d5efc.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-h5n1-cambodia-2024 (confirmed_case)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "c3d732b7-1c50-56f8-bc96-3e6108a0beb6",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Middle East respiratory syndrome coronavirus (MERS-CoV) – Saudi Arabia",
+        "text": "Between 10 April and 17 April 2024, the Ministry of Health of Saudi Arabia reported three laboratory-confirmed cases of Middle East respiratory syndrome coronavirus (MERS-CoV) infection, including one death, in Riyadh. All three cases were males aged 56 to 70 years with underlying chronic health conditions. Two patients had reported direct contact with dromedary camels and consumption of raw camel milk. Reverse transcription-PCR confirmed MERS-CoV infection. Contact tracing of 45 healthcare and household contacts revealed no secondary transmission.",
+        "publication_timestamp": "2024-05-08T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.774716Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON517",
+        "language": "en",
+        "content_hash_sha256": "4401d51dcad9d98ef64a1391ca0d63d7e03179a96189d2c049f7e70c70b63aa9",
+        "provenance_metadata": {
+          "slug": "who-middle-east-mers-2024",
+          "country": "Saudi Arabia",
+          "region": "Riyadh",
+          "incident_id": "inc-mers-saudi-2024",
+          "event_category": "confirmed_case",
+          "raw_storage_ref": "data/raw/c3d732b7-1c50-56f8-bc96-3e6108a0beb6.txt",
+          "processed_storage_ref": "data/processed/c3d732b7-1c50-56f8-bc96-3e6108a0beb6.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-mers-saudi-2024 (confirmed_case)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "612d1d9b-1c6c-5f6b-95f6-45fce5640073",
+        "source_id": "who_don",
+        "source_type": "official_bulletin",
+        "title": "Yellow fever – Region of the Americas",
+        "text": "Between 1 January and 18 March 2024, seven confirmed cases of yellow fever, including four deaths, were reported in the Region of the Americas across Colombia, Guyana, and Peru. In Colombia, confirmed cases were identified in rural forested municipalities of Tolima and Putumayo departments among unvaccinated agricultural workers with sylvatic mosquito exposure. Yellow fever virus infection was confirmed by RT-PCR at national reference laboratories. Reactive vaccination campaigns and vector control were initiated in high-risk rural areas.",
+        "publication_timestamp": "2024-03-20T14:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.776418Z",
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON510",
+        "language": "en",
+        "content_hash_sha256": "41be675824f0523a18a97338baa4d45196c7e4e372b1b97ab6b4f11aa7cef6cd",
+        "provenance_metadata": {
+          "slug": "who-yellow-fever-americas-2024",
+          "country": "Colombia",
+          "region": "Tolima",
+          "incident_id": "inc-yellowfever-americas-2024",
+          "event_category": "confirmed_case",
+          "raw_storage_ref": "data/raw/612d1d9b-1c6c-5f6b-95f6-45fce5640073.txt",
+          "processed_storage_ref": "data/processed/612d1d9b-1c6c-5f6b-95f6-45fce5640073.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-yellowfever-americas-2024 (confirmed_case)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "3cc30bd9-e645-5aa5-8aad-d2503cd76611",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "CDSCO approves India's first dengue vaccine Qdenga for emergency use",
+        "text": "The Central Drugs Standard Control Organisation (CDSCO) has granted marketing authorization for India's first tetravalent dengue vaccine, Qdenga, for individuals aged 4 to 60 years residing in endemic regions. Union Health Minister Shri J.P. Nadda stated that while the vaccine represents a milestone in biosecurity, routine surveillance, larval source reduction, and integrated vector management remain the primary pillars for combating seasonal dengue surges across urban municipal corporations ahead of the monsoon season.",
+        "publication_timestamp": "2026-07-21T15:30:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.777426Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2034921",
+        "language": "en",
+        "content_hash_sha256": "34b747e5631da0e5454b67bd72f3488c5cac16cd5690c029078c0a02a9540de6",
+        "provenance_metadata": {
+          "slug": "pib-dengue-vaccine-approval-jul2026",
+          "country": "India",
+          "region": "National",
+          "incident_id": "inc-dengue-vaccine-india-2026",
+          "event_category": "precautionary_advisory",
+          "raw_storage_ref": "data/raw/3cc30bd9-e645-5aa5-8aad-d2503cd76611.txt",
+          "processed_storage_ref": "data/processed/3cc30bd9-e645-5aa5-8aad-d2503cd76611.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-dengue-vaccine-india-2026 (precautionary_advisory)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "7628bacd-81ff-5dfb-af83-59e18008e7f9",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Status of Nipah virus cases in West Bengal: No additional cases detected",
+        "text": "The Union Ministry of Health and Family Welfare clarified today that only two confirmed cases of Nipah virus disease were reported in West Bengal in January 2026. The Ministry refuted social media rumors alleging a widespread hospital outbreak. Strict contact tracing was executed for 94 individuals, all of whom tested negative upon RT-PCR evaluation. No new suspected cases have been admitted over the past ten days, and public health authorities affirmed that transmission is under containment.",
+        "publication_timestamp": "2026-01-27T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.777958Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2018842",
+        "language": "en",
+        "content_hash_sha256": "c16069b6e8ccc451cf956e65d3997f3ac8fef3b757a3c9c7207d9904e5f29338",
+        "provenance_metadata": {
+          "slug": "pib-nipah-clarification-jan2026",
+          "country": "India",
+          "region": "West Bengal",
+          "incident_id": "inc-nipah-bengal-2026",
+          "event_category": "negation_statement",
+          "raw_storage_ref": "data/raw/7628bacd-81ff-5dfb-af83-59e18008e7f9.txt",
+          "processed_storage_ref": "data/processed/7628bacd-81ff-5dfb-af83-59e18008e7f9.txt"
+        }
+      },
+      "split": "test",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-nipah-bengal-2026 (negation_statement)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "8c0d5df0-ec98-545e-b4d0-d690d44257eb",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Union Health Minister reviews preparedness for Dengue, Malaria, and Vector-Borne Diseases",
+        "text": "Union Minister for Health and Family Welfare chaired a high-level inter-ministerial review meeting to assess national readiness for vector-borne diseases ahead of the southwest monsoon. States were directed to establish dedicated hospital isolation beds, maintain buffer stocks of NS1 diagnostic antigen kits and platelet units, and ensure door-to-door entomological larval surveillance in high-risk urban districts of Delhi, Uttar Pradesh, Maharashtra, and Tamil Nadu.",
+        "publication_timestamp": "2026-06-15T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.778765Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2026340",
+        "language": "en",
+        "content_hash_sha256": "26b69d743377f5a75efe6219fc7d5f6880adb937277dae03e00e0d1a06d9c918",
+        "provenance_metadata": {
+          "slug": "pib-monsoon-dengue-prep-jun2026",
+          "country": "India",
+          "region": "National",
+          "incident_id": "inc-monsoon-prep-india-2026",
+          "event_category": "routine_surveillance",
+          "raw_storage_ref": "data/raw/8c0d5df0-ec98-545e-b4d0-d690d44257eb.txt",
+          "processed_storage_ref": "data/processed/8c0d5df0-ec98-545e-b4d0-d690d44257eb.txt"
+        }
+      },
+      "split": "test",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-monsoon-prep-india-2026 (routine_surveillance)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "c252a77c-8fd0-5a4a-9c5d-444a6aecb434",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Ministry issues advisory to States regarding Zika virus surveillance",
+        "text": "In view of laboratory-confirmed Zika virus cases reported from Pune, Maharashtra, the Directorate General of Health Services (DGHS) issued an advisory urging all States and Union Territories to maintain heightened vigilance. Health facilities were instructed to screen pregnant women exhibiting low-grade fever, conjunctivitis, and maculopapular rash, and to ensure rigorous ultrasound monitoring for fetal microcephaly and central nervous system anomalies.",
+        "publication_timestamp": "2024-07-03T16:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.778765Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2031105",
+        "language": "en",
+        "content_hash_sha256": "d675c1fad4a8ef8e17a548bafc507992e648b8bed9124f455fa0f045be402be9",
+        "provenance_metadata": {
+          "slug": "pib-zika-advisory-states-jul2024",
+          "country": "India",
+          "region": "National",
+          "incident_id": "inc-zika-maharashtra-2024",
+          "event_category": "precautionary_advisory",
+          "raw_storage_ref": "data/raw/c252a77c-8fd0-5a4a-9c5d-444a6aecb434.txt",
+          "processed_storage_ref": "data/processed/c252a77c-8fd0-5a4a-9c5d-444a6aecb434.txt"
+        }
+      },
+      "split": "test",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-zika-maharashtra-2024 (precautionary_advisory)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "9c01748a-8cbc-5bf5-8a0b-c3f2ae2f3c98",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Central teams deployed to Gujarat to support Chandipura virus outbreak management",
+        "text": "The Ministry of Health and Family Welfare dispatched a multidisciplinary Central team to Gujarat to assist state authorities in investigating Acute Encephalitis Syndrome (AES) and Chandipura virus cases. The team comprising epidemiologists from NCDC, virologists from NIV Pune, and pediatricians from Lady Hardinge Medical College is supervising vector control measures, indoor residual spraying targeting sandfly vectors, and clinical case management in affected districts including Sabarkantha, Aravalli, and Kheda.",
+        "publication_timestamp": "2024-07-19T13:30:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.780774Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2034112",
+        "language": "en",
+        "content_hash_sha256": "6af213a597d979b8df9197702629c96ee7c8d973ebc39bce7f761e9d2831680f",
+        "provenance_metadata": {
+          "slug": "pib-chandipura-central-team-jul2024",
+          "country": "India",
+          "region": "Gujarat",
+          "incident_id": "inc-chandipura-western-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/9c01748a-8cbc-5bf5-8a0b-c3f2ae2f3c98.txt",
+          "processed_storage_ref": "data/processed/9c01748a-8cbc-5bf5-8a0b-c3f2ae2f3c98.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-chandipura-western-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "9212f2af-f2fc-58ad-94b5-f58b4b33fc88",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Nipah outbreak in Kozhikode contained successfully: Ministry of Health",
+        "text": "Union Health Minister announced that the Nipah virus outbreak in Kozhikode district, Kerala, has been effectively controlled with no new positive cases detected over the mandatory double incubation period of 42 days. A mobile BSL-3 laboratory deployed by ICMR conducted on-site testing of 387 suspected samples, enabling rapid containment. All containment zones have been de-notified, while baseline syndromic surveillance continues.",
+        "publication_timestamp": "2023-09-27T17:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.780774Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1961448",
+        "language": "en",
+        "content_hash_sha256": "ae4582cf3e3634bb320e05290ae82dbed1e3d71945f2dcae6a8b0ed5fccf2bc2",
+        "provenance_metadata": {
+          "slug": "pib-nipah-containment-kerala-sep2023",
+          "country": "India",
+          "region": "Kerala",
+          "incident_id": "inc-nipah-kerala-2023",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/9212f2af-f2fc-58ad-94b5-f58b4b33fc88.txt",
+          "processed_storage_ref": "data/processed/9212f2af-f2fc-58ad-94b5-f58b4b33fc88.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-nipah-kerala-2023 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "23f99950-2f6f-50e9-b4d6-43ab104f1fe6",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "MoHFW monitors acute diarrheal disease cases in tribal pockets of Odisha",
+        "text": "The Union Ministry of Health and Family Welfare is closely coordinating with the Department of Health, Government of Odisha, following an outbreak of acute diarrheal disease and suspected cholera in Rayagada and Koraput districts. Water quality testing revealed contamination of open perennial streams. Mobile medical teams distributed over 50,000 halogen tablets, oral rehydration salts, and intravenous fluids, stabilizing active case admissions.",
+        "publication_timestamp": "2024-07-25T14:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.782793Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2035610",
+        "language": "en",
+        "content_hash_sha256": "c6bb09d9b1ed029a0a2c813955054750da1ca62e114a5dca693e3f609c4187d2",
+        "provenance_metadata": {
+          "slug": "pib-cholera-odisha-monitoring-jul2024",
+          "country": "India",
+          "region": "Odisha",
+          "incident_id": "inc-cholera-odisha-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/23f99950-2f6f-50e9-b4d6-43ab104f1fe6.txt",
+          "processed_storage_ref": "data/processed/23f99950-2f6f-50e9-b4d6-43ab104f1fe6.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-cholera-odisha-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "abc687ff-bad8-54ca-a1f9-6e305cfecc33",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "National Center for Disease Control issues heatwave public health advisories",
+        "text": "The National Centre for Disease Control (NCDC) issued health advisories to Northern and Central Indian states amidst severe heatwave conditions. Hospitals were instructed to record heat stroke admissions and ensure round-the-clock availability of cooling equipment and rehydration therapy. The advisory emphasized that heat-related illnesses must be distinguished from seasonal viral fevers through careful clinical triaging.",
+        "publication_timestamp": "2024-05-18T10:30:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.782793Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2020811",
+        "language": "en",
+        "content_hash_sha256": "6a572677df128ea9aa92604a147dea55c6877acfb693ae6a3c150970b18bd3fb",
+        "provenance_metadata": {
+          "slug": "pib-heatwave-advisory-may2024",
+          "country": "India",
+          "region": "National",
+          "incident_id": "inc-heatwave-india-2024",
+          "event_category": "precautionary_advisory",
+          "raw_storage_ref": "data/raw/abc687ff-bad8-54ca-a1f9-6e305cfecc33.txt",
+          "processed_storage_ref": "data/processed/abc687ff-bad8-54ca-a1f9-6e305cfecc33.txt"
+        }
+      },
+      "split": "test",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-heatwave-india-2024 (precautionary_advisory)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "33e3cca8-3d75-528d-aedf-fa3d45c6d061",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Advisory on Scrub Typhus management issued to hilly states",
+        "text": "Following an increase in scrub typhus admissions across Shimla, Solan, and Mandi districts in Himachal Pradesh, the Ministry issued clinical guidance emphasizing early empirical administration of doxycycline. Scrub typhus, caused by Orientia tsutsugamushi transmitted by larval trombiculid mites (chiggers), frequently presents during monsoon harvesting. Health facilities were advised to maintain rapid IgM diagnostic test kits.",
+        "publication_timestamp": "2023-09-12T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.782793Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1958210",
+        "language": "en",
+        "content_hash_sha256": "24b7f250da86d426de1620b6cd53941ed6ab545a2a28a0bc1918a8933b5908ef",
+        "provenance_metadata": {
+          "slug": "pib-scrub-typhus-himachal-sep2023",
+          "country": "India",
+          "region": "Himachal Pradesh",
+          "incident_id": "inc-scrub-typhus-hp-2023",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/33e3cca8-3d75-528d-aedf-fa3d45c6d061.txt",
+          "processed_storage_ref": "data/processed/33e3cca8-3d75-528d-aedf-fa3d45c6d061.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-scrub-typhus-hp-2023 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "ca134477-6fd4-5cb4-9fc0-2b7fb9dd4df9",
+        "source_id": "pib_mohfw_india",
+        "source_type": "official_bulletin",
+        "title": "Health Ministry reviews COVID-19 preparedness following detection of JN.1 sub-variant",
+        "text": "Union Health Secretary reviewed the COVID-19 trajectory following the detection of the JN.1 sub-variant in Kerala and Goa. The Ministry noted that although a modest rise in mild upper respiratory illness had occurred, hospitalization and ICU admission rates remained low. States were instructed to strengthen whole genome sequencing through the INSACOG network and maintain influenza-like illness (ILI) surveillance.",
+        "publication_timestamp": "2023-12-20T16:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.785189Z",
+        "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1988912",
+        "language": "en",
+        "content_hash_sha256": "5a325ee615a91cdd48abf772227349f25e832e4936fe17659f4a0373057c7a62",
+        "provenance_metadata": {
+          "slug": "pib-jn1-covid-surveillance-dec2023",
+          "country": "India",
+          "region": "National",
+          "incident_id": "inc-jn1-variant-india-2023",
+          "event_category": "routine_surveillance",
+          "raw_storage_ref": "data/raw/ca134477-6fd4-5cb4-9fc0-2b7fb9dd4df9.txt",
+          "processed_storage_ref": "data/processed/ca134477-6fd4-5cb4-9fc0-2b7fb9dd4df9.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-jn1-variant-india-2023 (routine_surveillance)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "02d5b0a4-0215-592d-b893-1d748e16f59f",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Dengue Fever in Vellore, Tamil Nadu",
+        "text": "State: Tamil Nadu | District: Vellore | Disease/Illness: Dengue Fever | No. of Cases: 28 | No. of Deaths: 0 | Date of start of outbreak: 2024-08-24. Cases reported from Katpadi and Gudiyatham blocks. Patients presented with high fever, retro-orbital pain, and thrombocytopenia. Serum samples tested positive for Dengue NS1 antigen and IgM ELISA at Government Vellore Medical College. Indoor fogging, larvicidal application using abate, and source reduction activities initiated. Outbreak status: Under control.",
+        "publication_timestamp": "2024-09-01T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.785189Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/09/idsp-week35-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "f62ed5af05f7264b35cc9da421ac3612eb81c2a166e68ada2caedd65998c31aa",
+        "provenance_metadata": {
+          "slug": "idsp-dengue-vellore-2024",
+          "country": "India",
+          "region": "Tamil Nadu",
+          "incident_id": "inc-idsp-dengue-vellore-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/02d5b0a4-0215-592d-b893-1d748e16f59f.txt",
+          "processed_storage_ref": "data/processed/02d5b0a4-0215-592d-b893-1d748e16f59f.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-idsp-dengue-vellore-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "678025bb-ae2d-530a-888e-f792ae01be31",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Cholera in Puri, Odisha",
+        "text": "State: Odisha | District: Puri | Disease/Illness: Cholera | No. of Cases: 42 | No. of Deaths: 1 | Date of start of outbreak: 2024-07-06. Outbreak reported from Brahmagiri block following consumption of contaminated well water during village festival. Stool samples sent to District Public Health Laboratory isolated Vibrio cholerae O1 Ogawa. Bleaching powder distributed, overhead water tanks chlorinated, and mobile healthcare teams deployed. Outbreak status: Under surveillance.",
+        "publication_timestamp": "2024-07-14T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.787349Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/07/idsp-week28-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "d6d80fa569c756ddc5164cc4cde02cc3830d5482bbba12384d7995652cb3f749",
+        "provenance_metadata": {
+          "slug": "idsp-cholera-puri-2024",
+          "country": "India",
+          "region": "Odisha",
+          "incident_id": "inc-cholera-odisha-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/678025bb-ae2d-530a-888e-f792ae01be31.txt",
+          "processed_storage_ref": "data/processed/678025bb-ae2d-530a-888e-f792ae01be31.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-cholera-odisha-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "9eaad67a-5b4c-5273-9e60-6bc0efb66f9c",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Leptospirosis in Alappuzha, Kerala",
+        "text": "State: Kerala | District: Alappuzha | Disease/Illness: Leptospirosis | No. of Cases: 19 | No. of Deaths: 2 | Date of start of outbreak: 2024-08-02. Cases reported among paddy field workers and flood relief volunteers in Kuttanad region. Clinical presentations included severe calf tenderness, jaundice, and oliguria. Microscopic Agglutination Test (MAT) confirmed leptospira antibodies. Prophylactic doxycycline distributed to agricultural laborers. Outbreak status: Under surveillance.",
+        "publication_timestamp": "2024-08-11T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.787349Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/08/idsp-week32-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "634cedd1308b37774f1b925839d84632954dfc8951d4d2a288e326f81f0a122d",
+        "provenance_metadata": {
+          "slug": "idsp-leptospirosis-alappuzha-2024",
+          "country": "India",
+          "region": "Kerala",
+          "incident_id": "inc-lepto-kerala-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/9eaad67a-5b4c-5273-9e60-6bc0efb66f9c.txt",
+          "processed_storage_ref": "data/processed/9eaad67a-5b4c-5273-9e60-6bc0efb66f9c.txt"
+        }
+      },
+      "split": "dev",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-lepto-kerala-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "501a2dc0-49ad-5387-9ed2-200eba501d07",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Scrub Typhus in Kangra, Himachal Pradesh",
+        "text": "State: Himachal Pradesh | District: Kangra | Disease/Illness: Scrub Typhus | No. of Cases: 35 | No. of Deaths: 1 | Date of start of outbreak: 2023-09-01. Patients reported from Shahpur and Nurpur blocks. Typical eschar noted in 14 cases. Serum samples tested positive by Weil-Felix test and Scrub Typhus IgM ELISA at DRPGMC Tanda. IEC campaign conducted regarding protective clothing during grass cutting. Outbreak status: Under control.",
+        "publication_timestamp": "2023-09-10T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.789475Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2023/09/idsp-week36-2023.pdf",
+        "language": "en",
+        "content_hash_sha256": "299824b1693554b11e0b6ba49b3f465b5129ce37fcd59e76b425c9e9373b6ffe",
+        "provenance_metadata": {
+          "slug": "idsp-scrubtyphus-kangra-2023",
+          "country": "India",
+          "region": "Himachal Pradesh",
+          "incident_id": "inc-scrub-typhus-hp-2023",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/501a2dc0-49ad-5387-9ed2-200eba501d07.txt",
+          "processed_storage_ref": "data/processed/501a2dc0-49ad-5387-9ed2-200eba501d07.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-scrub-typhus-hp-2023 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "72a1bc9a-4f76-520d-8e70-da36e8a408fe",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Chikungunya in Pune, Maharashtra",
+        "text": "State: Maharashtra | District: Pune | Disease/Illness: Chikungunya | No. of Cases: 52 | No. of Deaths: 0 | Date of start of outbreak: 2024-09-03. Cases clustered in Hadapsar and Sinhagad Road municipal wards. Patients presented with acute fever and severe debilitating polyarthralgia. Serum IgM ELISA confirmed Chikungunya virus infection. Anti-larval measures and indoor thermal fogging conducted by municipal health staff. Outbreak status: Under control.",
+        "publication_timestamp": "2024-09-15T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.789475Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/09/idsp-week37-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "40c320e8ff789d247ded80e03c5eab4ac20935e5b7c228b06acd7c7421e7f15f",
+        "provenance_metadata": {
+          "slug": "idsp-chikungunya-pune-2024",
+          "country": "India",
+          "region": "Maharashtra",
+          "incident_id": "inc-chikungunya-pune-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/72a1bc9a-4f76-520d-8e70-da36e8a408fe.txt",
+          "processed_storage_ref": "data/processed/72a1bc9a-4f76-520d-8e70-da36e8a408fe.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-chikungunya-pune-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "d710e112-d197-50d8-b837-c978aff4af53",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Falciparum Malaria in Bastar, Chhattisgarh",
+        "text": "State: Chhattisgarh | District: Bastar | Disease/Illness: Malaria (Plasmodium falciparum) | No. of Cases: 64 | No. of Deaths: 0 | Date of start of outbreak: 2024-07-22. Cases reported from forested tribal hamlets of Tokapal block. Rapid diagnostic tests (bivalent RDT) and blood smear microscopy confirmed P. falciparum in 58 cases and P. vivax in 6 cases. Mass screening and treatment with ACT (Artesunate + Lumefantrine) completed. LLIN bed nets distributed. Outbreak status: Under control.",
+        "publication_timestamp": "2024-08-04T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.789475Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/08/idsp-week31-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "f40ea0c00c956613acb2188eda367921d38d6612db747a3b66bb625cb9e2f91f",
+        "provenance_metadata": {
+          "slug": "idsp-malaria-bastar-2024",
+          "country": "India",
+          "region": "Chhattisgarh",
+          "incident_id": "inc-malaria-bastar-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/d710e112-d197-50d8-b837-c978aff4af53.txt",
+          "processed_storage_ref": "data/processed/d710e112-d197-50d8-b837-c978aff4af53.txt"
+        }
+      },
+      "split": "dev",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-malaria-bastar-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "bd046644-8bdc-508b-8d00-f2f8618d9568",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Hepatitis A in Kozhikode, Kerala",
+        "text": "State: Kerala | District: Kozhikode | Disease/Illness: Hepatitis A | No. of Cases: 48 | No. of Deaths: 1 | Date of start of outbreak: 2024-04-28. Outbreak occurred among students and residents in Koduvally municipality following consumption of contaminated welcome drinks at wedding event. Serum IgM anti-HAV confirmed Hepatitis A in 24 tested samples. Food safety inspection sealed unhygienic ice-manufacturing unit. Super-chlorination of public wells carried out. Outbreak status: Under control.",
+        "publication_timestamp": "2024-05-12T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.789475Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/05/idsp-week19-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "46be62094fa9eba2c7d7e85b33474a856cf57a1477114c5015f8b0e1fb6fdca2",
+        "provenance_metadata": {
+          "slug": "idsp-hepatitis-a-kozhikode-2024",
+          "country": "India",
+          "region": "Kerala",
+          "incident_id": "inc-hepa-kerala-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/bd046644-8bdc-508b-8d00-f2f8618d9568.txt",
+          "processed_storage_ref": "data/processed/bd046644-8bdc-508b-8d00-f2f8618d9568.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-hepa-kerala-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "02f51bea-556f-5d0d-9f6d-000d50ec9a89",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Measles in Mumbai Suburban, Maharashtra",
+        "text": "State: Maharashtra | District: Mumbai Suburban | Disease/Illness: Measles | No. of Cases: 31 | No. of Deaths: 0 | Date of start of outbreak: 2023-01-29. Clustered cases among unvaccinated children under five years in Govandi and Kurla slum clusters. Patients presented with maculopapular rash, cough, and Koplik spots. Serum IgM ELISA at Haffkine Institute confirmed measles. Special MR immunization drive conducted, vaccinating 1,420 children. Vitamin A supplementation administered. Outbreak status: Under control.",
+        "publication_timestamp": "2023-02-12T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.794336Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2023/02/idsp-week06-2023.pdf",
+        "language": "en",
+        "content_hash_sha256": "8c816af90fd7ed7ae4f7dfa54ed7dbde5ae05cbcd67f4fac661827764757a290",
+        "provenance_metadata": {
+          "slug": "idsp-measles-mumbai-2023",
+          "country": "India",
+          "region": "Maharashtra",
+          "incident_id": "inc-measles-mumbai-2023",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/02f51bea-556f-5d0d-9f6d-000d50ec9a89.txt",
+          "processed_storage_ref": "data/processed/02f51bea-556f-5d0d-9f6d-000d50ec9a89.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-measles-mumbai-2023 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "3abb8baa-9c22-5ddc-a7c3-39f34a5d8fe5",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Food Poisoning in Warangal, Telangana",
+        "text": "State: Telangana | District: Warangal | Disease/Illness: Food Poisoning | No. of Cases: 74 | No. of Deaths: 0 | Date of start of outbreak: 2024-09-02. Residential school students developed acute abdominal cramps, vomiting, and loose stools within 4 hours of dinner. Food samples sent for microbiological analysis showed Staphylococcus aureus enterotoxin. All students recovered with intravenous fluid therapy and antiemetics. Kitchen sanitation overhauled. Outbreak status: Under control.",
+        "publication_timestamp": "2024-09-08T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.794336Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/09/idsp-week36-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "fc9ba7b3d7a197356a9a9d5eb5edfda6d2aa40ab2e8e6b92d51d6d676f58b4ed",
+        "provenance_metadata": {
+          "slug": "idsp-foodpoisoning-warangal-2024",
+          "country": "India",
+          "region": "Telangana",
+          "incident_id": "inc-foodpoisoning-telangana-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/3abb8baa-9c22-5ddc-a7c3-39f34a5d8fe5.txt",
+          "processed_storage_ref": "data/processed/3abb8baa-9c22-5ddc-a7c3-39f34a5d8fe5.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-foodpoisoning-telangana-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "1c20ef3b-80f7-51d9-a868-97e3c2b414e3",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Cutaneous Anthrax in Koraput, Odisha",
+        "text": "State: Odisha | District: Koraput | Disease/Illness: Cutaneous Anthrax | No. of Cases: 8 | No. of Deaths: 0 | Date of start of outbreak: 2023-06-05. Outbreak reported from tribal village in Dasamantapur block following butchering and consumption of a dead cow. Patients presented with painless necrotic skin ulcers with surrounding non-pitting edema on forearms and hands. Smears from skin lesions demonstrated Gram-positive spore-forming bacilli (Bacillus anthracis). Treated with oral ciprofloxacin. Animal husbandry department vaccinated cattle in 5 km radius. Outbreak status: Under control.",
+        "publication_timestamp": "2023-06-18T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.796344Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2023/06/idsp-week24-2023.pdf",
+        "language": "en",
+        "content_hash_sha256": "6eea208383e1ed1446a1a50479ab093f605bbe239e276a4630fa4e6ab145d153",
+        "provenance_metadata": {
+          "slug": "idsp-anthrax-koraput-2023",
+          "country": "India",
+          "region": "Odisha",
+          "incident_id": "inc-anthrax-odisha-2023",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/1c20ef3b-80f7-51d9-a868-97e3c2b414e3.txt",
+          "processed_storage_ref": "data/processed/1c20ef3b-80f7-51d9-a868-97e3c2b414e3.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-anthrax-odisha-2023 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "be94274f-fcc9-5a16-9768-cda24a30ea38",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Kyasanur Forest Disease in Shivamogga, Karnataka",
+        "text": "State: Karnataka | District: Shivamogga | Disease/Illness: Kyasanur Forest Disease (Monkey Fever) | No. of Cases: 14 | No. of Deaths: 1 | Date of start of outbreak: 2024-02-22. Cases reported among forest dwellers and cashew harvesters in Thirthahalli and Sagar taluks following reports of monkey deaths in adjacent reserve forests. Real-time RT-PCR at Viral Diagnostic Laboratory, Shivamogga confirmed KFD virus. Tick surveillance and application of dimethyl phthalate (DMP) oil repellent distributed to villagers. Outbreak status: Under surveillance.",
+        "publication_timestamp": "2024-03-10T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.797350Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/03/idsp-week10-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "026b5c79cb4dbbfa83223968bb28d10682b992f263ff800a80f273d8b5f0d245",
+        "provenance_metadata": {
+          "slug": "idsp-kfd-shivamogga-2024",
+          "country": "India",
+          "region": "Karnataka",
+          "incident_id": "inc-kfd-karnataka-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/be94274f-fcc9-5a16-9768-cda24a30ea38.txt",
+          "processed_storage_ref": "data/processed/be94274f-fcc9-5a16-9768-cda24a30ea38.txt"
+        }
+      },
+      "split": "dev",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-kfd-karnataka-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "b654d795-6172-58ff-b29e-70d0527e63fc",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Acute Encephalitis Syndrome in Muzaffarpur, Bihar",
+        "text": "State: Bihar | District: Muzaffarpur | Disease/Illness: Acute Encephalitis Syndrome / Hypoglycemic Encephalopathy | No. of Cases: 22 | No. of Deaths: 3 | Date of start of outbreak: 2024-05-28. Young children from rural Musahari and Kanti blocks presented in early morning hours with sudden onset of generalized convulsions and severe hypoglycemia (blood glucose < 30 mg/dL) during litchi harvesting season. Rapid intravenous 10% dextrose resuscitation protocol instituted at SKMCH hospital. Nutritional sensitization campaign conducted. Outbreak status: Under control.",
+        "publication_timestamp": "2024-06-09T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.797350Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/06/idsp-week23-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "7955850a222e6e0b34a2f49306c44c7894045869bbcd321c8ab602a7b3f33319",
+        "provenance_metadata": {
+          "slug": "idsp-aes-muzaffarpur-2024",
+          "country": "India",
+          "region": "Bihar",
+          "incident_id": "inc-aes-bihar-2024",
+          "event_category": "suspected_outbreak",
+          "raw_storage_ref": "data/raw/b654d795-6172-58ff-b29e-70d0527e63fc.txt",
+          "processed_storage_ref": "data/processed/b654d795-6172-58ff-b29e-70d0527e63fc.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-aes-bihar-2024 (suspected_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "fa95e950-b0c3-5165-9828-2be4d185e22c",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Dengue in South Delhi, Delhi",
+        "text": "State: Delhi | District: South Delhi | Disease/Illness: Dengue | No. of Cases: 41 | No. of Deaths: 0 | Date of start of outbreak: 2024-08-14. Cases reported from Sangam Vihar and Deoli areas. Entomological survey revealed House Index of 14.2% in domestic overhead water containers. NS1 antigen positive in 38 cases. Legal notices issued to premises with persistent mosquito breeding; motorized fogging deployed. Outbreak status: Under surveillance.",
+        "publication_timestamp": "2024-08-25T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.798762Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/08/idsp-week34-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "02ebf3505aabb089db02812f4d88b408b5e2153a7865dc3b7f2b262e6986550c",
+        "provenance_metadata": {
+          "slug": "idsp-dengue-delhi-2024",
+          "country": "India",
+          "region": "Delhi",
+          "incident_id": "inc-monsoon-prep-india-2026",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/fa95e950-b0c3-5165-9828-2be4d185e22c.txt",
+          "processed_storage_ref": "data/processed/fa95e950-b0c3-5165-9828-2be4d185e22c.txt"
+        }
+      },
+      "split": "test",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-monsoon-prep-india-2026 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "9ec4fd70-3b93-5c58-82a0-55ca1cf4fb9c",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Cholera in Ahmedabad, Gujarat",
+        "text": "State: Gujarat | District: Ahmedabad | Disease/Illness: Cholera | No. of Cases: 31 | No. of Deaths: 0 | Date of start of outbreak: 2024-07-10. Cases reported from slum quarters of Vatva industrial zone. Water pipeline breach contaminated by adjacent municipal drainage line identified as root cause. Stool cultures isolated Vibrio cholerae serogroup O1. Pipeline repaired, alternate tanker water supply arranged, and oral rehydration centers established. Outbreak status: Under control.",
+        "publication_timestamp": "2024-07-21T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.798762Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/07/idsp-week29-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "1e4e97d92ecb62a87dbee9ce1de78871a59f11bd5f2f7b452cc9c911218899dc",
+        "provenance_metadata": {
+          "slug": "idsp-cholera-ahmedabad-2024",
+          "country": "India",
+          "region": "Gujarat",
+          "incident_id": "inc-cholera-ahmedabad-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/9ec4fd70-3b93-5c58-82a0-55ca1cf4fb9c.txt",
+          "processed_storage_ref": "data/processed/9ec4fd70-3b93-5c58-82a0-55ca1cf4fb9c.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-cholera-ahmedabad-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "7910a642-6dc6-55d3-b844-eb26fc0635e4",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Dengue Fever in Coimbatore, Tamil Nadu",
+        "text": "State: Tamil Nadu | District: Coimbatore | Disease/Illness: Dengue | No. of Cases: 23 | No. of Deaths: 0 | Date of start of outbreak: 2024-08-08. Clustered in rural Pollachi block. Patients presented with acute febrile illness, joint pain, and petechial rash. ELISA confirmed DENV IgM. Anti-larval teams conducted tire and coconut shell disposal drives. Outbreak status: Under control.",
+        "publication_timestamp": "2024-08-18T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.801436Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/08/idsp-week33-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "dd615b42aa0d60d5ba3a7bcf5b586434d0f1ed30434f483625e0a981f2ee683e",
+        "provenance_metadata": {
+          "slug": "idsp-dengue-coimbatore-2024",
+          "country": "India",
+          "region": "Tamil Nadu",
+          "incident_id": "inc-idsp-dengue-vellore-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/7910a642-6dc6-55d3-b844-eb26fc0635e4.txt",
+          "processed_storage_ref": "data/processed/7910a642-6dc6-55d3-b844-eb26fc0635e4.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-idsp-dengue-vellore-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "c5bb321b-48b8-564f-9dfe-c3264f111ff7",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Crimean-Congo Hemorrhagic Fever in Bhavnagar, Gujarat",
+        "text": "State: Gujarat | District: Bhavnagar | Disease/Illness: Crimean-Congo Hemorrhagic Fever (CCHF) | No. of Cases: 2 | No. of Deaths: 1 | Date of start of outbreak: 2023-06-27. Index patient, an agricultural pastoralist with Hyalomma tick exposure, developed high fever, severe thrombocytopenia, hematemesis, and epistaxis. RT-PCR confirmed CCHF viral RNA at NIV Pune. Close contacts and healthcare staff monitored in negative pressure isolation; acaricide spraying implemented in animal shelters. Outbreak status: Under control.",
+        "publication_timestamp": "2023-07-09T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.801436Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2023/07/idsp-week27-2023.pdf",
+        "language": "en",
+        "content_hash_sha256": "f908dd1e10d8e08d33c12d4512067b0a5f268fcf2af474c29d00eac098f9724e",
+        "provenance_metadata": {
+          "slug": "idsp-cchf-bhavnagar-2023",
+          "country": "India",
+          "region": "Gujarat",
+          "incident_id": "inc-cchf-gujarat-2023",
+          "event_category": "confirmed_case",
+          "raw_storage_ref": "data/raw/c5bb321b-48b8-564f-9dfe-c3264f111ff7.txt",
+          "processed_storage_ref": "data/processed/c5bb321b-48b8-564f-9dfe-c3264f111ff7.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-cchf-gujarat-2023 (confirmed_case)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "e0332888-8ca7-5fcf-8ec5-340158e82961",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: Rubella in Bengaluru Urban, Karnataka",
+        "text": "State: Karnataka | District: Bengaluru Urban | Disease/Illness: Rubella | No. of Cases: 17 | No. of Deaths: 0 | Date of start of outbreak: 2023-08-16. Outbreak identified in an orphanage and primary school in Yelahanka. Children presented with low-grade fever, retroauricular lymphadenopathy, and pink maculopapular rash. Serology confirmed Rubella IgM. Pregnant female staff screened and counseled; catch-up MR vaccination administered. Outbreak status: Under control.",
+        "publication_timestamp": "2023-08-27T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.801436Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2023/08/idsp-week34-2023.pdf",
+        "language": "en",
+        "content_hash_sha256": "88b9bb27661cffc9e5cc775a97f656fe8c6ac1f713ed8d2e7fbdf28d3ea9fd05",
+        "provenance_metadata": {
+          "slug": "idsp-rubella-bengaluru-2023",
+          "country": "India",
+          "region": "Karnataka",
+          "incident_id": "inc-rubella-karnataka-2023",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/e0332888-8ca7-5fcf-8ec5-340158e82961.txt",
+          "processed_storage_ref": "data/processed/e0332888-8ca7-5fcf-8ec5-340158e82961.txt"
+        }
+      },
+      "split": "dev",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-rubella-karnataka-2023 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "6dccfb44-07e1-51c0-8ef4-a56c90a69d55",
+        "source_id": "ncdc_idsp_india",
+        "source_type": "official_bulletin",
+        "title": "IDSP Weekly Outbreak Summary: NIL Outbreak Report from North Sikkim",
+        "text": "State: Sikkim | District: Mangan (North Sikkim) | Disease/Illness: NIL OUTBREAK REPORT | No. of Cases: 0 | No. of Deaths: 0 | Date of reporting: 2024-09-20. Routine weekly syndromic and presumptive surveillance across all primary health centers and community health centers indicated zero epidemic-prone disease outbreaks during the reporting epidemiological week. Background seasonal respiratory infections remained within expected multi-year baseline levels.",
+        "publication_timestamp": "2024-09-22T09:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.801436Z",
+        "source_url": "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/09/idsp-week38-2024.pdf",
+        "language": "en",
+        "content_hash_sha256": "2331ab3b93ccf8cbf26cd6ae119bc49b61dbfcc4d091d90b1c9bbf4a54c08dd9",
+        "provenance_metadata": {
+          "slug": "idsp-nil-report-sikkim-2024",
+          "country": "India",
+          "region": "Sikkim",
+          "incident_id": "inc-idsp-nil-sikkim-2024",
+          "event_category": "routine_surveillance",
+          "raw_storage_ref": "data/raw/6dccfb44-07e1-51c0-8ef4-a56c90a69d55.txt",
+          "processed_storage_ref": "data/processed/6dccfb44-07e1-51c0-8ef4-a56c90a69d55.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-idsp-nil-sikkim-2024 (routine_surveillance)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "26d62b1d-9655-5fca-a874-08c21573318a",
+        "source_id": "promed_mail",
+        "source_type": "public_syndication",
+        "title": "PRO/EDR> DENGUE - INDIA (02): (WEST BENGAL)",
+        "text": "Source: The Telegraph (India) via ProMED-mail. Health departments in North 24 Parganas and Kolkata have reported a sharp escalation in suspected dengue admissions over the past fortnight. Over 450 individuals presented with sudden high fever, severe retro-orbital headache, and joint pain across district referral hospitals. While officials caution that diagnostic confirmation by ELISA is ongoing for the majority of cases, municipal vector teams have initiated door-to-door larval inspections in wards exhibiting container breeding indices exceeding 10 percent.",
+        "publication_timestamp": "2026-09-05T18:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.804982Z",
+        "source_url": "https://promedmail.org/promed-post/?id=20260905.8821451",
+        "language": "en",
+        "content_hash_sha256": "d53ca4034a9b4838adc218e96d20911411f39f8b34792d30265e6f9c49eb3d4b",
+        "provenance_metadata": {
+          "slug": "promed-dengue-bengal-sep2026",
+          "country": "India",
+          "region": "West Bengal",
+          "incident_id": "inc-dengue-bengal-2026",
+          "event_category": "suspected_outbreak",
+          "raw_storage_ref": "data/raw/26d62b1d-9655-5fca-a874-08c21573318a.txt",
+          "processed_storage_ref": "data/processed/26d62b1d-9655-5fca-a874-08c21573318a.txt"
+        }
+      },
+      "split": "test",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-dengue-bengal-2026 (suspected_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "d4735a12-673e-5833-9807-5eb30d2128b4",
+        "source_id": "promed_mail",
+        "source_type": "public_syndication",
+        "title": "PRO/EDR> LEPTOSPIROSIS - INDIA: (KERALA)",
+        "text": "Source: The Hindu via ProMED-mail. Health authorities in Kerala have sounded a high alert following a surge in leptospirosis (rat fever) cases across Wayanad, Kozhikode, and Ernakulam districts following severe monsoon flooding. State surveillance recorded 112 confirmed and 240 suspected leptospirosis cases with 14 fatalities this month. Officials stressed that all persons who participated in flood cleanup operations must ingest prophylactic doxycycline 200 mg weekly.",
+        "publication_timestamp": "2024-08-15T14:20:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.804982Z",
+        "source_url": "https://promedmail.org/promed-post/?id=20240815.8718223",
+        "language": "en",
+        "content_hash_sha256": "8156c112e5d8dfaa520f7e36597dc2fa3c227118f9bf5965705e18c50186b706",
+        "provenance_metadata": {
+          "slug": "promed-leptospirosis-kerala-aug2024",
+          "country": "India",
+          "region": "Kerala",
+          "incident_id": "inc-lepto-kerala-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/d4735a12-673e-5833-9807-5eb30d2128b4.txt",
+          "processed_storage_ref": "data/processed/d4735a12-673e-5833-9807-5eb30d2128b4.txt"
+        }
+      },
+      "split": "dev",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-lepto-kerala-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "f39696c7-c4ae-5e1c-8607-ecea1d3a1773",
+        "source_id": "promed_mail",
+        "source_type": "public_syndication",
+        "title": "PRO/EDR> CHOLERA, DIARRHEA & DYSENTERY - ASIA (01): INDIA (ODISHA)",
+        "text": "Source: Sambad English via ProMED-mail. An outbreak of acute watery diarrhea in Kashipur block of Rayagada district has claimed three lives and hospitalized over 60 patients. Rectal swabs confirmed Vibrio cholerae. The state health department rushed water disinfection machinery to affected villages where local residents were dependent on unchlorinated open streams. Medical teams have set up temporary treatment camps to administer ORS and IV fluids.",
+        "publication_timestamp": "2024-07-28T16:45:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.807263Z",
+        "source_url": "https://promedmail.org/promed-post/?id=20240728.8717891",
+        "language": "en",
+        "content_hash_sha256": "92bab69d99b710b6880e36f436b17265460283cce11e8a6bded9f73646d58158",
+        "provenance_metadata": {
+          "slug": "promed-cholera-odisha-jul2024",
+          "country": "India",
+          "region": "Odisha",
+          "incident_id": "inc-cholera-odisha-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/f39696c7-c4ae-5e1c-8607-ecea1d3a1773.txt",
+          "processed_storage_ref": "data/processed/f39696c7-c4ae-5e1c-8607-ecea1d3a1773.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-cholera-odisha-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "2b73ad8d-faea-52b0-b72c-2990c1b7c146",
+        "source_id": "promed_mail",
+        "source_type": "public_syndication",
+        "title": "PRO/EDR> SCRUB TYPHUS - INDIA: (HIMACHAL PRADESH)",
+        "text": "Source: Tribune India via ProMED-mail. Indira Gandhi Medical College (IGMC) Shimla has recorded over 380 positive scrub typhus cases and 16 deaths during the current season. Health experts noted that wet conditions and overgrown grass along agricultural fields have increased mite vector density. Farmers working in fields have been advised to use insect repellent and examine their bodies for characteristic necrotic eschars.",
+        "publication_timestamp": "2023-10-05T12:10:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.809246Z",
+        "source_url": "https://promedmail.org/promed-post/?id=20231005.8712450",
+        "language": "en",
+        "content_hash_sha256": "e682bb0bb3ddf3e3307ed9b57feea9ff62a46ae81686e9a40421c3800354d031",
+        "provenance_metadata": {
+          "slug": "promed-scrubtyphus-hp-oct2023",
+          "country": "India",
+          "region": "Himachal Pradesh",
+          "incident_id": "inc-scrub-typhus-hp-2023",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/2b73ad8d-faea-52b0-b72c-2990c1b7c146.txt",
+          "processed_storage_ref": "data/processed/2b73ad8d-faea-52b0-b72c-2990c1b7c146.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-scrub-typhus-hp-2023 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "86d17900-f2f6-592f-9399-e68cf6fc98c1",
+        "source_id": "promed_mail",
+        "source_type": "public_syndication",
+        "title": "PRO/EDR> DENGUE - INDIA (04): (TAMIL NADU)",
+        "text": "Source: Times of India via ProMED-mail. Greater Chennai Corporation and neighboring districts of Tiruvallur and Chengalpattu have reported a steady decline in daily dengue admissions following comprehensive source-reduction campaigns. Public health officials reported that active cases in government hospitals dropped from 450 in October to under 120 this week, demonstrating the efficacy of localized breeding-habitat clearance.",
+        "publication_timestamp": "2023-11-20T19:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.809246Z",
+        "source_url": "https://promedmail.org/promed-post/?id=20231120.8713290",
+        "language": "en",
+        "content_hash_sha256": "3699d2b082620209fa29f317083eb2eed994f88bb8da2ad0f19fb5052c6104bd",
+        "provenance_metadata": {
+          "slug": "promed-dengue-tamilnadu-nov2023",
+          "country": "India",
+          "region": "Tamil Nadu",
+          "incident_id": "inc-idsp-dengue-vellore-2024",
+          "event_category": "routine_surveillance",
+          "raw_storage_ref": "data/raw/86d17900-f2f6-592f-9399-e68cf6fc98c1.txt",
+          "processed_storage_ref": "data/processed/86d17900-f2f6-592f-9399-e68cf6fc98c1.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-idsp-dengue-vellore-2024 (routine_surveillance)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "bcbdadd4-805a-50f7-8733-f4e3dc80940f",
+        "source_id": "promed_mail",
+        "source_type": "public_syndication",
+        "title": "PRO/AH/EDR> Nipah virus disease - India: (Kerala) confirmed",
+        "text": "Source: Reuters via ProMED-mail. Two individuals died and four others tested positive for Nipah virus in Kozhikode district of Kerala state. The state government closed schools and government offices in seven village panchayats designated as containment zones. Monoclonal antibody treatments have been requested from central medical reserves as active surveillance continues across bordering districts.",
+        "publication_timestamp": "2023-09-13T14:15:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.810997Z",
+        "source_url": "https://promedmail.org/promed-post/?id=20230913.8712101",
+        "language": "en",
+        "content_hash_sha256": "119f6a83631dd21c455b1fcb48001f73df9337ff125ae4c994269f382101713c",
+        "provenance_metadata": {
+          "slug": "promed-nipah-kerala-sep2023-alert",
+          "country": "India",
+          "region": "Kerala",
+          "incident_id": "inc-nipah-kerala-2023",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/bcbdadd4-805a-50f7-8733-f4e3dc80940f.txt",
+          "processed_storage_ref": "data/processed/bcbdadd4-805a-50f7-8733-f4e3dc80940f.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-nipah-kerala-2023 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "0fa76a08-5853-5938-af82-ef9682ca694d",
+        "source_id": "medrxiv_preprints",
+        "source_type": "public_syndication",
+        "title": "Field Epidemiological and Entomological Investigation of Chandipura Encephalitis Outbreak in Western India, 2024",
+        "text": "In this field epidemiological investigation of the 2024 Acute Encephalitis Syndrome surge in Gujarat, clinical records of 185 pediatric hospitalizations across seven tertiary medical colleges were evaluated. Reverse transcription-PCR confirmed Chandipura vesiculovirus in 48 cerebrospinal fluid specimens. Entomological sampling in mud-plastered rural dwellings identified high indoor densities of Sergentomyia and Phlebotomus sandflies. The case-fatality rate was 34.6%, with median time from symptom onset to death of 48 hours.",
+        "publication_timestamp": "2024-09-02T11:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.812361Z",
+        "source_url": "https://www.medrxiv.org/content/10.1101/2024.08.30.24312810v1",
+        "language": "en",
+        "content_hash_sha256": "9cfe04ac01363fc1933ecf4d930fc76618229a65af511065ed525910349fad94",
+        "provenance_metadata": {
+          "slug": "medrxiv-chandipura-field-investigation-2024",
+          "country": "India",
+          "region": "Gujarat",
+          "incident_id": "inc-chandipura-western-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/0fa76a08-5853-5938-af82-ef9682ca694d.txt",
+          "processed_storage_ref": "data/processed/0fa76a08-5853-5938-af82-ef9682ca694d.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-chandipura-western-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "a637e0ea-6f0b-52f6-bcdb-66d98c9803dd",
+        "source_id": "medrxiv_preprints",
+        "source_type": "public_syndication",
+        "title": "Genomic Epidemiology and Spillover Dynamics of Nipah Virus Outbreaks in Southern India (2018-2023)",
+        "text": "We performed whole-genome sequencing of clinical isolates from Nipah virus outbreaks in Kozhikode district between 2018 and 2023. Phylogenetic analysis confirmed that circulating lineages belong to the Indian clade (I-lineage), exhibiting distinct genetic divergence from the Malaysian clade. Comparison across historical episodes indicates recurrent independent spillover events from local fruit bat (Pteropus medius) populations rather than persistent cryptic transmission among humans.",
+        "publication_timestamp": "2024-02-16T10:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.812361Z",
+        "source_url": "https://www.medrxiv.org/content/10.1101/2024.02.14.24302801v1",
+        "language": "en",
+        "content_hash_sha256": "146c006f3360771eb3918f45b0cfa896895e5f2a63e43ef9ae12a84fef6c6354",
+        "provenance_metadata": {
+          "slug": "medrxiv-nipah-genomics-kerala-2024",
+          "country": "India",
+          "region": "Kerala",
+          "incident_id": "inc-nipah-kerala-2023",
+          "event_category": "routine_surveillance",
+          "raw_storage_ref": "data/raw/a637e0ea-6f0b-52f6-bcdb-66d98c9803dd.txt",
+          "processed_storage_ref": "data/processed/a637e0ea-6f0b-52f6-bcdb-66d98c9803dd.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-nipah-kerala-2023 (routine_surveillance)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "8d5568fb-4043-5ad1-9c7f-e9342b594e2d",
+        "source_id": "medrxiv_preprints",
+        "source_type": "public_syndication",
+        "title": "Hyperendemic Transmission and Serotype Co-circulation of Dengue Virus in Urban Centers of Tamil Nadu",
+        "text": "Community serological surveillance of 2,400 participants in Vellore, Chennai, and Madurai revealed an overall age-adjusted dengue IgG seroprevalence of 68.4%. Molecular typing of acute-phase sera during the 2023 seasonal surge demonstrated co-circulation of DENV-1, DENV-2, and DENV-3 serotypes. Primary infections dominated in pediatric cohorts under 10 years, whereas adult hospitalizations frequently involved secondary heterotypic reinfections accompanied by plasma leakage.",
+        "publication_timestamp": "2023-11-30T14:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.814330Z",
+        "source_url": "https://www.medrxiv.org/content/10.1101/2023.11.28.23299102v1",
+        "language": "en",
+        "content_hash_sha256": "9aa1f593abec3e6362f4356b737bc56cdd197a9a5759781be14f38c26e55050a",
+        "provenance_metadata": {
+          "slug": "medrxiv-dengue-seroprevalence-urban-india",
+          "country": "India",
+          "region": "Tamil Nadu",
+          "incident_id": "inc-idsp-dengue-vellore-2024",
+          "event_category": "routine_surveillance",
+          "raw_storage_ref": "data/raw/8d5568fb-4043-5ad1-9c7f-e9342b594e2d.txt",
+          "processed_storage_ref": "data/processed/8d5568fb-4043-5ad1-9c7f-e9342b594e2d.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-idsp-dengue-vellore-2024 (routine_surveillance)",
+      "curator_id": "episense_curator",
+      "verified": true
+    },
+    {
+      "document": {
+        "document_id": "9b33dd3e-d8b7-5384-bfba-4e67d23afa00",
+        "source_id": "medrxiv_preprints",
+        "source_type": "public_syndication",
+        "title": "Genomic Surveillance of Multidrug-Resistant Vibrio cholerae O1 during Seasonal Waterborne Surges in Eastern India",
+        "text": "Whole-genome sequencing of 86 clinical Vibrio cholerae isolates recovered from acute diarrheal illness clusters in Odisha during 2022-2024 revealed the persistence of seventh pandemic El Tor (7PET) lineage harboring altered ctxB7 alleles and fluoroquinolone-resistance mutations. Water sampling from village step-wells identified identical sequence types, confirming seasonal waterborne dissemination during initial monsoon flooding.",
+        "publication_timestamp": "2024-07-20T12:00:00Z",
+        "ingestion_timestamp": "2026-09-06T13:05:49.814330Z",
+        "source_url": "https://www.medrxiv.org/content/10.1101/2024.07.18.24310620v1",
+        "language": "en",
+        "content_hash_sha256": "a2aded11c30ad193d5fe7dfdfd46051b7507cd9e7b15d7fc9cb199baafe5a856",
+        "provenance_metadata": {
+          "slug": "medrxiv-cholera-genomics-southasia-2024",
+          "country": "India",
+          "region": "Odisha",
+          "incident_id": "inc-cholera-odisha-2024",
+          "event_category": "confirmed_outbreak",
+          "raw_storage_ref": "data/raw/9b33dd3e-d8b7-5384-bfba-4e67d23afa00.txt",
+          "processed_storage_ref": "data/processed/9b33dd3e-d8b7-5384-bfba-4e67d23afa00.txt"
+        }
+      },
+      "split": "train",
+      "annotations": [],
+      "license_or_usage_note": "Official open public health bulletin or educational research syndication",
+      "curation_notes": "Curated in Phase 4 under incident inc-cholera-odisha-2024 (confirmed_outbreak)",
+      "curator_id": "episense_curator",
+      "verified": true
+    }
+  ]
+}

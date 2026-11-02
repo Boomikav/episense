@@ -1,0 +1,136 @@
+<USER_REQUEST>
+
+PROJECT: EpiSense — Live Surveillance Acquisition, NLP Extraction,
+Evidence Qualification and Dashboard Reconciliation
+
+WORKSPACE:
+C:\Users\ajaya\Desktop\NLP
+
+OBJECTIVE
+
+Perform a complete implementation-level audit and correction of
+EpiSense live external surveillance.
+
+The present application reports zero actionable October 2026 alerts,
+despite having configured external feeds and showing discovered and
+ingested documents.
+
+The objective is NOT to manufacture positive alerts or populate
+the dashboard with historical events.
+
+The objective is to retrieve accessible external sources, extract
+their actual epidemiological content, qualify it correctly, and
+make every meaningful processing outcome visible.
+
+Keep the finalized eight-disease priority registry unchanged:
+
+1. Dengue
+2. Malaria
+3. Chikungunya
+4. Leptospirosis
+5. Cholera
+6. Acute Diarrhoeal Disease (ADD)
+7. Japanese Encephalitis (JE)
+8. Scrub Typhus
+
+Do not remove existing project functionality or modify the
+forecasting methodology unless a concrete defect requires it.
+
+==================================================
+PHASE 1 — AUDIT THE EXISTING LIVE INGESTION PIPELINE
+==================================================
+
+Inspect the actual implementations of:
+
+- Source connector configuration
+- Polling and HTTP response handling
+- Document discovery and downloading
+- Raw document storage
+- SHA-256 deduplication
+- PDF, HTML and RSS extraction
+- NLP pipeline execution
+- Disease and location recognition
+- Assertion and quantity extraction
+- Event candidate generation
+- Multi-source fusion
+- Current-window classification
+- Dashboard APIs and frontend counters
+
+Trace individual documents from source discovery to final UI.
+
+For every source, establish:
+
+1. Configured URL and adapter.
+2. Actual request URL.
+3. HTTP response code.
+4. Response content type.
+5. Number of discovered entries.
+6. Number of downloaded documents.
+7. Number of unique documents.
+8. Number of duplicat
+<truncated 17009 bytes>
+extracted event records with
+their outbreak IDs, disease labels, locations, counts,
+dates, source pages, and evidence snippets.
+
+Verify the records are persisted in the database and can be
+opened in Event Intelligence and the NLP Workbench.
+
+Verify Overview counters against persisted database records.
+
+Do not make a current positive October alert from an August event.
+
+If a source returns zero qualifying events, show what it actually
+returned, what was parsed, and why no event was created.
+
+==================================================
+PHASE 9 — VERIFICATION AND FINAL REPORT
+==================================================
+
+Run:
+
+- Complete backend pytest suite.
+- Frontend Vitest suite.
+- Frontend production build.
+- Actual live source smoke tests.
+- Database count and provenance audit.
+- End-to-end browser verification of all modified views.
+
+Capture actual exit codes and results.
+
+Create:
+
+docs/LIVE_SURVEILLANCE_EXTRACTION_AND_VALIDATION_REPORT.md
+
+The report must include:
+
+1. Root cause of the zero-current-alert issue.
+2. Working and unavailable source connectors.
+3. New APIs and adapters implemented.
+4. Actual extraction counts per source.
+5. Exact NCDC Week 34 extracted observations.
+6. NLP relevance corrections.
+7. Quantity/date/geography validation.
+8. Deduplication results.
+9. Current versus historical event counts.
+10. Dashboard counter reconciliation.
+11. Tests and build results.
+12. Remaining access and source-coverage limitations.
+
+Do not report success merely because HTTP status is 200.
+
+Do not report successful extraction unless actual text,
+entities, dates, quantities and evidence provenance were
+persisted and verified.
+
+Do not modify the finalized eight-disease registry.
+
+Do not manufacture positive outbreak reports.
+
+The objective is genuine live-source extraction and
+evidence-grounded epidemiological intelligence.
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-30T23:29:36+05:30.
+</ADDITIONAL_METADATA>

@@ -1,0 +1,2426 @@
+{
+  "audit_window_start": "2026-10-01T00:00:00+00:00",
+  "audit_window_end": "2026-10-31T23:59:59+00:00",
+  "raw_ingested_count": 158,
+  "unique_ingested_count": 156,
+  "duplicates_filtered_count": 2,
+  "primary_classification_summary": {
+    "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL": 119,
+    "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB": 36,
+    "PRIORITY_DISEASE_NEGATIVE_RULEOUT": 1,
+    "PRIORITY_DISEASE_ACTIONABLE_POSITIVE": 0
+  },
+  "secondary_tags_summary": {
+    "priority_disease_tagged": 39,
+    "duplicate_instances": 2,
+    "international_geography": 105,
+    "media_discovery_stub": 25,
+    "non_priority_pathogen": 60
+  },
+  "documents": [
+    {
+      "document_id": "10eb1c60-62ae-5086-a908-6f0f55f0e992",
+      "sha256": "49ed63ab2af5bfb8709f7924fb9b04c286158275dd53f8ef7db326909cbdbe48",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-10T07:49:45+00:00",
+      "title": "New WHO technical package to help countries improve health data for CO",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 7,
+      "canonical_events_count": 2,
+      "processing_status": "completed"
+    },
+    {
+      "document_id": "200ebbac-9579-4886-80a4-8e0f4bb5dd5e",
+      "sha256": "c203f61e52a9ca83c5fc35b9f653a09cb0851b50a102530946d232c15d22f17f",
+      "source_id": "api_submission",
+      "publication_timestamp": "2026-10-12T11:00:00+00:00",
+      "title": "Health authorities rule out cholera after extensive testing in Puri di",
+      "primary_classification": "PRIORITY_DISEASE_NEGATIVE_RULEOUT",
+      "secondary_tags": [
+        "priority_disease:Cholera"
+      ],
+      "priority_disease": "Cholera",
+      "extracted_observations_count": 2,
+      "canonical_events_count": 1,
+      "processing_status": "completed"
+    },
+    {
+      "document_id": "fd1f9cdc-cd6b-466d-9dc3-99619e537fcb",
+      "sha256": "d7d50d3dcfad7a2e8f84ac1a344087027f3c3fb1a10b7404619ac36d1477f132",
+      "source_id": "api_submission",
+      "publication_timestamp": "2026-10-15T09:00:00+00:00",
+      "title": "WHO highlights primary healthcare resilience and cross-border health w",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [],
+      "priority_disease": "None",
+      "extracted_observations_count": 1,
+      "canonical_events_count": 1,
+      "processing_status": "completed"
+    },
+    {
+      "document_id": "179b563d-0434-445f-a133-55f670527948",
+      "sha256": "17567bc56beddd7fe426f8a7875e48f24b69b68805dc5b9184a7da95ad1d394a",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-23T12:57:37.427734+00:00",
+      "title": "WHO Outbreak News: Acute Nipah virus disease confirmed in Kozhikode di",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen",
+        "duplicate_count:2"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 1,
+      "canonical_events_count": 1,
+      "processing_status": "completed"
+    },
+    {
+      "document_id": "8dca3f99-1cd7-592a-b78c-c87d7bac54e3",
+      "sha256": "fa32a507739061c5664c8cacfd0dce923633ceee5e0744e8d6abd2c02041081f",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the C",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 6,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "72daa27c-27a5-547b-939d-5a536ee52687",
+      "sha256": "770f5451b24ff38aa0811a5807fc8c20268a4295dd266d3a8b7db204d32b463d",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 6,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "c76d2813-e2a0-555e-add3-5955d1b55491",
+      "sha256": "3c9d892f849aefdbe5ad255ccf964a3d35cd29ec7eede49470f87c22e2071709",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Pneumonia of undetermined etiology - the Russian Federation",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 5,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "d60414a0-2075-57a3-a7e7-59eccb897170",
+      "sha256": "264d854aa44ce2521ea34fe878fa0516526070f2d3d771ca728d9455eacc7751",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the ",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 7,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "df116b96-d36d-5e9c-bb29-dae1212b74e2",
+      "sha256": "16f9acc037fa31c5eaf1d2fbd34317d52aa73457c7d33fdb41fc45c5aeb5751e",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the ",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 5,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "21c849b2-fb0a-559d-b441-cd192db7bb2f",
+      "sha256": "f8392f35ee78df9e858f9c7ff3a53c71c1b2f2d26b02e4cdeb6bbe35f5dc4e89",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the ",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 3,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "6570abe9-f9af-52eb-885f-8292467f21cb",
+      "sha256": "805412a96c01cf242d26aa4992e176878cafaacae8abf4849f11d5c649bbf30b",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the ",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 4,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "7850235f-d65e-50ad-8032-ef7692c3c66c",
+      "sha256": "52d2cb625bd962dd0431c7d6539710ab525452e4abcecb1aa1a69165d21cd3a8",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the ",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 3,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "dde16114-3e26-5b27-bbb4-7b5e142f8559",
+      "sha256": "c9a9ccc535e0cbeb633ec16b3eec4823c2df24fbb2d6bb620bcde3710110b16e",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the ",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 6,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "be9e3645-5fdd-5837-9d44-77ea703fc37c",
+      "sha256": "8016a6a0b6a3d72a8e7ea94e6b1f4ff4bd94652dada433a522dc57be1c59c028",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the C",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 4,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "3b0da580-b822-5cc7-bbc2-448fe2b53fd4",
+      "sha256": "ff9f2bd1776c1308ff2ab36ba4d9f96475fc2c3c9af96ae41b026041b018757e",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the C",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 4,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "3214e183-3bf9-5b1e-ba61-bbb385cc1465",
+      "sha256": "73a8a4467f53100a64209427e5f88917ad7850c2ae5fdd5f1c9baa666161886b",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Hantavirus outbreak linked to cruise ship travel, Multi-locations",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 2,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "a2a800f5-7bfd-51a5-8498-1f21b9c7b326",
+      "sha256": "ccb3dd04a5a2cf74876355394c340730dbe0fa766b6106f938d20adc72b3a050",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Nipah virus disease - India",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 12,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "404b712f-0605-5a0f-b580-f522941f8451",
+      "sha256": "603fcb0211db88fb61c9ce56a8a43f9a4fd3c8a0b6d0792a94b50ede43c1e8aa",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Yellow fever - Global",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "07fbfda8-2b39-5488-bd45-43c64e8eb002",
+      "sha256": "06be884995a7eb47067516bdba9a69f08329866b41dbbcc98e91dd26c8892dbf",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the C",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 3,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "838da0b0-e3eb-5db2-858d-24571a3f5fa8",
+      "sha256": "f5d94448d78a1745071e0719a4345fe7fe3af6d10bd962adce7d78074ec9cdb7",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the C",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 4,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "59da3444-b14c-5945-86ae-1e4a5f354bab",
+      "sha256": "41926b3b11b2fb190ea00aefa3523681760a6d2bc8fcc4f131634282093e3de2",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the C",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 3,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "1601d36a-bbe8-5790-b382-6d04e02f8b4d",
+      "sha256": "29416caab6a5ec5fc19fb02a1e516de3441c72a26d4917c907cb19dd72cd4558",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the C",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 1,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "6edda6fe-a50b-5147-8d44-200c9a11fc49",
+      "sha256": "2743576ada12de46a75d8db4a6359428626cdfbd778e25a506bba7d18b186ce7",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Hantavirus outbreak linked to cruise ship travel, Multi-locations",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 4,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "20daeb38-d4c2-5438-b8df-5a1a8a46596b",
+      "sha256": "6be89c8c6673461f243fd888bc48a52f53a5d1e532441b85bdd90d9309d8988f",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:31:20.981328+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus \u2013 Democratic Republic of the ",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "1cce5343-1c99-5c69-9f5c-2f1bed339130",
+      "sha256": "e2436aa6881a80ac1bb6683964fcdf41e38dffd89d5f608bbd36c07e9c55052d",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Adverse Outcomes of Travel-Related Cosmetic Procedures among US Reside",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "99731e25-7862-5ca9-8b77-f23a4cdf89d5",
+      "sha256": "2bbbd9eda78316ab2c1a09d1fc476fa890c6f589085c241dae77fbafd84ff157",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Measles Cases and Outbreaks",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "72bfb7eb-8e8e-57d4-9fd2-e3b1567acd3d",
+      "sha256": "cefd42eafd40f41fd8517fa601386641027e156600c25b922f9136c3a866bc39",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "EH Nexus: Childhood Lead Poisoning Prevention Podcast",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "a3242e57-98e6-56d1-a562-9e1684aa505c",
+      "sha256": "88958ff96fc8b918cbba68d6ce7083145d6e9259b9c72ef52074955127b42197",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Teaching Data to Talk",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "b9363e6d-b42d-5b4a-a4d2-c9b8d3b7934a",
+      "sha256": "21ae3877e853378c0b1745dcf3e137bf7effd0252fbd244f222878f9ad9439fb",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "QuickStats: Percentage of Children and Adolescents Aged 5\u201317 Years Who",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "c0c54a7f-4029-5dcf-b67b-4043a55d90cf",
+      "sha256": "2c4ad01d79d3ef82478ec2c6a99b81374737e50860f4c82f5f27e8077951f6fb",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Notes from the Field: Use of Enhanced Surveillance to Detect Severe Gr",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "e62af78a-bb94-5ef5-a60b-79942ac00279",
+      "sha256": "89537abea0e8455e1b9a7f2ebf9aba727cf3d497eae77661748f646c24a1cce0",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "DOSE-SYS Dashboard: Nonfatal Overdose Syndromic Surveillance Data",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "76e56842-6dc5-524a-a6a8-6b170b680c8c",
+      "sha256": "fba8fad8b4ed1031b4cc08d251ac7b1869cf25705ed9c626a016081e7899cf3e",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Collecting and Submitting Placental and Fetal Tissue Specimens for Zik",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "933746b6-2991-57d1-b4d6-2eccf5038e9d",
+      "sha256": "dc89159061013f90b6bb144fd0966a484199427f9274eff6f382b6c97c2c02eb",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "QuickStats",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "3701e299-ae97-58eb-bb80-5b9a901f6cdd",
+      "sha256": "43fa8ddde074175d2e46af637b0b984de5367d0c9efb13d36db0997c720c6222",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Post-Deployment Phase",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "19ed3a2b-c2f1-54fb-baec-f30b3df57463",
+      "sha256": "76bb1f94a45c23bd3858c22594a0ee68e1628bd3cbb91064b1424e593a25c86c",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Nursing Home Data Dashboard",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "8b6eeb2d-adf5-59b5-83ae-c6cfbc5fb90f",
+      "sha256": "579d3baa6d0417346ddc73ef021c72369c0a0e7c50ba4bfaccc760f1e92755ee",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Infant Mortality Dashboard",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "af7f0d91-a640-58fc-ba18-472cf5e2d66e",
+      "sha256": "bdb8fe2f1482527c12cc8c3f6d43e3b31cacaa57eb68165a77802a2953cf10ca",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Quarterly Provisional Estimates of Infant Mortality, 2024-Quarter 2, 2",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "9171876f-acd5-5fe5-944e-4311af60d9c9",
+      "sha256": "f0cb9a53b89ae0b5edf6b350f3a0f9e40648b0c3175ce591172838c7409534ec",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Sound Level Meter App",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "d0cda7c5-8a8f-544e-a341-8620c079bc04",
+      "sha256": "e0288356b25ba7769ad1a71e699f44bbd89dce7c7498e6c2461ea01e27e948ff",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Step 2: Involve and Train Management and Workers",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "2a621a23-ddf6-5dc0-ad52-4c382f41c1a5",
+      "sha256": "cea9b019391dedd7002b30c3121ae7ca62595330e7f44cbdc82e628f57fa56dd",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Step 3: Collect Health and Medical Evidence",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "92d65239-1475-520d-9c55-c47e5dde2018",
+      "sha256": "596976a870855a74401f3a6988d565ac23121b0bd415efd285f59cd311232f86",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Step 5: Evaluate Your Ergonomic Program",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "b2d345cd-f020-5ed1-bcd1-099acbbb95da",
+      "sha256": "195b2bd5edb220e721960a69bf567eac287a24bfb5606dda61912f077875d361",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Infectious Agents Risk Factors",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "59f2cec3-720f-5dc7-b1b6-04e0517dc3dc",
+      "sha256": "0d4fec55e9409bd6d5e13741c9242309f1216cb52af509617cf889fadbe771c1",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Upper Limb Musculoskeletal Disorders Consortium",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "748e7452-93ef-56fa-a13a-839afb1ec6f7",
+      "sha256": "a8fccff2d737b8ff4004d67c2c0cf8fb31b4821bf1b954f0b675ad186046209f",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Construction",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "c19cd8ad-279d-5670-979c-cb246b866821",
+      "sha256": "c2ac0abefb036d59a83fb17c515d4d466cc25399b43c0489a9f44396c0db004d",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Elements of Ergonomics Programs",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "33187fab-6e38-57ba-a888-d009c5ee7772",
+      "sha256": "c00f55563439ba2ffa452e2247ef237163ac1f8e3f410510c3dbb37a69d17fa8",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "About Veterinary Medicine and Animal Care Workers",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "b90f5e68-fc7f-5ce3-9480-9d2fadae010e",
+      "sha256": "eb200e77e0a127e067942685508cfd351463bba6157249bfdca681e2ed3d8ee6",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "About Maritime Safety and Health",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "5b163997-1b7d-5dd6-a6f0-6cceca4b6035",
+      "sha256": "9229eda74be1880d490eba1f3d8cfee3b1ff43b7aa6795ba0a482a6434b88ce1",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Risk Factors for Stress and Burnout",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "90f8b1c3-001c-52ff-aed5-b9dc5fcc08e3",
+      "sha256": "fb5c21975f249240327f34e69fd57e1e2574114904f6a2aedc962e490f98919f",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "NMAM 5th Edition Web Book",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "5d84da2a-4d0b-534a-8e92-d6c90e8e1c70",
+      "sha256": "c52c1067f6c7c48ed993370fb00765f49f4a6fef37a3d53964b35de985e5a24f",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Pocket Guide to Chemical Hazards Mobile Application",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "6438c922-341f-50db-9537-85f2ef65033c",
+      "sha256": "b98a586c8555732e8942f34a4339f61ef3fe15cee1affbfc428a66c915b6884c",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Hood Building",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "bcb14aea-cd03-5634-a734-8d2f1c853361",
+      "sha256": "e5c4886ac2d6c42c17cd750c2aefde173017c53aff57f0f0fd8d7b90e10fca5e",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Probability of Causation (PC) Topics",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "8461a6d3-810d-58aa-9581-27ee5caa3650",
+      "sha256": "acbe8b0daa4ae4407230f41771e88a4d03e2fef12a316f863e5cd107e138ae72",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Benzene: Systemic Agent",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "a50d4690-6140-555b-9cc2-10e486edd824",
+      "sha256": "86af9532f886fa527cf35e8ab4b03131bd6fc960fba33d756a8b5b67e7dd6b37",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "DCAS Newsroom",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "9b578c78-fc4c-529c-94d1-bda0746f7d4c",
+      "sha256": "78adcc310aca321a82f6a4cac03f2696ffcce5ebef415d1d176453bce42a4080",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Special Exposure Cohort (SEC) Topics",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "5a7b2c5b-2ebd-5fc2-91ff-5741f4bab649",
+      "sha256": "870ec2c7149be8d82400477c675fc4106802049e8bb7f7d47179349844f84536",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Tools & Resources Topics",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "6de86430-474e-5342-8850-069de75ea01a",
+      "sha256": "b8980b0311245d2c20a01c33284abf93bc460da7ae6e6c0b96f11dad498a9a0d",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Dose Reconstruction (DR) Topics",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "93fefb82-b93e-52f5-97ed-1c88e8f3ffcb",
+      "sha256": "86f63ce25d04d3cf280894495a631c3eeb0fe8567f12c6ffb50e5b5b208f57d1",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Methanol: Systemic Agent",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "b033263f-e92d-5918-9a9b-1d27043c27c0",
+      "sha256": "7c3e026a37ca8e15d3bb33c2e3c0e787f7e5aaa9a248edae4098769fead4a4e1",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Advisory Board on Radiation and Worker Health Topics",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "1103e26b-11f7-5871-a3e3-35de2e6de2ef",
+      "sha256": "b4c7c826c6cae808cbf3e4c4db9bc9fe7db82d6bd91edb5ee6a1a323deaf6972",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Information for Funeral Directors",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "d35f1a2f-3718-5679-aa7c-f98288f907a4",
+      "sha256": "ee0232aba26a2f7d4cbaa81b4fcac1a969b2012f5c48c84aa1b2a4788c6ad02e",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Robotics in the Workplace: An Overview",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "ea9c331d-66a5-5459-953f-f950a23cd4b1",
+      "sha256": "4c810a96add998b8c75ea04b6f49e4b587d182373e2f3f43b91c704ef798e9d7",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Hierarchy of Controls",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "7403477a-7afe-50eb-b7de-0ca86a953153",
+      "sha256": "e1ee5faf371b97f3978b46500192901a33ef330fc4611050747b6e2743331c77",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Distracted Driving at Work",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "b3e83368-9cf0-5da9-86f0-959a6dbd4b8f",
+      "sha256": "efb6eaaa43422e74b7beb0be4402db05b05a317a6368fcb26bcc38ef8e3ffae8",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Hazards to Veterinary Medicine and Animal Care Workers",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "581c546f-25e0-55d3-bc31-81606aef97ed",
+      "sha256": "b470a197b5237a8f525f76f5126a5f17a3b25f7ea50305eaa25459b14da10bed",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Driver Fatigue on the Job",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "443ad5bd-0ee6-5391-bc50-a743d4a65f40",
+      "sha256": "fee6b888544f61946827433d94c15a00cdb400829ec5b93f5325094f996c4c4d",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "EMS Worker Safety",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "1abaddb2-fef8-5788-9af8-10abfc3d819d",
+      "sha256": "71b7df0ff11fa4aa6b68be61f1bc2d44d12c678ff911f5af7bc5fed06b309620",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Older Drivers at Work",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "62220fa8-77fc-5bfb-81cf-ed9b9b980671",
+      "sha256": "07b5d5d594c4a907c5395a5b6b182a92d301378acc157960be2cda4b5458e693",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Young Drivers at Work",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "a256db93-3364-5d8e-b727-84ec86012738",
+      "sha256": "102c1a3ed529f2b2dd76d08082b020d31cf9c3967ecc4624b47c45a939afed2c",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "About Western States Division",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "761efdba-c00a-5f77-bebc-1d75faa69b6c",
+      "sha256": "c71ebf26ee120fd4b9568316c727a576c66a50f58d843a5a2f7171b47ff07ceb",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "National Campaign to Prevent Falls",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "3962c6e7-dd7d-5ca1-941c-de51771fc16d",
+      "sha256": "9326e4cbaac980ad977affe2ac70789af199918ca95a9248f2438ce54b3891cf",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Centers of Excellence for Total Worker Health \u00ae",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "68fc39ea-1078-5dff-a0f7-6888e47948a3",
+      "sha256": "3253c8040a5021fc226b01fa7453c7ba533b1846d1dc253d029872bec5809cd0",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Noise and Occupational Hearing Loss",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "66c262f7-44c7-5ff6-a3a9-1decef23c8b5",
+      "sha256": "4b78d521cf222e2386e9ac040b64169d3d271a5b90e7016d55a97963d3fb358b",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Training Project Grants",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "92e3b73d-ca5d-54b5-9903-6e448aa10b8d",
+      "sha256": "4b3cfb0b0c050ea7ac777b60d539d4e08240e169ec62c8242c9c0c6347361a23",
+      "source_id": "cdc_media_api",
+      "publication_timestamp": "2026-10-30T19:33:10.718727+00:00",
+      "title": "Oil and Gas Extraction Resources",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "75825a25-2450-52bd-b9e3-c95af9486e00",
+      "sha256": "e2b95e32481868988771e76cf107c84ac99a2bf458969a5e9dfafae9b399d77e",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "Dengue outbreak strains Christian hospital - Mission Network News",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "media_discovery_stub"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 1,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "01945175-a86c-5232-9bf1-f943e3c844bc",
+      "sha256": "a8518a5bc64aecb01f58552c37cefcc1be6f870a5291abbcee271a3e7eb86a05",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "\u0d07\u0d28\u0d4d\u0d24\u0d4d\u0d2f \u0d39\u0d48 \u0d1f\u0d41 \u0d35\u0d46\u0d30\u0d3f \u0d39\u0d48 \u0d31\u0d3f\u0d38\u0d4d\u200c\u0d15\u0d4d \u0d2a\u0d1f\u0d4d\u0d1f\u0d3f\u0d15\u0d2f\u0d3f\u0d32\u0d4d\u200d ! | Global Warming Triggers S",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "91676fa5-347c-5329-8fba-36a33830e852",
+      "sha256": "62be2ff0ecc366d105b52e15ae8edb98615c29191ade15bcc88da1e29d7410a3",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "Qdenga dengue vaccine may be included in India Universal Immunisation ",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "media_discovery_stub"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "3db50ddc-a594-51d3-8536-903c7ea06816",
+      "sha256": "cacb31544527e517b5b08dc196a31c6c7dac18b19394210c5f86cf7994d12242",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "\u0a85\u0aae\u0aa6\u0abe\u0ab5\u0abe\u0aa6\u0aae\u0abe\u0a82 \u0aae\u0a9a\u0acd\u0a9b\u0ab0\u0a9c\u0aa8\u0acd\u0aaf \u0ab0\u0acb\u0a97\u0a9a\u0abe\u0ab3\u0abe\u0aa8\u0acb \u0a95\u0ab9\u0ac7\u0ab0 , 20 \u0a9c \u0aa6\u0abf\u0ab5\u0ab8\u0aae\u0abe\u0a82 \u0aa1\u0ac7\u0aa8\u0acd\u0a97\u0acd\u0aaf\u0ac1\u0aa8\u0abe 496 \u0a95\u0ac7\u0ab8\u0acb",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "media_discovery_stub"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "d4362c30-6b10-58bc-a00a-c5d0cb04d65f",
+      "sha256": "7eb8fa6758e67bd83ce1420729243ce9d5493347c3ce4a94acd0aa44b5439570",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "Monsoon Dengue Malaria Cases Update ; Symptoms Prevention Home Remedie",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "media_discovery_stub"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "139e37f5-8f5e-510f-8bb6-bab127853ea8",
+      "sha256": "68a3f85f60aca6e4b38e1f908a6cd8ea8c46321712d455efc7f3afa237e29941",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "India at growing risk of infectious diseases due to climate change eff",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "769593f6-f154-5e0e-bc2c-64c9f6ef1460",
+      "sha256": "2940f695bb92739a175787b9a5aba4e371b941e15d509d877b11dcb9fe38a1cb",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "\u09ac\u09bf\u09b6\u09cd\u09ac \u09ae\u09b6\u09be \u09a6\u09bf\u09ac\u09b8 \u0986\u099c",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "a7c8c801-891d-58bf-bfd5-aca89d4ead6f",
+      "sha256": "8775111c773cb12f9e67ba3b008f0f46c7dcea78edd215795ac8b8543a6aad4c",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "\u09ac\u09bf\u09b6\u09cd\u09ac \u09ae\u09b6\u09be \u09a6\u09bf\u09ac\u09b8 \u0986\u099c - MZamin",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "337b3cd0-5f39-5e64-8007-7710f137c836",
+      "sha256": "f2174c88bd3d01a2165c4382699c8578bcad17b22818a7b904299b2b0ee78c77",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "El Nino puts India on high health - risk radar , says WHO",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "3b625a2e-d425-55a7-af87-cbc9ff54fa71",
+      "sha256": "e1cf9fb30e21d469f1ea5484fdecc498b388891216e2d8cdf2298af43bebf26a",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "Gujarat mosquito - borne disease campaign reduces malaria by 45 % and ",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "media_discovery_stub"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "37912227-be7e-55cb-8270-421bb695757f",
+      "sha256": "a2ab020951287c6b0653fc1fa9ef14b642de7dbfaa9b179f405a58b3e8d36c68",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "\u03a3\u03b1\u03bd \u03c3\u03ae\u03bc\u03b5\u03c1\u03b1 \u03c4\u03bf 1987 \u03bf \u03b3\u03b9\u03b1\u03c4\u03c1\u03cc\u03c2 \u03a1\u03cc\u03bd\u03b1\u03bb\u03bd\u03c4 \u03a1\u03bf\u03c2 \u03b1\u03bd\u03b1\u03ba\u03ac\u03bb\u03c5\u03c8\u03b5 \u03c3\u03c4\u03b7\u03bd \u0399\u03bd\u03b4\u03af\u03b1 \u03c4\u03bf \u03ba\u03bf\u03c5\u03bd\u03bf",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "330aae3f-9794-53d9-8c74-58ebdcf6b410",
+      "sha256": "817bab08a42222bfa4a47bffba51619fa4f046e1fa3419922fd9ac19b65b83c0",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "\u041d\u0430\u0432\u043e\u0434\u043d\u0435\u043d\u0438\u044f , \u0437\u0430\u0441\u0443\u0445\u0438 , \u043a\u0440\u0443\u043f\u043d\u044b\u0435 \u043f\u043e\u0436\u0430\u0440\u044b : \u0441\u0443\u043f\u0435\u0440 \u042d\u043b\u044c - \u041d\u0438\u043d\u044c\u043e \u0443\u0441\u0442\u0440\u043e\u0438\u0442 \u043a\u043b\u0438\u043c\u0430",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "3ec03ad1-d686-552e-bc64-a6e750329b21",
+      "sha256": "f363142ec69d511e5dd4222201aaad4d54ab91ece6db7be1127c75c111666a8a",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "Northeast faces new vector threat as diseases spread to new areas : He",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "95764d69-9203-57d3-897e-35a9df377aa6",
+      "sha256": "776800fd5f4887cbb351560aa4a8149b0f9cd258ce77fa68a2615124c44d3594",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "Mosquito Prevention Tips : Hideouts In Homes & Safety Measures",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "media_discovery_stub"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "861a77b8-0979-51a5-b167-2543d231259d",
+      "sha256": "1e4fcc7d2343b2580910177e9242fc4167aecdd6de3cb590bcd9fa4a8dc4e15e",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "\u5370\u5ea6\u6279\u51c6\u9996\u6b3e\u767b\u9769\u70ed\u75c5\u6bd2\u75ab\u82d7",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "media_discovery_stub"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "11555525-a770-5abf-a59d-04f26e58698a",
+      "sha256": "cd07a0710b3f0fe1f6f0a573ec584214ff56604004361260bab66fe11a3712f2",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "\u0627\u0644\u062d\u0645\u0649 \u0627\u0644\u0633\u0648\u062f\u0627\u0621 \u062a\u0632\u064a\u062f \u0645\u062e\u0627\u0637\u0631 \u062a\u0641\u0634\u064a \u0627\u0644\u0623\u0645\u0631\u0627\u0636 \u0641\u064a \u0627\u0644\u0633\u0648\u062f\u0627\u0646",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "23475d56-51e7-5011-8f53-e735cd9f900e",
+      "sha256": "b1980c65599142ff2c3ebe2c24a4a99cdaf247af1c398c1b1686fd8b229c3371",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "Elnino and dengue fever : world health organization warning",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "media_discovery_stub"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "d35c0185-fd78-52ba-aa88-2c65a8145f82",
+      "sha256": "ec196fa682360e91e6e6212682ea5c1849f9822b582a69ef6397c5d6a0f46600",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "Gujarat Health Drive : Monsoon Disease Survey Targets 2 Lakh Homes",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "media_discovery_stub"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "c1c13f35-94ad-5703-a7a8-7ea770611ce5",
+      "sha256": "e5aa9efe0053e25e6cbee2f7d13ed15b1e62527848afad1b8503f5d1ff86ab06",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "Delhi Health Minister evaluates seasonal influenza trends ; directs in",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "e03a16ec-a60a-50d8-8c3d-d7674140107d",
+      "sha256": "d0e3392c43e3ecd7e857a739034b830424336941eda8207254d73feba496d847",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "World Mosquito Day 2026 : Why North India Must Prepare For A Changing ",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "c3ea214e-76ef-5e27-b7a0-1a899ac57ecf",
+      "sha256": "8e0d47bad027d0d897b8ae0a4effddd9c51d3de10a655155106b34be4b348e18",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "Delhi : MP Kamaljeet Sehrawat inaugurates Dengue Day \u2013 Awareness Campa",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "media_discovery_stub"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "66596d75-bff4-5e7f-b943-3cadcdd924fd",
+      "sha256": "42b3a7e04bb92d07726eabc7979e2c5384d93159a8ca47259a750b12b05a963a",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "A Tiny Mosquito Big Impact on Health and Planning \u2013 Chennaionline",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "8797d741-080a-5cfb-af12-af6da9c140d2",
+      "sha256": "564d4e90e34eec44b3d4bc0fd1d0508cde85b00b7b71b46adf37a26d33d9338f",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "Crne prognoze : El Nino sve ja\u010di , moglo bi umrijeti 450 . 000 ljudi",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "752eb1e2-6a32-5dc6-b3ea-9276a643b662",
+      "sha256": "942972483a1a151dec74831fb281e191554853bfee831b91eaad0641323e3ebf",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "\u092e\u093e\u0928\u0938\u0942\u0928 \u092e\u0947\u0902 \u092a\u094d\u0930\u0947\u0917\u094d\u0928\u0947\u0902\u091f \u092e\u0939\u093f\u0932\u093e\u090f\u0902 \u0907\u0928 5 \u092c\u093e\u0924\u094b\u0902 \u0915\u093e \u0930\u0916\u0947\u0902 \u0927\u094d\u092f\u093e\u0928 , \u0917\u093e\u092f\u0928\u0947\u0915\u094b\u0932\u0949\u091c\u093f\u0938\u094d",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "a39f1314-7d9a-540b-9b56-709fb198708f",
+      "sha256": "0620ceb592070ab033b7f393ad2ae9cffa0d17be6ce4be05cbed65677b20b861",
+      "source_id": "gdelt_doc_discovery",
+      "publication_timestamp": "2026-10-30T19:33:31.619644+00:00",
+      "title": "India Sends Medicines and Medical Supplies to Afghanistan , Delhi News",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "media_discovery_stub"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "55dc01ae-8d67-5f06-8455-164a2488e7a4",
+      "sha256": "3b6e0f41eba4a9756c33bde3e230a957cbed2949e88959fe3721811c7aa7501f",
+      "source_id": "tn_nhm_idsp_portal",
+      "publication_timestamp": "2026-10-30T19:33:36.833796+00:00",
+      "title": "Tamil Nadu Integrated Disease Surveillance Programme (IDSP) Overview",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "dcb28888-454f-5be6-ad0f-72e29603de1d",
+      "sha256": "5339a873d458312d96e93eeb49a67a4e7f601f22dc6c7e14127affe1f0576e75",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:33:37.907646+00:00",
+      "title": "WHO releases guidelines to help countries maintain essential health se",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 4,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "7fbd26db-bc7a-5142-afe9-a1c61718e26f",
+      "sha256": "1e7f0044161cd544fffb4000f85529398be93fba68bae19729c47877c95bcefa",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:33:37.907646+00:00",
+      "title": "Iraq needs $325 million for emergency health care, says World Health O",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "3c756ae0-34d8-5a62-877f-89915f99266c",
+      "sha256": "f86ad5180d4d2867b2a802c3279367898a911f41feeaeaafeb2982be7eeb9a2f",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:33:37.907646+00:00",
+      "title": "WHO Director-General calls on G20 to Fight, Unite, and Ignite against ",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "afed7627-fee6-5f8a-9cc0-9b73ee7b278c",
+      "sha256": "4863aecbb2ac7c604d5c075f8667bbcffafecc9f315abf2497cb3fad3306d3e5",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:33:37.907646+00:00",
+      "title": "Statue commemorates smallpox eradication",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "3f108104-9aed-5969-bda2-a36fd04f6c7f",
+      "sha256": "318438170cd9274a46555ae2c9e8c1cda2ca9674151efeecd2d43bc5eb093446",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the C",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 15,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "502950a5-5a5a-556f-b2bb-d78c4a67b1d6",
+      "sha256": "5c9662ea0a9a5a70f565d01165c8ff5d369056d6927929817520c769d2f35fc9",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Hantavirus cluster linked to cruise ship travel, Multi-country",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 2,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "be49da26-701f-580e-acb7-848640488956",
+      "sha256": "6c65bbbaa34a74bf6ea580901de6650ab9ddc2ce960010830c93fcf8d3b9ed23",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Hantavirus cluster linked to cruise ship travel, Multi-country",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 16,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "5630a7b3-7991-5a0f-b203-322a0d929dc8",
+      "sha256": "c6ddb03cf07703aa8f2704e9ad8c05f3480bbc2685a367292f7de1ff948c5454",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Hantavirus cluster linked to cruise ship travel, Multi-country",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 4,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "758b868b-9a88-577c-8f41-0814a43b47df",
+      "sha256": "0793b3968695ae2b481761a81fe9fa9bbcdc483755ceeaea0c4a8e0bd5634cbd",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Measles - Bangladesh",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 13,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "acc00ce6-0c12-5fff-9c01-f3fb1c55aee7",
+      "sha256": "be367be1f41d70c02490b060204d7c1d027fa7b05f63174c4019774f71ec2c18",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Avian Influenza A(H9N2) - Italy",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 9,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "9c33eee2-2f99-5761-bd3f-f36640286117",
+      "sha256": "14b4fac7b07a7f6b8fb73e4aeb842859a6d707671ae3e0c34b2b783d25f368e0",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "International food safety event: Infant formula and products containin",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 1,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "b1163556-2c26-5e18-a42f-12e082c19d19",
+      "sha256": "3bb39c806e00a13a3d806a361e8fb7a839eddbfb9752c70667259cdcdf97863d",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Mpox: recombinant virus with genomic elements of clades Ib and IIb \u2013 G",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 17,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "e04e8515-b177-5fa6-9b04-745e7e0fe895",
+      "sha256": "6f32a181dbd2d23bd8981d997cfd4c667d7a44b76d2bd1a22c7f48f2c53f5d3c",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Nipah virus infection - Bangladesh",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 15,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "15c0831b-488e-5ec0-a7c4-7a619d42d892",
+      "sha256": "47f3d29966f9431a74f5f382fb3f99a7af3cdacea0e76bbddb4c9b37b9b7a53c",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Nipah virus disease - India",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 14,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "2beaba1b-f80e-56d8-b47e-88ec72cdfaf6",
+      "sha256": "32e7918064c868710ce8b631a64eefbc4ea36bb00159e655a2655404c3aa3cfd",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Marburg virus disease- Ethiopia",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "e563a88c-2704-5719-a1be-e01be81a43bb",
+      "sha256": "57459e325c4a1d97b09515f533e30e48bdc3c0fda80d3bcc3d89688619ecfeac",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Middle East respiratory syndrome coronavirus - Global update",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 19,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "99299de5-5be7-5c73-8e86-082c1a382b50",
+      "sha256": "1f4c382346b175186ea50a31013805fc0661968e4ffc87533ad021ac41c01e82",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Seasonal influenza - Global situation",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 20,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "bcb2f33e-f490-57a2-8829-74abd985ee30",
+      "sha256": "703ce9ba4ea1ae6d57c20caa76b14865b122bad0b0dd0b4ade3173e63fe0bd93",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Broader transmission of mpox due to clade Ib MPXV \u2013 Global situation",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 16,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "f069f826-828e-5335-aede-43fa8bc0e220",
+      "sha256": "0c17ebcee9a4c20b8c66b115efc2ac8b348e47b4e37fc5ef790ff6547d90f6b4",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Avian Influenza A(H5N5)- United States of America",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 10,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "595ec57e-0e57-5e42-8bbf-5ded8ae4ab5e",
+      "sha256": "a20b946a8aa6b3a8a741f3a93a70966d0b9ce5b1b4234c71dad4d3aefca94377",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Ebola virus disease \u2013 Democratic Republic of the Congo",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Cholera",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Cholera",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 4,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "97bd8606-b50d-5fb8-9dee-139c4ca9e87b",
+      "sha256": "6374db25eb2658859e66c927940623b21f5f69a83946bb4f4359987c7076680a",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Diphtheria - African Region (AFRO)",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Cholera",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Cholera",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 5,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "608e4843-0b6a-51ab-a00c-cfd9913fbac8",
+      "sha256": "68c93dbab07a1e9d887c650479c402b920b29d21748c6c09f67340db95250d66",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Marburg virus disease- Ethiopia",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "46b4a96a-6411-5412-a966-d9ce48934ce6",
+      "sha256": "8f95af60f0fe58d918de28fe3888b0bf466ea50a219a8ccabc169b171512595c",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Rift Valley fever- Mauritania and Senegal",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 2,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "e209028d-3c18-548e-8269-e83ab2e3498f",
+      "sha256": "fc33376741e800dba22a2df7e0b21a22ed1f83853227421eaf8231b65dbed63c",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Chikungunya virus disease- Global situation",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Dengue",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Dengue",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 24,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "268adcb7-e11e-5b29-bcf9-0caf6333eaba",
+      "sha256": "770fc87e1ef2787266e7860e53474e2cf6944a01e4afda399f0302cb9c93bdbc",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Nipah virus infection - Bangladesh",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 12,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "da89b228-2fcd-5a39-bf38-9148219be3a6",
+      "sha256": "da0931a7d8cfea182a850bf3c90623b77a5399f13068b3dc2d292e2280e97f69",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Ebola virus disease \u2013 Democratic Republic of the Congo",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Cholera",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Cholera",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 6,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "a632c28b-776b-5efc-b051-cc7ba8dde6ab",
+      "sha256": "482bd13af7bff344a9e8be2e9337367a1dfbb38ff4d3d171a76afe6c4e196620",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Cholera \u2013 Multi-country with a focus on countries experiencing current",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Cholera",
+        "international_geography"
+      ],
+      "priority_disease": "Cholera",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 10,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "ae616787-e6cb-593a-acf9-068f11603362",
+      "sha256": "655ba2710cab9f271e7197d34cecd967c1b813b9bf5bd74272d2dfcc8ac2bdec",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Circulating vaccine-derived poliovirus type 1- Israel",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 4,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "d0e80a86-1c80-59eb-a959-6e52187331b6",
+      "sha256": "49a032dca6774ccdb438d6f2e8b0034207e8e4ef45732f5654db3c19665d9f29",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Nipah Virus Infection - India",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "43d97f00-7185-50c4-8a37-3c2c974fccac",
+      "sha256": "8a477ce8bc40e7afde2d924696f966c5abf5e84bdcde68f1dee6e29f43f70210",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Rabies - Timor-Leste",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 17,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "03be2b41-d422-5581-bcbb-8e3cda721999",
+      "sha256": "baaa048056deda0e20c28484892b61cc110f0fcaa348b57ee187785c747de4e2",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Avian Influenza A(H5N1) - Cambodia",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 12,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "4b86d425-c547-5bf2-8adc-3de0c61a9d78",
+      "sha256": "cee36698d1b519a103633b59776a4cd7b367315354c347b53d14285bdf93eae3",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Anthrax \u2013 Thailand",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 8,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "aa08ed03-5401-5cc2-80b3-40f422960bcc",
+      "sha256": "a5e2d14075ea87938e126360d308c37ba61da43f932f4bdb473406f41f77de10",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "COVID-19 - Global Situation",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "b3cd2c79-119b-5bab-8a5e-40f37ae69498",
+      "sha256": "f8b6c847c0fecfc573983fd1bbb085a54580b748f8572bafdc02ea12f751452d",
+      "source_id": "who_don_feed",
+      "publication_timestamp": "2026-10-30T19:35:16.160951+00:00",
+      "title": "Circulating vaccine-derived poliovirus type 2 (cVDPV2) - Papua New Gui",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "2c82fd1c-5740-518f-a7fd-a9c0cfa4ce8b",
+      "sha256": "3ddf5272000b7605a97aac982ed289c5210576ff76ce4b1b5f9e2e2185c8cfca",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Ensuring continuity of TB services during the COVID-19 pandemic",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "585e69c6-32c4-5e45-b4bc-b106406594cc",
+      "sha256": "7791d96d5f00493111c19cece51ed6f812c051d8501ef6c9b0611b13d5ac0cdf",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Hope for 11 million children facing death from illnesses",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Malaria"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 2,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "415f72c9-1d27-56a1-89f6-1c898363a015",
+      "sha256": "37b4bf36d3c6d6574353a09685c7966782d2314564e557cced7092be3bf75cd0",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Key step forward on International Health Rules",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "d2c336bd-7bd6-53fe-a643-fb3ae07d7317",
+      "sha256": "ba459fd976e1297620e5c9eb9210dc52330a800329cf1630b704c5d84c426ba8",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "SARS outbreak contained worldwide",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 8,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "0cd09b57-b44f-5ca5-8627-f90a9caea280",
+      "sha256": "0099c0f681eaf985484408a40fd00126ea5282944b8f7bf47d18382f3b978477",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Update 31 - Coronavirus never before seen in humans is the cause of SA",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "7f3f4007-0528-55f5-8923-16fe06d6bc01",
+      "sha256": "4e80bf801ce29680a63307d398cc9567e43f5a185ee5e0d63340f2e53a5ecf2a",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "End in sight, but flare-ups likely in the Ebola outbreak in the Democr",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography",
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 4,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "f9a9b4c4-ff7e-58ce-bca4-3183d58f3a82",
+      "sha256": "33a54fcb88ddc328890c59f5c80cea7f833b409928a5724aab6afc87e1723439",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Shortage of personal protective equipment endangering health workers w",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 1,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "1cd6c9f8-29a0-5566-aadb-35fc31a16eda",
+      "sha256": "cfcb79dc88ec4975c874bab94a1995456548a2b5cd81e105821b7dd4256eeb42",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Global leaders intensify commitment to prevent leading childhood kille",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 8,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "786571bd-861b-5602-a9e5-01cdde16db31",
+      "sha256": "1db4fe695824a2d01623832fe4478919e096e204df52ef3f5295bdd91472802d",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "International spread of disease threatens public health security",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "2a28c367-c9ce-5d36-b9b6-3c63e2285de1",
+      "sha256": "4c628ff078c6cb26c0336b1e04ab69745590520c1e33cf29fedb0faa103b3750",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "WHO calls on malaria-endemic countries to strengthen monitoring of ant",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [
+        "priority_disease:Malaria"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "9b93b76d-8c1d-5738-955f-78c34088695e",
+      "sha256": "ba5fdba77de5bfafab1a16bd1f9e436fe65f66870a20a27a9c5b7b5c2b7f9c94",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Landmark agreement improves global preparedness for influenza pandemic",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "97e1c588-9d3c-5d12-a578-2d4dfd6dadd9",
+      "sha256": "ff0363ed60533c657d17b2cd4406def74827e0cf65adce6eec830d7c589def7d",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Health in all policies: the case of air pollution, urban health and su",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "1b65f9cc-729d-54ef-87b8-7275b883168e",
+      "sha256": "9a24b79cfc9e22e78d17d6c02387eeec53d157c06b846d01f6ca10ab2514d759",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Major milestone for WHO-supported Ebola vaccine",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "295190d6-c49c-5db8-9ac1-dda9e443d897",
+      "sha256": "7364e35fca79b0b50e7da0c7e2f18436f006f8a17e0c539751953a57504f8e8e",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Universal Health Coverage Passes Key Global Milestone",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "acfb432b-7e9a-5d07-8cc5-bf66531e0b0a",
+      "sha256": "d0ac94f14f44fad3ab59441c91124e9caaf1641149a0753aa499882d85b9e4d6",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Multilateral agencies launch a joint plan to boost global health goals",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "priority_disease:Malaria",
+        "international_geography"
+      ],
+      "priority_disease": "Malaria",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "55b74a98-8e76-5136-8d91-77c8eb781d1b",
+      "sha256": "47b13540355a9ba668ec470880f9b64f362c77ecf1169a527ddc5019ac7bf443",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Call for action to reduce the harmful use of alcohol",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "619d1c69-46ea-565e-b851-fddfa9a09362",
+      "sha256": "e1b81073638df41a0edab2aafceed4b8e2556b0e5031a1e944da2259ace6c237",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "Tropical Data: a WHO-led initiative to help national programmes collec",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "b864a597-c530-51cc-bb9d-37dc26cae9fb",
+      "sha256": "8d0d234c7a01076506d5a1152ed5c6a25bfbd8960771fff9d0baaa72b89b6cd1",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "WHO launches new report on the global tobacco epidemic",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "d0d0ca20-6759-5453-856d-3fe42f6a7ed2",
+      "sha256": "491ae6fadc70a221e8b93268be4427a4f556cd91898f58df35cede02423a525e",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "World hunger is still not going down after three years and obesity is ",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "77d737d0-3d43-5924-9f8b-d12f3a2e59b3",
+      "sha256": "32a478df39d8688ce73a74213afe6e06b5298f504302e5a7651292eff7ac677c",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "WHO highlights devastating global impact of drowning",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "international_geography"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "55eee1cc-2170-52d3-8227-8d93addde86d",
+      "sha256": "3bb5db7972685032932122e60d73e3c48c54a047510d0c7a9676923f1143553d",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "WHO updates personal protective equipment guidelines for Ebola respons",
+      "primary_classification": "OUT_OF_SCOPE_PATHOGEN_OR_INTERNATIONAL",
+      "secondary_tags": [
+        "non_priority_pathogen"
+      ],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 5,
+      "processing_status": "PROCESSED"
+    },
+    {
+      "document_id": "60e942b9-d70e-5e5b-952e-0965be10e22f",
+      "sha256": "603d368e176a5056f6b31a6320e39ed9d3bdfbc37eaf202a73bd5eb5c832b445",
+      "source_id": "who_news_feed",
+      "publication_timestamp": "2026-10-30T19:38:20.078851+00:00",
+      "title": "WHO recommends 29 ways to stop surgical infections and avoid superbugs",
+      "primary_classification": "ADMINISTRATIVE_POLICY_OR_DISCOVERY_STUB",
+      "secondary_tags": [],
+      "priority_disease": "None",
+      "extracted_observations_count": 0,
+      "canonical_events_count": 0,
+      "processing_status": "PROCESSED"
+    }
+  ]
+}

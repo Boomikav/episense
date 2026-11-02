@@ -1,0 +1,72 @@
+# Python byte-code and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# IDE & Editor Metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Data Directories (keep runtime datasets, ignore heavy raw archives)
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/official_historical_series/
+!data/raw/official_historical_series/*
+data/raw/*.zip
+data/raw/opendengue_india_spatial.csv
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/spatiotemporal_surveillance_panel.csv
+!data/processed/spatiotemporal_surveillance_panel.parquet
+data/benchmarks/*
+!data/benchmarks/.gitkeep
+!data/benchmarks/*.json
+
+# Local SQLite Databases and Backups
+*.sqlite
+*.sqlite3
+*.db
+*.backup
+!data/surveillance_store.sqlite
+*-wal
+*-shm
+backups/
+scratch/
+logs/
+*.log
+
+# Frontend build & environment artifacts
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+frontend/node_modules/
+node_modules/
+
+# Model Artifacts and Cache
+models/
+.cache/
+downloads/

@@ -1,0 +1,16 @@
+{
+  "avg_ms_per_doc": 9.43,
+  "dead_letter_count": 0,
+  "documents_rejected": 0,
+  "duplicates_skipped": 0,
+  "elapsed_seconds": 1.0374,
+  "state_checksum_sha256": "0a22fdd8f4f17960177c37fc6d94f03297e1396c66bcd5bb0c67b371cc76f5b9",
+  "throughput_docs_per_sec": 106.03,
+  "total_alerts": 170,
+  "total_bins": 170,
+  "total_documents_ingested": 110,
+  "total_documents_received": 110,
+  "total_dossiers": 170,
+  "total_fused_events": 170,
+  "total_signals": 170
+}

@@ -1,0 +1,16 @@
+{
+  "total_signals_consumed": 0,
+  "total_alerts_generated": 0,
+  "alerts_by_tier": {},
+  "alerts_by_threat_tier": {},
+  "gated_alerts_count": 0,
+  "alerts_by_disease": {},
+  "alerts_by_geo": {},
+  "high_alerts_count": 0,
+  "medium_alerts_count": 0,
+  "low_alerts_count": 0,
+  "informational_alerts_count": 0,
+  "elapsed_seconds": 0.0,
+  "pipeline_version": "1.0.0",
+  "generated_at": "2026-11-01T18:29:00.702067+00:00"
+}

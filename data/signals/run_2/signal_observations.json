@@ -1,0 +1,72 @@
+[
+  {
+    "signal_id": "bad8ce18-d29b-52e3-aa37-0e99694288c0",
+    "disease_key": "nipah virus disease",
+    "geo_key": "kozhikode",
+    "target_period_start": "2024-07-08T00:00:00Z",
+    "target_period_end": "2024-07-14T23:59:59Z",
+    "observed_value": 2.0,
+    "expected_value": 0.0,
+    "deviation": 2.0,
+    "standardized_score": null,
+    "threshold": 2.0,
+    "origin": "HISTORICAL_CORPUS",
+    "detection_method": "suppressed_insufficient_baseline",
+    "signal_level": "no_signal",
+    "supporting_fused_event_ids": [
+      "e281414e-5ca2-4ad7-9f00-1fe7ca285855"
+    ],
+    "supporting_source_count": 2,
+    "reliability_status": "insufficient_history",
+    "is_downgraded": true,
+    "downgrade_reason": "Signal suppressed: Insufficient historical baseline data, incompatible in granularity, or not evaluable.",
+    "explainable_rationale": "1. Observed: 2.0 cases across 1 fused events (2 independent sources).\n2. Expected: 0.00 cases (baseline median: 0.00, std: 0.00).\n3. Deviation: +2.00 (N/A).\n4. Detectors Triggered: None.\n5. Historical Support: 0 historical weeks (0 non-zero periods), status: insufficient_history.\n6. Source Support: 2 independent source groups (2 total articles).\n7. Classification: NO_SIGNAL (Signal suppressed: Insufficient historical baseline data, incompatible in granularity, or not evaluable.).",
+    "provenance_references": [
+      {
+        "document_id": "b1723dac-4f30-4744-87ca-b27ed28410ad",
+        "source_id": "who_don",
+        "start_char": 10,
+        "end_char": 25,
+        "span_text": "2 confirmed cases",
+        "extraction_method": "rule_based",
+        "attribute_role": "case_count"
+      }
+    ],
+    "created_at": "2024-07-14T23:59:59Z"
+  },
+  {
+    "signal_id": "0674f978-5d8e-5f0f-9e77-022ab37a6d37",
+    "disease_key": "nipah virus disease",
+    "geo_key": "kozhikode",
+    "target_period_start": "2024-07-15T00:00:00Z",
+    "target_period_end": "2024-07-21T23:59:59Z",
+    "observed_value": 8.0,
+    "expected_value": 2.0,
+    "deviation": 6.0,
+    "standardized_score": null,
+    "threshold": 2.0,
+    "origin": "HISTORICAL_CORPUS",
+    "detection_method": "suppressed_insufficient_baseline",
+    "signal_level": "no_signal",
+    "supporting_fused_event_ids": [
+      "2ab4064e-2327-4c8c-8852-5a58cb10ade3"
+    ],
+    "supporting_source_count": 2,
+    "reliability_status": "insufficient_history",
+    "is_downgraded": true,
+    "downgrade_reason": "Signal suppressed: Insufficient historical baseline data, incompatible in granularity, or not evaluable.",
+    "explainable_rationale": "1. Observed: 8.0 cases across 1 fused events (2 independent sources).\n2. Expected: 2.00 cases (baseline median: 2.00, std: 0.00).\n3. Deviation: +6.00 (N/A).\n4. Detectors Triggered: None.\n5. Historical Support: 1 historical weeks (1 non-zero periods), status: insufficient_history.\n6. Source Support: 2 independent source groups (3 total articles).\n7. Classification: NO_SIGNAL (Signal suppressed: Insufficient historical baseline data, incompatible in granularity, or not evaluable.).",
+    "provenance_references": [
+      {
+        "document_id": "13bdb4da-a95b-44a6-a4a0-b1345d99e210",
+        "source_id": "who_don",
+        "start_char": 10,
+        "end_char": 25,
+        "span_text": "8 confirmed cases",
+        "extraction_method": "rule_based",
+        "attribute_role": "case_count"
+      }
+    ],
+    "created_at": "2024-07-21T23:59:59Z"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "report": {
+    "total_documents_processed": 110,
+    "total_candidates_extracted": 190,
+    "total_fused_events": 187,
+    "multi_observation_event_count": 3,
+    "single_observation_event_count": 184,
+    "conflicting_quantity_event_count": 2,
+    "average_observations_per_event": 1.02,
+    "elapsed_seconds": 0.19,
+    "fusion_window_days": 7,
+    "pipeline_version": "1.0.0",
+    "generated_at": "2026-09-06T14:10:34.832843+00:00"
+  },
+  "multi_source_consensus_events": 1,
+  "top_diseases": {
+    "Disease/Illness": 35,
+    "Dengue": 22,
+    "Nipah virus disease": 12,
+    "Malaria": 10,
+    "Cholera": 10,
+    "Scrub Typhus": 7,
+    "Chandipura virus": 5,
+    "Rabies": 5,
+    "Measles": 5,
+    "Kyasanur Forest Disease": 5,
+    "Chikungunya": 5,
+    "Leptospirosis": 4,
+    "Infection": 3,
+    "National Centre For Disease": 2,
+    "Acute Respiratory Distress Syndrome": 2
+  },
+  "top_locations": {
+    "Unknown / Global": 125,
+    "Kerala": 12,
+    "Gujarat": 11,
+    "Kozhikode": 6,
+    "India": 5,
+    "Odisha": 5,
+    "Karnataka": 4,
+    "Delhi": 4,
+    "Malda": 3,
+    "Bangladesh": 2,
+    "Rayagada": 2,
+    "West Bengal": 2,
+    "Vellore": 1,
+    "Rajasthan": 1,
+    "Bihar": 1
+  }
+}
