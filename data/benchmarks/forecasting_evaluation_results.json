@@ -1,6 +1,6 @@
 {
   "framework": "EpiSense Conference-Grade Spatiotemporal Forecasting Evaluation",
-  "evaluation_timestamp": "2026-11-01T17:44:43.286532+00:00",
+  "evaluation_timestamp": "2026-11-02T06:06:07.270428+00:00",
   "total_panel_records": 993,
   "priority_diseases_monitored": 8,
   "disease_evaluations": {
@@ -11,8 +11,8 @@
       "longitudinal_depth": 32,
       "latest_observation": "2026-08-31",
       "latest_cases": 33125,
-      "latency_days": 62,
-      "freshness": "FRESH (Lag: 62d <= 90d)",
+      "latency_days": 63,
+      "freshness": "FRESH (Lag: 63d <= 90d)",
       "forecast_vintage": "August 2026 (Origin: 2026-08-31)",
       "observation_cutoff": "2026-08-31",
       "elapsed_periods": [

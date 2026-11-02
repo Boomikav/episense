@@ -245,7 +245,7 @@ export const ForecastingView: React.FC = () => {
               1 Series Active
             </div>
             <div style={{ fontSize: "11px", color: "#A7F3D0", marginTop: "4px" }}>
-              Malaria Monthly N=32 (Aug 2026 Vintage, 62d lag)
+              Malaria Monthly N=32 (Aug 2026 Vintage, 63d lag)
             </div>
           </div>
 
@@ -290,12 +290,12 @@ export const ForecastingView: React.FC = () => {
             </span>
           </div>
           <span style={{ fontSize: "11px", fontWeight: 700, background: "#FDE68A", color: "#78350F", padding: "3px 8px", borderRadius: "6px" }}>
-            Current System Date: November 1, 2026 | Observation Latency: 62 Days
+            Current System Date: November 2, 2026 | Observation Latency: 63 Days
           </span>
         </div>
         <p style={{ margin: 0, fontSize: "12px", color: "#78350F", lineHeight: "1.5" }}>
           <strong>Vintage Integrity Protocol:</strong> The August 2026 forecast vintage produced six multi-step monthly projections (Sep 2026 to Feb 2027).
-          Because the surveillance clock has advanced to November 1, 2026, <strong>September and October 2026 are elapsed forecast periods</strong>.
+          Because the surveillance clock has advanced to November 2, 2026, <strong>September and October 2026 are elapsed forecast periods</strong>.
           Official MMIS reports for Sep/Oct 2026 remain pending publication by NCVBDC; values are preserved as unobserved rather than fabricated.
           Active operational horizons cover <strong>November 2026 through February 2027</strong> under compounded projection uncertainty.
         </p>
@@ -397,7 +397,7 @@ export const ForecastingView: React.FC = () => {
                         {isDengue
                           ? "Monthly series: 13 calendar periods (Jan 2024-Jan 2025), 12 observed, 1 missing (Dec 2024). N_cont=11 (<12), latency >640d. Retrospective 7-state annual panel validated."
                           : isMalaria
-                          ? "August 2026 vintage (62d latency). Seasonal Naive exploratory baseline (MAE 5,563.50, MASE 1.121). Horizons Sep/Oct elapsed, Nov-Feb conditional projections."
+                          ? "August 2026 vintage (63d latency). Seasonal Naive exploratory baseline (MAE 5,563.50, MASE 1.121). Horizons Sep/Oct elapsed, Nov-Feb conditional projections."
                           : prof.suppression_reason || (isElig ? "Continuous surveillance series verified." : "Historical baseline reference only.")}
                       </td>
                     </tr>
@@ -605,7 +605,7 @@ export const ForecastingView: React.FC = () => {
                 }}
               >
                 <option value="malaria:india_national">
-                  malaria:india_national (N=32 months — FORECAST READY [Fresh lag 62d])
+                  malaria:india_national (N=32 months — EXPLORATORY BASELINE [Fresh lag 63d])
                 </option>
                 {seriesList
                   .filter((s) => s.series_key !== "malaria:india_national")
@@ -934,13 +934,12 @@ export const ForecastingView: React.FC = () => {
         <div style={{ padding: "16px", background: "#F8FAFC", borderRadius: "12px", border: "1px solid #E2E8F0" }}>
           <div style={{ fontWeight: 700, fontSize: "13px", color: "#1E293B", marginBottom: "6px", display: "flex", alignItems: "center", gap: "6px" }}>
             <CheckCircle2 size={16} color="#059669" />
-            <span>1. NCVBDC August 2026 Data Gap Resolved (Fresh Lag: 62d &le; 90d)</span>
+            <span>1. NCVBDC August 2026 Data Gap Resolved (Fresh Lag: 63d &le; 90d)</span>
           </div>
           <p style={{ margin: 0, fontSize: "12px", color: "#475569", lineHeight: "1.5" }}>
             Vector graphics and official text in the NCVBDC August 2026 bulletin (<code>malaria_india_ncvbdc_bulletin_aug_2026.pdf</code>)
             were extracted with sub-millimeter precision, recovering all 8 months of 2026 (Jan–Aug: 142,141 cases, exactly verifying the
-            official 10.43% decrease vis-à-vis 2025). The unbroken series spans 32 months (Jan 2024 – Aug 2026). With an observation lag of 62 days
-            relative to surveillance cutoff, Malaria is strictly <strong>FRESH</strong> and eligible for prospective forecasting.
+            official 10.43% decrease vis-à-vis 2025). The unbroken series spans 32 months (Jan 2024 – Aug 2026). With an observation lag of 63 days relative to surveillance cutoff (November 2, 2026), Malaria is strictly <strong>FRESH</strong> and eligible for prospective forecasting.
           </p>
         </div>
 
