@@ -34,18 +34,21 @@ class SurveillanceDatabase:
     Uses WAL mode for concurrent read/write and guarantees persistence across restarts.
     """
 
-    def __init__(self, db_path: Optional[Union[str, Path]] = None):
+    def __init__(self, db_path: Optional[Union[str, Path]] = None, seed_if_missing: bool = False):
+        env_db_path = os.environ.get("EPISENSE_DB_PATH")
         if db_path is None:
-            raw_path = os.environ.get("EPISENSE_DB_PATH")
+            raw_path = env_db_path
             db_path = Path(raw_path) if raw_path else DEFAULT_DB_PATH
+            if env_db_path:
+                seed_if_missing = True
         self.db_path = Path(db_path).resolve()
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
 
         # Persistence safeguard: if configured persistent path doesn't exist,
-        # but bundled seed exists in repository, copy seed once (initial hydration).
+        # and seed_if_missing is True, copy seed once (initial production hydration).
         # If it ALREADY exists, NEVER overwrite!
         seed_db = Path("data/surveillance_store.sqlite").resolve()
-        if not self.db_path.exists() and seed_db.exists() and self.db_path != seed_db:
+        if seed_if_missing and not self.db_path.exists() and seed_db.exists() and self.db_path != seed_db:
             import shutil
             logger.info("Persistent DB not found at %s. Seeding from repository database at %s...", self.db_path, seed_db)
             shutil.copy2(str(seed_db), str(self.db_path))
