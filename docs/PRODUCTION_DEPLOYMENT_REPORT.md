@@ -2,274 +2,197 @@
 
 **Document Authority:** Lead AI & Platform Deployment Engineering  
 **Deployment Date:** November 2, 2026  
-**System Clock / Reference Date:** `2026-11-02T07:22:00+05:30` (Asia/Kolkata)  
+**System Clock / Reference Date:** `2026-11-02T07:45:00+05:30` (Asia/Kolkata)  
 **Workspace:** `C:\Users\ajaya\Desktop\NLP`  
-**GitHub Repository:** [https://github.com/Boomikav/episense](https://github.com/Boomikav/episense)  
+**GitHub Repository:** [https://github.com/Boomikav/episense](https://github.com/Boomikav/episense) (Branch: `main`)  
 
 ---
 
-## 1. Executive Deployment Summary & Public Endpoints
+## 1. Executive Deployment Ledger & Status Classification
 
-The complete EpiSense multisource disease surveillance, event fusion, and epidemic forecasting platform has been prepared, packaged, and deployed for public HTTPS access.
+In accordance with strict operational auditing rules, all system components are categorized below:
 
-```
-+---------------------------------------------------------------------------------------------------+
-| PRODUCTION ACCESS DIRECTORY                                                                       |
-+---------------------------------------------------------------------------------------------------+
-| 1. Frontend Web Application (Vercel):   https://frontend-navy-eta-74.vercel.app                  |
-|    - Direct Deployment Alias:           https://frontend-ptd9t1x0x-ajayajay17at19-4269.vercel.app |
-|    - Deployment Status:                 ACTIVE & VERIFIED (HTTP 200, ReadyState: READY)           |
-|                                                                                                   |
-| 2. Backend API Gateway (Public HTTPS):  https://60b727782c065c.lhr.life                           |
-|    - Health Check Probe:                https://60b727782c065c.lhr.life/api/v1/health             |
-|    - Interactive Swagger API Docs:      https://60b727782c065c.lhr.life/docs                      |
-|    - WebSocket Streaming Feed:          wss://60b727782c065c.lhr.life/api/v1/ws/surveillance      |
-|    - Deployment Status:                 ACTIVE & VERIFIED (HTTP 200, Live Endpoints)              |
-|                                                                                                   |
-| 3. Render Blueprint Deployment Target:  https://render.com/deploy?repo=https://github.com/Boomikav/episense |
-|    - Service Specification:             render.yaml (Web Service + 1GB Persistent Storage Disk)   |
-|    - Render Service Default URL:        https://episense-api.onrender.com                         |
-|    - Status:                            CONFIGURED & READY (Awaiting Render Account Authorization)|
-+---------------------------------------------------------------------------------------------------+
-```
-
----
-
-## 2. Status Categorization & Deployment Ledger
-
-In accordance with strict operational auditing requirements, the state of all components is explicitly classified:
-
-| Component | Target Provider | Operational Status | Verification Evidence |
+| Component | Target Provider | Operational Status | Verification Evidence / Action Required |
 | :--- | :--- | :--- | :--- |
-| **Frontend Web App** | Vercel | **Successfully Deployed & Verified** | Public HTTPS request returns HTTP 200; bundle verified with zero localhost references. |
-| **SPA Route Handling** | Vercel (`vercel.json`) | **Successfully Deployed & Verified** | Sub-routes (`/alerts`, `/forecasting`, `/map`, `/events`, `/workbench`) return HTTP 200. |
-| **Backend REST API** | Public HTTPS Endpoint | **Successfully Deployed & Verified** | `/api/v1/health`, `/metrics/overview`, `/forecasting/evaluations` return HTTP 200. |
-| **Backend CORS Filter** | FastAPI Middleware | **Successfully Deployed & Verified** | Preflight OPTIONS returns `Allow-Origin: https://frontend-navy-eta-74.vercel.app`. |
-| **SQLite Persistence** | Persistent Disk Mount | **Successfully Deployed & Verified** | `SurveillanceDatabase` copy-on-first-boot safeguard verified; test write survived restart. |
-| **GitHub Repository** | GitHub (`Boomikav/episense`) | **Successfully Deployed & Verified** | Repository created and pushed to `main`; all models, schemas, and panel files tracked. |
-| **Render Web Service** | Render Cloud Platform | **Configured; Awaiting Authorization** | `render.yaml` & `Dockerfile` pushed; 1-click deploy link generated for user account. |
-
----
-
-## 3. Architecture & Data Flow
-
-```mermaid
-flowchart TD
-    subgraph Client["Client Browser"]
-        UI["Vercel Frontend (React 19 + Vite 8)\nhttps://frontend-navy-eta-74.vercel.app"]
-    end
-
-    subgraph CDN["Edge & Security Layer"]
-        VercelEdge["Vercel Edge Network\n(SPA Rewrites via vercel.json)"]
-        CORSSec["FastAPI CORS Filter\n(Origin: https://.*\\.vercel\\.app)"]
-    end
-
-    subgraph Backend["Persistent Backend Host"]
-        API["FastAPI Production Gateway\nUvicorn 0.0.0.0:$PORT"]
-        StateStore["In-Memory SurveillanceStateStore\n(1,637 docs, 1,395 events, 916 signals, 511 alerts)"]
-        WSServer["WebSocket Push Server\n/api/v1/ws/surveillance"]
-    end
-
-    subgraph Storage["Persistent Storage Volume"]
-        Disk["Persistent Storage Mount\n/var/data/surveillance_store.sqlite\n(WAL Mode, Copy-on-First-Boot)"]
-        Seed["Authoritative Seed Database\ndata/surveillance_store.sqlite (48.2 MB)"]
-        Panel["Spatiotemporal Surveillance Panel\ndata/processed/spatiotemporal_surveillance_panel.csv (993 rows)"]
-    end
-
-    UI -->|HTTPS Fetch / REST| VercelEdge
-    VercelEdge -->|Proxied Client Request| CORSSec
-    CORSSec --> API
-    API <--> StateStore
-    API <--> WSServer
-    API <--> Disk
-    Disk -.->|Initial Seed Copy if Target Absent| Seed
-    API <--> Panel
-```
-
----
-
-## 4. Database Persistence & Integrity Safeguards
-
-### 4.1 Persistence Architecture
-The application uses SQLite in **Write-Ahead Logging (WAL)** mode. To ensure database writes survive container restarts without data corruption or resetting:
-1. **Dynamic Database Path (`EPISENSE_DB_PATH`):**
-   - Configurable via `EPISENSE_DB_PATH` environment variable.
-   - Production target: `/var/data/surveillance_store.sqlite` (on Render persistent disk mount).
-   - Local fallback: `data/surveillance_store.sqlite`.
-2. **Safe Initialization & Non-Destructive Seeding:**
-   - On container startup, `SurveillanceDatabase` checks if `/var/data/surveillance_store.sqlite` exists.
-   - **First Boot (Fresh Volume):** Target file does not exist. The application safely copies `data/surveillance_store.sqlite` (48,218,112 bytes) from the repository to `/var/data/surveillance_store.sqlite`.
-   - **Subsequent Boots & Restarts:** Target file **ALREADY EXISTS**. The application logs `"Using existing persistent database at ..."` and **NEVER OVERWRITES** the production database.
-3. **Transaction Lifecycle & Concurrency:**
-   - Connections run with `PRAGMA journal_mode=WAL;` and `PRAGMA foreign_keys=ON;`.
-   - Thread-local connections prevent cross-thread SQLite locks.
-   - Connection timeout set to 30.0s for high-concurrency burst safety.
-
-### 4.2 Controlled Test Write & Restart Verification
-A controlled probe record was written to the persistent database and verified:
-- **Table:** `source_poll_history`
-- **Probe ID:** `test_probe_697f2e15`
-- **Write Verification:** Verified present via independent SQLite connection (`True`).
-- **Restart Verification:** Process restarted; record remained intact.
-- **Pristine Cleanup:** Dedicated test probe excised; production surveillance counts confirmed preserved:
-  - Documents: **1,781**
-  - Fused Events: **2,422**
-  - Signals: **1,011**
-  - Alerts: **1,011**
-  - Forecasts: **11**
-- **Zero Accidental Resets:** No production surveillance events, documents, or forecast models were altered or erased.
-
-### 4.3 Database Backup & Restoration Procedure
-A verified physical backup was captured prior to deployment:
-- **Backup Location:** [`backups/surveillance_store_backup_20261102_070413.sqlite`](file:///C:/Users/ajaya/Desktop/NLP/backups/surveillance_store_backup_20261102_070413.sqlite) (48,218,112 bytes).
-- **Restoration Command (CLI):**
-  ```bash
-  # Restore from local backup
-  cp backups/surveillance_store_backup_20261102_070413.sqlite data/surveillance_store.sqlite
-  
-  # Restore to production persistent volume mount
-  cp backups/surveillance_store_backup_20261102_070413.sqlite /var/data/surveillance_store.sqlite
-  ```
-
----
-
-## 5. Render Web Service & Hosting Configuration
-
-### 5.1 Service Specification (`render.yaml`)
-The Render Blueprint specification is committed to the repository root:
-
-```yaml
-services:
-  - type: web
-    name: episense-api
-    runtime: python
-    buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
-    startCommand: "python run_server.py"
-    plan: starter
-    region: oregon
-    healthCheckPath: /api/v1/health
-    disk:
-      name: episense-storage
-      mountPath: /var/data
-      sizeGB: 1
-    envVars:
-      - key: PORT
-        value: 10000
-      - key: HOST
-        value: 0.0.0.0
-      - key: EPISENSE_DB_PATH
-        value: /var/data/surveillance_store.sqlite
-      - key: CORS_ORIGINS
-        value: "https://*.vercel.app,http://localhost:5173"
-      - key: EPISENSE_PRELOAD_CORPUS
-        value: "1"
-```
-
-### 5.2 Render Hosting Plans & Persistent Disk Policy
-- **Starter Plan ($7/mo instance + $0.25/GB disk):** Fully supports Persistent Disks. When deployed with the Starter plan, `/var/data` is backed by persistent block storage that survives container rebuilds, redeployments, and service restarts.
-- **Free Plan ($0/mo):** Render does not support Persistent Disks on the Free tier. If deployed on the Free tier, `EPISENSE_DB_PATH` falls back to the bundled `data/surveillance_store.sqlite`, which is fully readable and operational with all 1,781 historical documents and forecast models. However, writes during a free instance session will reset upon spin-down.
-- **Managed PostgreSQL Alternative:** For users requiring zero-cost persistent writes without paying Render's disk fee, the application's SQLAlchemy persistence abstractions can be connected to Render's free managed PostgreSQL instance or Supabase by setting `DATABASE_URL=postgresql://...`.
-
-### 5.3 One-Click Render Deployment Instructions for the User
-Because deploying on your personal Render account requires your authorization:
-1. Navigate to: **[https://render.com/deploy?repo=https://github.com/Boomikav/episense](https://render.com/deploy?repo=https://github.com/Boomikav/episense)**
-2. Sign in with your GitHub account (`Boomikav`).
-3. Click **"Apply"** to approve the Blueprint defined in `render.yaml`.
-4. Render will automatically build the service, install dependencies, attach the persistent disk, and launch the API gateway.
-5. Once complete, copy the public URL (e.g. `https://episense-api.onrender.com`) and update `VITE_API_BASE_URL` in Vercel if needed.
-
----
-
-## 6. Frontend Deployment: Vercel Configuration & Routing
-
-### 6.1 Vercel Project Details
-- **Project Name:** `frontend` (under team `ajayajay17at19-4269`)
-- **Framework Preset:** Vite
-- **Root Directory:** `frontend/`
-- **Build Command:** `tsc -b && vite build` (or `npm run build`)
-- **Output Directory:** `frontend/dist`
-- **Environment Variable:** `VITE_API_BASE_URL=https://60b727782c065c.lhr.life`
-- **Primary Production URL:** **[https://frontend-navy-eta-74.vercel.app](https://frontend-navy-eta-74.vercel.app)**
-
-### 6.2 SPA Fallback & Security Headers (`frontend/vercel.json`)
-```json
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" }
-      ]
-    }
-  ]
-}
-```
-
----
-
-## 7. Production Smoke-Test Audit Ledger
-
-All core API endpoints and frontend views were independently verified against the public HTTPS endpoints:
-
-| Endpoint / View | Tested Public URL | HTTP Status | Validation Outcome |
-| :--- | :--- | :--- | :--- |
-| **Backend Health Probe** | `https://60b727782c065c.lhr.life/api/v1/health` | **200 OK** | `{"status":"healthy","version":"1.0.0"}` |
-| **API Documentation** | `https://60b727782c065c.lhr.life/docs` | **200 OK** | Swagger UI renders OpenAPI 3.1.0 schema |
-| **Forecasting Sufficiency** | `https://60b727782c065c.lhr.life/api/v1/forecasting/sufficiency` | **200 OK** | All 8 priority pathogens qualified |
-| **Forecasting Evaluations** | `https://60b727782c065c.lhr.life/api/v1/forecasting/evaluations` | **200 OK** | 18 series matrix; Seasonal Naive baseline |
-| **Spatiotemporal Panel** | `https://60b727782c065c.lhr.life/api/v1/forecasting/panel?limit=5` | **200 OK** | 993 records returned with climate covariates |
-| **Metrics Overview** | `https://60b727782c065c.lhr.life/api/v1/metrics/overview` | **200 OK** | Active alerts, signals, fused events hydrated |
-| **Priority Alerts** | `https://60b727782c065c.lhr.life/api/v1/alerts?priority_only=true` | **200 OK** | Filtered explainable priority alerts returned |
-| **Fused Event Clusters** | `https://60b727782c065c.lhr.life/api/v1/fusion/clusters` | **200 OK** | Canonical cross-document event clusters returned |
-| **Source Connectors** | `https://60b727782c065c.lhr.life/api/v1/sources` | **200 OK** | 8 registered public health feed connectors |
-| **Priority Taxonomy** | `https://60b727782c065c.lhr.life/api/v1/taxonomy/priority` | **200 OK** | 8 canonical priority pathogens confirmed |
-| **CORS Preflight OPTIONS** | Preflight with `Origin: https://frontend-navy-eta-74.vercel.app` | **200 OK** | `Allow-Origin`, `Allow-Credentials: true` verified |
-| **Frontend Root** | `https://frontend-navy-eta-74.vercel.app/` | **200 OK** | HTML loads; 0 localhost strings in JS bundle |
-| **Frontend Alerts Route** | `https://frontend-navy-eta-74.vercel.app/alerts` | **200 OK** | Direct navigation & refresh verified |
-| **Frontend Forecasting** | `https://frontend-navy-eta-74.vercel.app/forecasting` | **200 OK** | Direct navigation & refresh verified |
-| **Frontend Map View** | `https://frontend-navy-eta-74.vercel.app/map` | **200 OK** | Direct navigation & refresh verified |
-| **Frontend Workbench** | `https://frontend-navy-eta-74.vercel.app/workbench` | **200 OK** | Direct navigation & refresh verified |
-
----
-
-## 8. Test Suite Verification Results
+| **Frontend Web App** | Vercel | **Successfully Deployed & Verified** | Public HTTPS loads with HTTP 200 at `https://frontend-navy-eta-74.vercel.app`; 0 localhost references in JS bundle. |
+| **SPA Route Handling** | Vercel (`vercel.json`) | **Successfully Deployed & Verified** | Direct navigation to `/alerts`, `/forecasting`, `/map`, `/workbench` returns HTTP 200 with `index.html`. |
+| **GitHub Repository** | GitHub (`Boomikav/episense`) | **Successfully Deployed & Synchronized** | Repository initialized, pushed to `main`; `render.yaml`, `Dockerfile`, `requirements.txt` (with `pymupdf`), and all datasets tracked. |
+| **Backend Code & Persistence** | Codebase (`src/episense`) | **Ready & Verified** | `SurveillanceDatabase` copy-on-first-boot safeguard verified; WAL mode active; `EPISENSE_DB_PATH` integrated across panel and data sufficiency modules. |
+| **CORS Middleware** | FastAPI (`app.py`) | **Ready & Verified** | Configured for exact origin `https://frontend-navy-eta-74.vercel.app` + regex `r"https://.*\.vercel\.app"`; OPTIONS preflight returns HTTP 200. |
+| **Backend Test Suites** | Local Python 3.11 | **441 Passed / 0 Failed** | All 441 unit and integration tests passing cleanly; 21 frontend Vitest tests passing cleanly. |
+| **Permanent Render Web Service** | Render Cloud (`render.yaml`) | **Awaiting Manual User Approval** | Render requires user OAuth connection and payment method authorization for the Starter Plan ($7/mo) + Persistent Disk ($0.25/mo). |
+| **Temporary Backend Gateway** | localhost.run (`lhr.life`) | **Transitional Fallback (Active)** | Active only while Render provisioning is pending. Must be decommissioned once Render is live. |
 
 ```
 +---------------------------------------------------------------------------------------------------+
-| TEST SUITE EXECUTION SUMMARY                                                                      |
+| ENDPOINT DIRECTORY                                                                                |
 +---------------------------------------------------------------------------------------------------+
-| 1. Pytest Backend Suite:   441 PASSED, 0 FAILED (in 129.94s)                                      |
-| 2. Vitest Frontend Suite:   21 PASSED, 0 FAILED (across 9 test files in 35.45s)                   |
-| 3. Frontend Vite Build:    PASSED (tsc -b && vite build in 290ms, 0 errors)                       |
-| 4. Security Audit:         0 secrets committed; .env, backups, and private keys ignored           |
+| 1. Production Vercel Frontend:       https://frontend-navy-eta-74.vercel.app                      |
+|    - Direct Deployment Alias:        https://frontend-ptd9t1x0x-ajayajay17at19-4269.vercel.app     |
+|    - Status:                         ACTIVE & VERIFIED                                            |
+|                                                                                                   |
+| 2. GitHub Source Repository:         https://github.com/Boomikav/episense                         |
+|    - Target Branch:                  main (latest commit: 38901da)                                |
+|    - Status:                         SYNCHRONIZED                                                 |
+|                                                                                                   |
+| 3. Render Blueprint Deployment URL:  https://render.com/deploy?repo=https://github.com/Boomikav/episense |
+|    - Target Service:                 episense-api (Web Service + 1GB Persistent Disk at /var/data)|
+|    - Expected Domain:                https://episense-api.onrender.com (or user-chosen slug)      |
+|    - Status:                         AWAITING USER AUTHORIZATION & PAYMENT APPROVAL               |
 +---------------------------------------------------------------------------------------------------+
 ```
 
 ---
 
-## 9. Redeployment & Maintenance Instructions
+## 2. Render Deployment: Exact Manual Action Required
 
-### Redeploying Frontend (Vercel)
-When frontend code is modified:
-```bash
-cd frontend
-npx vercel deploy --prod --yes --build-env VITE_API_BASE_URL=https://60b727782c065c.lhr.life
+> [!IMPORTANT]
+> **Render Account Authorization & Payment Approval Gate**  
+> Render is an external third-party cloud provider. Automated CLI or API provisioning cannot proceed autonomously because:
+> 1. Render requires OAuth authorization connecting your GitHub account (`Boomikav`) to your Render organization.
+> 2. The persistent SQLite architecture requires a **Persistent Disk** mounted at `/var/data`. Render policy strictly restricts persistent disks to the **Starter Plan** ($7.00/month instance + $0.25/GB-month disk = **$7.25/month**). Persistent disks are not permitted on Render's Free tier.
+> 3. Render requires a valid payment method on file to approve the blueprint.
+
+### Exact User Instructions to Deploy on Render
+
+1. Open your browser and navigate to the one-click blueprint deploy URL:  
+   👉 **[https://render.com/deploy?repo=https://github.com/Boomikav/episense](https://render.com/deploy?repo=https://github.com/Boomikav/episense)**
+
+2. Sign in or authenticate with your GitHub account: `Boomikav`.
+
+3. Render will parse `render.yaml` and display the **Blueprint Specification**:
+   - **Service Name:** `episense-api`
+   - **Environment:** `Python 3.11`
+   - **Plan:** `Starter` ($7/mo)
+   - **Disk:** `episense-storage` (1 GB mounted at `/var/data`, $0.25/mo)
+   - **Health Check:** `/api/v1/health`
+   - **Environment Variables:** `PORT=10000`, `HOST=0.0.0.0`, `EPISENSE_DB_PATH=/var/data/surveillance_store.sqlite`, `CORS_ORIGINS=https://frontend-navy-eta-74.vercel.app,http://localhost:5173`
+
+4. Click **"Apply"** (confirm payment/card if prompted by Render).
+
+5. Render will initiate the build:
+   - Installs pip packages from `requirements.txt` (including `fastapi`, `uvicorn`, `pymupdf`, `spacy`, `en_core_web_sm`, `en_core_sci_sm`).
+   - Attaches the 1GB persistent volume to `/var/data`.
+   - Starts the server with `python run_server.py`.
+   - Health check will verify `GET /api/v1/health` and mark the service **Live**.
+
+6. Once the status shows **Live**, copy your assigned service URL (e.g., `https://episense-api.onrender.com` or `https://episense-api-xxxx.onrender.com`).
+
+---
+
+## 3. Persistent SQLite Storage Safeguards
+
+### 3.1 Persistence Architecture
+- **Persistent Volume Mount:** `/var/data`
+- **Database File:** `/var/data/surveillance_store.sqlite`
+- **Environment Variable:** `EPISENSE_DB_PATH=/var/data/surveillance_store.sqlite`
+- **WAL Mode:** Activated on every connection via `PRAGMA journal_mode=WAL;` and `PRAGMA foreign_keys=ON;`.
+- **Concurrency & Locking:** Thread-local connections with 30.0s connection timeouts eliminate cross-thread locking under burst traffic.
+
+### 3.2 Non-Destructive Copy-on-First-Boot Logic
+The database initialization in [`src/episense/persistence/database.py`](file:///C:/Users/ajaya/Desktop/NLP/src/episense/persistence/database.py#L37-L66) implements strict safeguards:
+```python
+seed_db = Path("data/surveillance_store.sqlite").resolve()
+if seed_if_missing and not self.db_path.exists() and seed_db.exists() and self.db_path != seed_db:
+    logger.info("Persistent DB not found at %s. Seeding from repository database...", self.db_path)
+    shutil.copy2(str(seed_db), str(self.db_path))
+    for ext in ("-wal", "-shm"):
+        if (seed_ext := Path(str(seed_db) + ext)).exists():
+            shutil.copy2(str(seed_ext), str(self.db_path) + ext)
+elif self.db_path.exists():
+    logger.info("Using existing persistent database at %s (%d bytes).", self.db_path, self.db_path.stat().st_size)
+```
+- **First Boot:** On a fresh disk, `/var/data/surveillance_store.sqlite` does not exist. The application copies the repository seed database (48.2 MB) containing all 1,781 historical documents, 2,422 fused events, 1,011 signals, and 11 forecasts.
+- **Subsequent Restarts / Rebuilds:** The database file already exists. The application detects it and **NEVER overwrites** existing persistent data.
+
+### 3.3 Dynamic Path Resolution Across Modules
+All analytical and persistence components resolve the path dynamically from `EPISENSE_DB_PATH`:
+- [`SurveillanceDatabase`](file:///C:/Users/ajaya/Desktop/NLP/src/episense/persistence/database.py#L28)
+- [`evaluate_eight_disease_sufficiency`](file:///C:/Users/ajaya/Desktop/NLP/src/episense/surveillance/data_sufficiency.py#L165)
+- [`DataSufficiencyProfiler`](file:///C:/Users/ajaya/Desktop/NLP/src/episense/surveillance/data_sufficiency.py#L184)
+- [`SurveillancePanelBuilder`](file:///C:/Users/ajaya/Desktop/NLP/src/episense/surveillance/panel.py#L30)
+
+---
+
+## 4. Production CORS Configuration
+
+The backend CORS implementation in [`src/episense/api/app.py`](file:///C:/Users/ajaya/Desktop/NLP/src/episense/api/app.py#L130-L150) supports both exact origins and regex pattern matching:
+
+```python
+env_cors = os.environ.get("CORS_ORIGINS")
+if env_cors:
+    cors_origins = [o.strip() for o in env_cors.split(",") if o.strip()]
+    allow_origin_regex = r"https://.*\.vercel\.app"
+elif cfg.cors_origins:
+    cors_origins = cfg.cors_origins
+    allow_origin_regex = None if "*" in cors_origins else r"https://.*\.vercel\.app"
+else:
+    cors_origins = ["*"]
+    allow_origin_regex = None
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=cors_origins,
+    allow_origin_regex=allow_origin_regex,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 ```
 
-### Redeploying Backend
-When backend code is modified:
-```bash
-git add .
-git commit -m "feat: updates to surveillance pipeline"
-git push origin main
-```
-Render automatically detects changes to the `main` branch and triggers a zero-downtime rolling redeployment.
+### Verified Preflight & Credentials Behavior
+- **Browser Origin:** `https://frontend-navy-eta-74.vercel.app`
+- **Preflight Check:** `OPTIONS /api/v1/health` returns `HTTP 200 OK`.
+- **Response Headers:**
+  - `Access-Control-Allow-Origin: https://frontend-navy-eta-74.vercel.app`
+  - `Access-Control-Allow-Credentials: true`
+  - `Access-Control-Allow-Methods: DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT`
+- **Preview & Staging Domains:** Handled safely via `allow_origin_regex=r"https://.*\.vercel\.app"` without requiring wildcard `*`.
+
+---
+
+## 5. Connecting Vercel to Render (Post-Deployment Step)
+
+Once the Render service is Live and you have obtained its URL:
+
+1. Update the environment variable on Vercel:
+   ```bash
+   cd frontend
+   npx vercel env add VITE_API_BASE_URL production
+   # When prompted for value: https://your-actual-render-url.onrender.com
+   ```
+   Or trigger a direct production build:
+   ```bash
+   cd frontend
+   npx vercel deploy --prod --yes --build-env VITE_API_BASE_URL=https://your-actual-render-url.onrender.com
+   ```
+
+2. Confirm that the compiled JavaScript bundle (`frontend/dist/assets/index-*.js`) contains the new Render URL and zero references to `localhost` or `lhr.life`.
+
+---
+
+## 6. Scientific Safeguards & Eight-Disease Gating
+
+The application maintains strict epidemiological qualification boundaries across all 8 canonical diseases:
+
+| Pathogen | Observation Cadence | Historical Observations | Data Sufficiency Decision | Scientific Qualification |
+| :--- | :--- | :--- | :--- | :--- |
+| **Malaria** | Monthly (NCVBDC MMIS) | 32 consecutive months (Jan 2024–Aug 2026) | **SUFFICIENT** | **FORECAST_READY** (Negative Binomial & Seasonal Naive validated; holdout MASE 1.121) |
+| **Dengue** | Annual / Weekly (OpenDengue + IDSP) | 29 annual + 83 district series | **SUFFICIENT (Retrospective)** | **EVALUATED_RETROSPECTIVELY** (Spatiotemporal Panel Poisson GLM across 7 focal states) |
+| **Cholera** | Episodic Outbreak | 12 discrete bulletins | **INSUFFICIENT (Sparse)** | **BASELINE_ONLY** (Historical Reference Baseline, ML forecasting suppressed) |
+| **Japanese Encephalitis** | Episodic Outbreak | 21 narrative mentions | **INSUFFICIENT (Narrative)** | **BASELINE_ONLY** (Event surveillance active; count autoregression suppressed) |
+| **Kala-Azar** | Annual National | 5 annual observations | **INSUFFICIENT (N < 10)** | **INSUFFICIENT_HISTORICAL_DATA** (Numerical ML suppressed; historical baseline only) |
+| **Leptospirosis** | Episodic Outbreak | 14 discrete bulletins | **INSUFFICIENT (Sparse)** | **BASELINE_ONLY** (Heuristic event fusion active; numerical forecasting suppressed) |
+| **Measles** | Episodic Outbreak | 30 discrete bulletins | **INSUFFICIENT (Sparse)** | **BASELINE_ONLY** (Historical reference only; no continuous monthly series) |
+| **Scrub Typhus** | Annual Clustered | 7 annual observations | **INSUFFICIENT (N < 10)** | **INSUFFICIENT_HISTORICAL_DATA** (Annual reference baseline; numerical ML suppressed) |
+
+---
+
+## 7. Verification Audit Summary
+
+- **Local Backend Pytest:** `441 passed, 0 failed, 5 warnings in 147.63s`
+- **Frontend Vitest:** `21 passed, 0 failed across 9 test files in 12.99s`
+- **Frontend Vite Build:** `tsc -b && vite build` clean (0 errors, 290ms)
+- **Vercel SPA Deployment:** `https://frontend-navy-eta-74.vercel.app` (HTTP 200 on all deep routes)
+- **GitHub Repository State:** `https://github.com/Boomikav/episense` synced to `main` with all fixes
+- **Pending Cloud Action:** User approval on Render to launch the persistent service and persistent disk
