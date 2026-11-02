@@ -380,7 +380,7 @@ export const ForecastingView: React.FC = () => {
                       </td>
                       <td style={{ padding: "8px 12px" }}>
                         {isMalaria ? (
-                          <span style={{ color: "#059669", fontWeight: 700, fontSize: "11px" }}>AUGUST_VINTAGE_CONDITIONAL</span>
+                          <span style={{ color: "#D97706", fontWeight: 700, fontSize: "11px" }}>EXPLORATORY_BASELINE_SELECTED</span>
                         ) : isDengue ? (
                           <span style={{ color: "#4F46E5", fontWeight: 700, fontSize: "11px" }}>RETROSPECTIVE_PANEL (Monthly Suppressed)</span>
                         ) : isElig ? (
@@ -397,7 +397,7 @@ export const ForecastingView: React.FC = () => {
                         {isDengue
                           ? "Monthly series: 13 calendar periods (Jan 2024-Jan 2025), 12 observed, 1 missing (Dec 2024). N_cont=11 (<12), latency >640d. Retrospective 7-state annual panel validated."
                           : isMalaria
-                          ? "August 2026 vintage (62d latency). Seasonal Naive primary operational baseline (MAE 5,563.50). Horizons Sep/Oct elapsed, Nov-Feb active."
+                          ? "August 2026 vintage (62d latency). Seasonal Naive exploratory baseline (MAE 5,563.50, MASE 1.121). Horizons Sep/Oct elapsed, Nov-Feb conditional projections."
                           : prof.suppression_reason || (isElig ? "Continuous surveillance series verified." : "Historical baseline reference only.")}
                       </td>
                     </tr>
@@ -425,7 +425,7 @@ export const ForecastingView: React.FC = () => {
               National Malaria Monthly Incidence & Prospective Multi-Step Forecast (2024–2027)
             </h3>
             <p style={{ margin: 0, fontSize: "13px", color: "#64748B" }}>
-              Continuous monthly case counts through August 2026 (NCVBDC Bulletin) with prospective 6-month Negative Binomial / Random Forest trajectory and 95% prediction intervals.
+              Continuous monthly case counts through August 2026 (NCVBDC Bulletin) with 6-month Seasonal Naive exploratory baseline trajectory (m=12) and prediction intervals (vintage: August 2026).
             </p>
           </div>
 

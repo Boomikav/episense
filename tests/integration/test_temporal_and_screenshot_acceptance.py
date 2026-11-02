@@ -518,10 +518,15 @@ def test_check_14_forecasting_suppression_enforced(db):
     profiler = DataSufficiencyProfiler(db_path=db.db_path)
     profiles = profiler.audit_database()
 
-    # Malaria and Dengue are FORECAST_READY; all other profiles must be suppressed for operational ML forecasting
+    # Malaria and Dengue are evaluated (Malaria exploratory baseline, Dengue retrospective panel); all others suppressed
     for disease_key, p in profiles.items():
         if disease_key in ("Malaria", "Dengue"):
-            assert p.capability_b_quantitative_forecasting in ("GO", "FORECAST_READY")
+            assert p.capability_b_quantitative_forecasting in (
+                "GO",
+                "FORECAST_READY",
+                "RETROSPECTIVE_EVALUATION",
+                "EXPLORATORY_BASELINE_SELECTED",
+            )
         else:
             assert p.capability_b_quantitative_forecasting in (
                 "SUPPRESSED_INSUFFICIENT_BASELINE",

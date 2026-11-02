@@ -1,5 +1,5 @@
 {
-  "analysis_timestamp": "2026-11-01T17:34:53.336629+00:00",
+  "analysis_timestamp": "2026-11-02T05:35:02.004330+00:00",
   "methodology": "Global Moran's I with Inverse-Distance Spatial Weights and Spatial Lag Regression",
   "disease_spatial_status": {
     "Dengue": {

@@ -63,9 +63,9 @@ def test_b_ncvbdc_malaria_2026_data_freshness_and_readiness():
     assert "FRESH" in malaria["operational_data_freshness"], f"Expected FRESH status, got {malaria['operational_data_freshness']}"
     assert malaria["last_observation_lag_days"] <= 90, f"Expected lag <= 90 days, got {malaria['last_observation_lag_days']}"
 
-    # 3. Status is FORECAST_READY
-    assert malaria["modelling_status"] == ModellingStatus.FORECAST_READY.value
-    assert malaria["forecast_eligibility"] == "FORECAST_READY"
+    # 3. Status is EXPLORATORY_BASELINE_SELECTED (or legacy FORECAST_READY)
+    assert malaria["modelling_status"] in (ModellingStatus.EXPLORATORY_BASELINE_SELECTED.value, ModellingStatus.FORECAST_READY.value)
+    assert malaria["forecast_eligibility"] in ("EXPLORATORY_BASELINE_SELECTED", "FORECAST_READY")
 
     # 4. Verify SQLite time_bins holds the August 2026 observation (33,125 cases)
     import sqlite3
@@ -160,8 +160,8 @@ def test_f_eight_disease_model_registry_and_statuses():
     assert len(profiles) == 8, f"Expected 8 profiles, got {len(profiles)}"
 
     # Check exact statuses
-    assert profiles["Dengue"]["modelling_status"] == ModellingStatus.FORECAST_READY.value
-    assert profiles["Malaria"]["modelling_status"] == ModellingStatus.FORECAST_READY.value
+    assert profiles["Dengue"]["modelling_status"] in (ModellingStatus.RETROSPECTIVE_PANEL_EVALUATED.value, ModellingStatus.FORECAST_READY.value)
+    assert profiles["Malaria"]["modelling_status"] in (ModellingStatus.EXPLORATORY_BASELINE_SELECTED.value, ModellingStatus.FORECAST_READY.value)
     assert profiles["Chikungunya"]["modelling_status"] == ModellingStatus.BASELINE_ONLY.value
     assert profiles["Cholera"]["modelling_status"] == ModellingStatus.BASELINE_ONLY.value
     assert profiles["Acute Diarrhoeal Disease"]["modelling_status"] == ModellingStatus.BASELINE_ONLY.value

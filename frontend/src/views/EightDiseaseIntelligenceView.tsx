@@ -77,6 +77,25 @@ export const EightDiseaseIntelligenceView: React.FC<EightDiseaseIntelligenceView
 
   const getStatusBadge = (status: string) => {
     switch (status) {
+      case "EXPLORATORY_BASELINE_SELECTED":
+        return {
+          bg: "#FEF3C7",
+          color: "#B45309",
+          border: "#FDE68A",
+          icon: Clock,
+          label: "EXPLORATORY BASELINE SELECTED",
+          desc: "Seasonal Naive (m=12) Selected (H=6 Holdout MASE 1.121; Operational Readiness Withheld)",
+        };
+      case "RETROSPECTIVE_PANEL_EVALUATED":
+      case "RETROSPECTIVE_EVALUATION":
+        return {
+          bg: "#EEF2FF",
+          color: "#4338CA",
+          border: "#C7D2FE",
+          icon: Scale,
+          label: "RETROSPECTIVE PANEL EVALUATED",
+          desc: "7-State Annual Spatial Panel Evaluated; Monthly Forecasting Suppressed (N_cont=11 < 12)",
+        };
       case "FORECAST_READY":
         return {
           bg: "#ECFDF5",
@@ -155,7 +174,14 @@ export const EightDiseaseIntelligenceView: React.FC<EightDiseaseIntelligenceView
     if (statusFilter === "ALL") return true;
     const prof = sufficiencyData[k];
     const status = prof?.modelling_status || prof?.forecast_eligibility;
-    if (statusFilter === "FORECAST_READY") return status === "FORECAST_READY";
+    if (statusFilter === "FORECAST_READY" || statusFilter === "EXPLORATORY") {
+      return (
+        status === "FORECAST_READY" ||
+        status === "EXPLORATORY_BASELINE_SELECTED" ||
+        status === "RETROSPECTIVE_PANEL_EVALUATED" ||
+        status === "RETROSPECTIVE_EVALUATION"
+      );
+    }
     if (statusFilter === "BASELINE_ONLY") return status === "BASELINE_ONLY";
     if (statusFilter === "INSUFFICIENT") return status === "INSUFFICIENT_HISTORICAL_DATA";
     return true;
@@ -254,9 +280,9 @@ export const EightDiseaseIntelligenceView: React.FC<EightDiseaseIntelligenceView
           }}
         >
           <div style={{ background: "rgba(16, 185, 129, 0.1)", border: "1px solid rgba(16, 185, 129, 0.3)", borderRadius: "10px", padding: "12px" }}>
-            <div style={{ fontSize: "12px", color: "#6EE7B7", fontWeight: 600 }}>OPERATIONAL FORECAST READY (1)</div>
+            <div style={{ fontSize: "12px", color: "#FCD34D", fontWeight: 600 }}>EXPLORATORY BASELINE SELECTED (1)</div>
             <div style={{ fontSize: "18px", fontWeight: 800, color: "#FFFFFF", marginTop: "2px" }}>Malaria Monthly</div>
-            <div style={{ fontSize: "11px", color: "#A7F3D0", marginTop: "4px" }}>NCVBDC Aug 2026 (N=32, 62d lag; 2 elapsed / 4 active)</div>
+            <div style={{ fontSize: "11px", color: "#FDE68A", marginTop: "4px" }}>NCVBDC Aug 2026 (N=32, Seasonal Naive m=12, H=6 MASE 1.121; 2 elapsed / 4 active)</div>
           </div>
 
           <div style={{ background: "rgba(99, 102, 241, 0.1)", border: "1px solid rgba(99, 102, 241, 0.3)", borderRadius: "10px", padding: "12px" }}>
@@ -290,7 +316,7 @@ export const EightDiseaseIntelligenceView: React.FC<EightDiseaseIntelligenceView
         <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
           {[
             { id: "ALL", label: "All 8 Priority Pathogens" },
-            { id: "FORECAST_READY", label: "Forecast Ready (2)" },
+            { id: "EXPLORATORY", label: "Exploratory / Retrospective (2)" },
             { id: "BASELINE_ONLY", label: "Baseline Only (4)" },
             { id: "INSUFFICIENT", label: "Insufficient Data (2)" },
           ].map((tab) => (

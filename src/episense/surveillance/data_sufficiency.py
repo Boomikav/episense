@@ -72,6 +72,8 @@ class ModellingStatus(str, Enum):
     Authoritative disease-specific operational modelling readiness statuses (Section 12).
     """
     FORECAST_READY = "FORECAST_READY"
+    EXPLORATORY_BASELINE_SELECTED = "EXPLORATORY_BASELINE_SELECTED"
+    RETROSPECTIVE_PANEL_EVALUATED = "RETROSPECTIVE_PANEL_EVALUATED"
     BASELINE_ONLY = "BASELINE_ONLY"
     EXPLORATORY_MODEL = "EXPLORATORY_MODEL"
     INSUFFICIENT_HISTORICAL_DATA = "INSUFFICIENT_HISTORICAL_DATA"
@@ -476,14 +478,14 @@ class DataSufficiencyProfiler:
         # Determine authoritative disease-specific operational modelling readiness status (Section 12)
         c_lower = canonical_name.lower().strip()
         if c_lower == "malaria":
-            mod_status = ModellingStatus.FORECAST_READY
-            best_model = "Negative Binomial GLM / Autoregressive (h=1..6)"
+            mod_status = ModellingStatus.EXPLORATORY_BASELINE_SELECTED
+            best_model = "Seasonal Naive (m=12) Primary Baseline"
             hist_trend = "Decreasing (-10.4% vis-a-vis 2025)"
             season_range = {"lower": 12000.0, "median": 21000.0, "upper": 35000.0}
             latest_obs_date = "2026-08-31"
         elif c_lower == "dengue":
-            mod_status = ModellingStatus.FORECAST_READY
-            best_model = "Spatiotemporal Panel Poisson GLM (7 Focal States)"
+            mod_status = ModellingStatus.RETROSPECTIVE_PANEL_EVALUATED
+            best_model = "Spatiotemporal Panel Poisson GLM (7 Focal States Retrospective)"
             hist_trend = "Seasonal Post-Monsoon Surge"
             season_range = {"lower": 5000.0, "median": 27000.0, "upper": 52000.0}
             latest_obs_date = "2026-08-15"
@@ -560,6 +562,49 @@ class DataSufficiencyProfiler:
             suppress_reason = "Insufficient longitudinal continuity (cross-sectional snapshots: outbreak reports at single points in time without historical baseline; forecasting suppressed)."
             completeness = "Cross-sectional Only"
             comparability = "No longitudinal baseline"
+        elif mod_status == ModellingStatus.EXPLORATORY_BASELINE_SELECTED:
+            classification = DataStructureClassification.LONGITUDINAL_TIME_SERIES
+            go_anomaly = "GO (Baseline criteria and freshness satisfied)"
+            go_forecast = f"GO (EXPLORATORY_BASELINE_SELECTED: {best_model}, fresh within {max(0, lag_days)}d)"
+            cap_a_status = "AVAILABLE"
+            cap_b_status = "EXPLORATORY_BASELINE_SELECTED"
+            forecast_elig = "EXPLORATORY_BASELINE_SELECTED"
+            current_forecast_elig = "EXPLORATORY_BASELINE_SELECTED"
+            suppress_reason = (
+                "Exploratory baseline selected (Seasonal Naive m=12). Holdout H=6 (Mar-Aug 2026) MASE=1.121. "
+                "Numerical forecast preserved for academic demonstration with elapsed Sep-Oct horizons and conditional "
+                "Nov-Feb horizons; operational validation withheld."
+            )
+            completeness = "Sufficient for exploratory monthly baseline modeling (N=32)"
+            comparability = "Directly comparable official NCVBDC monthly MMIS reports"
+        elif mod_status == ModellingStatus.RETROSPECTIVE_PANEL_EVALUATED:
+            classification = (
+                DataStructureClassification.LONGITUDINAL_TIME_SERIES
+                if max_consecutive >= self.min_forecast_weeks
+                else DataStructureClassification.DISCONTINUOUS_SERIES
+            )
+            go_anomaly = "CONDITIONAL_GO (Retrospective spatial panel evaluated)"
+            cap_a_status = "AVAILABLE"
+            if max_consecutive >= self.min_forecast_weeks:
+                go_forecast = f"GO (RETROSPECTIVE_PANEL_EVALUATED: {best_model}, fresh within {max(0, lag_days)}d)"
+                cap_b_status = "GO"
+                forecast_elig = "RETROSPECTIVE_EVALUATION"
+                current_forecast_elig = "RETROSPECTIVE_EVALUATION"
+            else:
+                go_forecast = (
+                    "RETROSPECTIVE_PANEL_ONLY (Monthly forecasting suppressed: 13 calendar periods, 12 observed, "
+                    "Dec 2024 missing, N_cont=11 < 12; 7-state retrospective panel evaluated)"
+                )
+                cap_b_status = "RETROSPECTIVE_EVALUATION"
+                forecast_elig = "RETROSPECTIVE_EVALUATION"
+                current_forecast_elig = "SUPPRESSED_MONTHLY_DISCONTINUOUS"
+            suppress_reason = (
+                "Monthly series covers 13 calendar periods (Jan 2024-Jan 2025) with 12 observed records; "
+                "December 2024 is missing. Longest contiguous run is 11 months (<12 threshold). Monthly ML "
+                "forecasting suppressed; retrospective 7-state annual panel evaluated (N=189)."
+            )
+            completeness = "Retrospective 7-state annual panel complete (N=189); monthly series discontinuous (N_cont=11 < 12)"
+            comparability = "Annual state panel comparable across 1998-2024; monthly series lacks continuity"
         elif mod_status == ModellingStatus.FORECAST_READY:
             classification = DataStructureClassification.LONGITUDINAL_TIME_SERIES
             go_anomaly = "GO (Baseline criteria and freshness satisfied)"

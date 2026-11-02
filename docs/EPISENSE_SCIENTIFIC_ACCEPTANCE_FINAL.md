@@ -23,7 +23,7 @@
 | [X] Multi-Source Ingestion Architecture: VALIDATED IN STAGING (Authentic WHO DON 622)             |
 | [X] Forecast Vintage Preservation & Stale Period Separation: FULLY RESOLVED                       |
 | [X] Series-Level Eligibility Differentiation (18 independent series): FULLY RESOLVED             |
-| [!] Operational Forecast Scalability: RESTRICTED TO MALARIA (N=32); DENGUE IS RETROSPECTIVE ONLY   |
+| [!] Operational Forecast Scalability: RESTRICTED TO EXPLORATORY MALARIA BASELINE (N=32, H=6 holdout MASE 1.121); DENGUE IS RETROSPECTIVE ONLY (N_cont=11 < 12, monthly forecasting suppressed; 7-state retrospective panel N=189 evaluated) |
 | [!] Unconditional Score of 1.0 (Precision/Recall/FAR): FORMALLY WITHDRAWN & RELABELED EXPLORATORY |
 +---------------------------------------------------------------------------------------------------+
 ```
@@ -55,7 +55,11 @@ Evaluating all candidate models on the chronological holdout of the 32-month dat
    - 95% Empirical Coverage is **100.0%** (all 6 holdout periods covered) versus **66.7%** for Negative Binomial (which undercovered the sudden July monsoon surge).
 2. **Biostatistical Reason:** On short time-series ($N=32$), parametric GLMs suffer from parameter estimation variance and can overfit recent post-monsoon declines, failing to anticipate monsoon surges. Seasonal Naive directly projects the 12-month historical vector without estimation variance penalty.
 3. **Database Update:** SQLite record `56e31c8a-14ba-43ce-b4fa-cd6b02324c5a` has been formally updated with `model_type="seasonal_naive"` and `sufficiency_status="AUGUST_VINTAGE_CONDITIONAL_FORECAST"`.
-4. **Exploratory Qualification:** Given that $H=6$ on $N=32$ observations represents an exploratory benchmark, this holdout result is explicitly communicated as preliminary empirical evidence, not proof of asymptotic optimality.
+4. **Exploratory Qualification & Interval Uncertainty Formulation:**
+   - Under standard seasonal naive with white noise seasonal differences $e_t = y_t - y_{t-m}$, theoretical variance is $\text{Var}(\hat{y}_{T+h|T}) = \sigma^2$ for $h \le m$.
+   - In prospective surveillance with unobserved intermediate periods (Sep and Oct 2026 pending publication), recursive uncertainty compounds over unobserved steps. EpiSense models this with the heuristic $\sigma_h = \hat{\sigma}_{\text{res}}\sqrt{h}$ ($s = 7,439.82$ cases).
+   - While covering 6/6 holdout points in the $H=6$ evaluation, this sample size does not constitute asymptotic proof of 95% calibration.
+   - Consequently, Malaria prospective forecasting is formally designated **EXPLORATORY_BASELINE_SELECTED**, and claims of "operational production readiness" are strictly withheld pending multi-year validation.
 
 ### 1.2 August 2026 Forecast Vintage & Latency Accounting
 The surveillance system reference clock is **November 1, 2026**. The forecast origin remains anchored at **August 31, 2026**:
@@ -165,10 +169,10 @@ EpiSense tracks 18 independent `Disease + Location + Frequency` time series acro
 
 | Canonical Disease | Surveillance Frequency | Series Type & Geography | Total Bins | Continuous Length ($N_{\text{cont}}$) | Observation Window | Latest Obs. Date | Reporting Latency | Gaps & Missing Periods | Operational Modeling Decision |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Malaria** | **Monthly** | Routine National Surveillance (Admin-0) | 32 | **32 months** | 2024-01 to 2026-08 | 2026-08-31 | 62 days | None (Unbroken) | **FORECAST_READY** (Vintage: August 2026 preserved; Sep/Oct elapsed) |
+| **Malaria** | **Monthly** | Routine National Surveillance (Admin-0) | 32 | **32 months** | 2024-01 to 2026-08 | 2026-08-31 | 62 days | None (Unbroken) | **EXPLORATORY_BASELINE_SELECTED** (Holdout H=6, MASE 1.121; Aug 2026 vintage; Sep/Oct elapsed, Nov-Feb conditional) |
 | **Malaria** | Annual | Routine Historical Series (Admin-0) | 30 | 30 years | 1995 to 2024 | 2024-12-31 | 671 days | None (Complete) | **BASELINE_ONLY** (Annual historical baseline reference) |
 | **Malaria** | Weekly | IDSP Outbreak Investigations (Admin-2) | 48 | 1 week (episodic) | 2002 to 2026 | 2026-08-20 | 73 days | Discrete district clusters | **EPISODIC_ONLY** (Continuous modeling suppressed) |
-| **Dengue** | **Annual** | Routine State/UT Panel (Admin-1, 7 States) | 398 (189) | **27 years** | 1998 to 2024 | 2024-12-31 | 671 days | Complete in 7 states | **EVALUATED_RETROSPECTIVE_PANEL** (Valid for retrospective ML; no live forecast) |
+| **Dengue** | **Annual** | Routine State/UT Panel (Admin-1, 7 States) | 398 (189) | **27 years** | 1998 to 2024 | 2024-12-31 | 671 days | Complete in 7 states | **RETROSPECTIVE_PANEL_EVALUATED** (Valid for retrospective ML; no live forecast) |
 | **Dengue** | Monthly | Routine National Series (Admin-0) | 12 | **11 months** | 2024-01 to 2025-01 | 2025-01-31 | 640 days | Dec 2024 missing; 1 pt in Jan 2025 | **SUPPRESSED_INSUFFICIENT_BASELINE** ($N_{\text{cont}} = 11 < 12$; latency $> 21$mo) |
 | **Dengue** | Weekly | IDSP Outbreak Investigations (Admin-2) | 121 | 1 week (episodic) | 2023 to 2026 | 2026-09-05 | 57 days | Discrete district clusters | **EPISODIC_ONLY** (Continuous modeling suppressed) |
 | **Chikungunya** | Annual | Routine National Series (Admin-0) | 10 | 10 years | 2015 to 2024 | 2024-12-31 | 671 days | None (Complete) | **BASELINE_ONLY** ($N = 10 < 12$; seasonal median baseline) |
@@ -186,10 +190,10 @@ EpiSense tracks 18 independent `Disease + Location + Frequency` time series acro
 
 ### 4.1 Series-Level Functional Classification (5 Classes across 18 Series)
 The 18 independent time series are decoupled into 5 operational functional classes:
-1. **Operational Forecasting (1 series):**
-   - `Malaria National Monthly` ($N=32$, unbroken, August 2026 vintage, Seasonal Naive baseline selected).
+1. **Exploratory Baseline Forecasting (1 series):**
+   - `Malaria National Monthly` ($N=32$, unbroken, August 2026 vintage, Seasonal Naive baseline selected; H=6 holdout MASE 1.121; Sep/Oct elapsed, Nov-Feb conditional).
 2. **Retrospective Model Evaluation (1 series):**
-   - `Dengue 7-State Annual Panel` ($N=27$ continuous years $\times$ 7 states = 189 rows, evaluated for spatial lag regression).
+   - `Dengue 7-State Annual Panel` ($N=27$ continuous years $\times$ 7 states = 189 rows, evaluated for spatial lag regression; monthly ML suppressed due to 13-calendar-period discontinuity with Dec 2024 missing, $N_{\text{cont}}=11 < 12$).
 3. **Historical Baseline Reference (7 series):**
    - `Malaria National Annual` ($N=30$)
    - `Dengue National Monthly` ($N=12$ observed records across 13 calendar periods)
@@ -307,21 +311,30 @@ flowchart LR
 
 The React/Vite dashboard running at `http://localhost:5173` was verified across all views:
 1. **Eight-Disease Intelligence Matrix:** Displays all 8 priority pathogens with non-zero, scientifically grounded epidemiological indicators:
-   - Malaria: Operational Forecast Ready (N=32, 62d lag, Sep/Oct elapsed, Nov 2026 active).
-   - Dengue: Retrospective Panel Validated (N=27, 14.8% spatial gain; monthly ML suppressed).
+   - Malaria: Exploratory Baseline Selected (N=32, 62d lag, holdout H=6 MASE 1.121, Sep/Oct elapsed, Nov 2026 active).
+   - Dengue: Retrospective Panel Evaluated (7 focal states, N=189, 14.8% spatial gain; monthly series covers 13 calendar periods with 12 observed, Dec 2024 missing, N_cont=11 < 12, monthly forecasting suppressed).
    - Chikungunya, Cholera, ADD, JE: Baseline reference only (Seasonal median + IQR gating).
    - Leptospirosis, Scrub Typhus: Insufficient historical data (Event surveillance active; regression suppressed).
 2. **Forecasting & Vintage Freshness Banner:** Displays the August 2026 forecast vintage notice, explicitly labeling September and October 2026 as elapsed horizons with actuals pending official publication.
 3. **SVG Forecast Chart:** Displays historical monthly actuals through August 2026, separates elapsed horizons from active horizons, and projects the 95% prediction interval ribbon.
 4. **Model Comparison & Ablation Tables:** Displays out-of-sample holdout metrics across 15 models and 5-stage feature ablation results.
 5. **Fresh Screenshots:** 16 full-page screenshots captured and archived to `docs/screenshots/` and `<appDataDir>\brain\<conversation-id>\screenshots/`.
-6. **Frontend Tests & Build:** Vitest suite passed (**21/21 passed** in 40.22s); Vite production build succeeded in **1.05s** with 0 errors.
+6. **Frontend Tests & Build:** Vitest suite passed (**21/21 passed** across 9 test files); Vite production build succeeded (`tsc -b && vite build`) in **19.43s** with 0 errors.
 
 ---
 
 ## 8. Verified Achievements vs. Remaining Scientific Limitations
 
-### 8.1 Verified Achievements
+### 8.1 Verification Test Ledger
+| Verification Suite | Target Command | Scope & Test Cases | Execution Time | Exit Code | Result Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Pytest Full Backend** | `pytest tests/ -q` | 441 total tests (295 unit + 146 integration) | 406.16s | 0 | **441/441 PASSED** |
+| **Pytest Unit Suite** | `pytest tests/unit/ -q` | 295 unit tests (data sufficiency, NLP, anomalies, API) | 41.02s | 0 | **295/295 PASSED** |
+| **End-to-End Integration** | `pytest tests/integration/test_final_end_to_end_surveillance.py` | 12 comprehensive surveillance workflow checks | 34.71s | 0 | **12/12 PASSED** |
+| **Temporal & Map Acceptance** | `pytest tests/integration/test_temporal_and_screenshot_acceptance.py` | 21 temporal, boundary, and screenshot checks | 25.52s | 0 | **21/21 PASSED** |
+| **Spatial LOGO-CV Audit** | `python scripts/spatial_analysis_evaluation.py` | Global Moran's I + 7-state Leave-One-State-Out CV | 2.14s | 0 | **SUCCESS (p=0.0597)** |
+| **Vitest Frontend Suite** | `cd frontend; npm test` | 21 tests across 9 test suites | 91.03s | 0 | **21/21 PASSED** |
+| **Frontend Production Build** | `cd frontend; npm run build` | TypeScript compilation (`tsc -b`) & Vite rollup | 19.43s | 0 | **SUCCESS (0 errors)** |
 1. **Bit-for-Bit Provenance Integrity:** 100% of biomedical entities, temporal tokens, and quantities maintain character-level verbatim span offsets linking back to source text.
 2. **Deterministic Deduplication & Idempotency:** Duplicate and syndicated dispatches are compressed without losing provenance; re-ingestion is rejected with HTTP 409.
 3. **Strict Biostatistical Abstention:** Suppresses forecasting when continuous series depth $N < 12$ or latency $> 90$ days, preventing manufactured predictions.
